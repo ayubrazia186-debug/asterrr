@@ -1,0 +1,7 @@
+{
+  "appId": "app.aster.study",
+  "appName": "Aster",
+  "webDir": "www",
+  "server": { "androidScheme": "http", "cleartext": true, "allowNavigation": ["*"] },
+  "android": { "allowMixedContent": true, "appendUserAgent": "AsterApp" }
+}

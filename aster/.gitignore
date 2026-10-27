@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-public
+.aster-data
+.aster-cache
+aster.config.json
+desktop/node_modules
+desktop/release
+desktop/bundle
+android/node_modules
+android/android

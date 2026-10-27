@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0F1728" />
+<title>Aster</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100dvh; display: grid; place-content: center; justify-items: center; gap: 14px; padding: 28px; background: #0F1728; color: #EEF1F6; font: 16px/1.5 system-ui, sans-serif; text-align: center; }
+  .mark { width: 64px; height: 64px; border-radius: 18px; background: #fff; display: grid; place-items: center; }
+  h1 { margin: 0; font-size: 1.7rem; }
+  p { margin: 0; color: #B4BCCB; max-width: 30rem; }
+  form { display: grid; gap: 10px; width: min(100%, 22rem); }
+  input { font: inherit; padding: 14px; border-radius: 12px; border: 1px solid #3a4252; background: #161A21; color: inherit; text-align: center; }
+  button { font: inherit; font-weight: 650; padding: 14px; border-radius: 12px; border: 0; background: #EEF1F6; color: #0F1728; }
+  button:disabled { opacity: .6; }
+  .err { color: #FF8F80; min-height: 1.4em; }
+  small { color: #8A94A6; max-width: 26rem; }
+</style>
+</head>
+<body>
+  <div class="mark" aria-hidden="true"><svg width="38" height="38" viewBox="0 0 32 32"><path d="M6 15l5 5 9-10M12 23l5 5 10-12" fill="none" stroke="#0F1728" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <h1>Aster</h1>
+  <p>Type the address your computer shows when Aster is running. Your phone and computer must be on the same Wi-Fi.</p>
+  <form id="f">
+    <input id="addr" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="192.168.1.20:5174" aria-label="Computer address" />
+    <button id="go" type="submit">Open Aster</button>
+    <div id="err" class="err" role="alert"></div>
+  </form>
+  <small>On the computer, open the Aster desktop app and choose Aster, Tablet and phone access. It shows the address and PIN.</small>
+<script>
+  var KEY = 'aster.pc';
+  var addr = document.getElementById('addr'), err = document.getElementById('err'), go = document.getElementById('go');
+  function norm(v) { v = (v || '').trim(); if (!v) return ''; if (!/^https?:\/\//i.test(v)) v = 'http://' + v; return v.replace(/\/+$/, '') + '/'; }
+  function open(url, auto) {
+    go.disabled = true; err.textContent = auto ? 'Connecting…' : '';
+    var done = false;
+    var ctl = new AbortController();
+    var t = setTimeout(function () { ctl.abort(); }, 5000);
+    // "no-cors" lets us learn only whether the computer answered, which is all we need before opening it
+    fetch(url + 'api/info', { mode: 'no-cors', signal: ctl.signal }).then(function () {
+      clearTimeout(t); done = true;
+      try { localStorage.setItem(KEY, url); } catch (e) {}
+      location.href = url;
+    }).catch(function () {
+      clearTimeout(t); go.disabled = false;
+      err.textContent = "Can't reach that address. Check that Aster is running on the computer and that both are on the same Wi-Fi.";
+    });
+  }
+  document.getElementById('f').addEventListener('submit', function (e) { e.preventDefault(); var u = norm(addr.value); if (u) open(u, false); });
+  var saved = ''; try { saved = localStorage.getItem(KEY) || ''; } catch (e) {}
+  if (saved) addr.value = saved.replace(/^http:\/\//, '').replace(/\/$/, '');
+  if (saved && !/[?&]change=1/.test(location.search)) open(saved, true);
+</script>
+</body>
+</html>

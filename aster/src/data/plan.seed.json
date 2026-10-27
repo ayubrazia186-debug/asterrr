@@ -1,0 +1,7163 @@
+{
+ "business": {
+  "code": "0450",
+  "title": "Business  (0450)",
+  "teacher": "Sir Saad Hassan",
+  "classes": [
+   {
+    "row": 12,
+    "day": 1,
+    "date": "2026-10-06",
+    "section": "plan",
+    "topic": "Introduction",
+    "part": "First day: introduction",
+    "watch": "Introduction",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "3 Jul",
+    "notes": "sir introduces himself and tells his qualification and tells about like more of how classes conducted and all.",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 13,
+    "day": 1,
+    "date": "2026-10-06",
+    "section": "plan",
+    "topic": "1. Understanding business activity",
+    "part": "Understanding business activity",
+    "watch": "Start till income of fop",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/OHP8a0tMcO8?si=0xwm6gDQ0z-3YcEB",
+    "passcode": "",
+    "taught": "6 Jul",
+    "notes": "Sir explains about factors about production land labour, capital and enterprise and how they are combined + income of factors of production.",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 15,
+    "day": 2,
+    "date": "2026-10-07",
+    "section": "plan",
+    "topic": "1. Understanding business activity",
+    "part": "1.1 Business activity",
+    "watch": "Opportunity cost till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/OHP8a0tMcO8?si=0xwm6gDQ0z-3YcEB",
+    "passcode": "",
+    "taught": "7 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 17,
+    "day": 3,
+    "date": "2026-10-08",
+    "section": "plan",
+    "topic": "1. Understanding business activity",
+    "part": "1.2 Classification of businesses",
+    "watch": "start till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/FAu1C_zaTtM?si=p2xZ3AaCwNT68sd9",
+    "passcode": "",
+    "taught": "8 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 18,
+    "day": 3,
+    "date": "2026-10-08",
+    "section": "plan",
+    "topic": "1. Understanding business activity",
+    "part": "1.3 Enterprise, business growth and size",
+    "watch": "start till characteristics of a successfull entrepreneur",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/lbx1qSyapyE?si=jvF3wObmBigy3oz7",
+    "passcode": "",
+    "taught": "9 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 20,
+    "day": 4,
+    "date": "2026-10-09",
+    "section": "plan",
+    "topic": "1. Understanding business activity",
+    "part": "1.3 Enterprise, business growth and size",
+    "watch": "business plan till who needs to measure size of a business",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/lbx1qSyapyE?si=jvF3wObmBigy3oz7",
+    "passcode": "",
+    "taught": "10 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 22,
+    "day": 5,
+    "date": "2026-10-10",
+    "section": "plan",
+    "topic": "1. Understanding business activity",
+    "part": "1.3 Enterprise, business growth and size",
+    "watch": "measuring size of business till internal and external growth",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/lbx1qSyapyE?si=jvF3wObmBigy3oz7",
+    "passcode": "",
+    "taught": "13 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 24,
+    "day": 6,
+    "date": "2026-10-11",
+    "section": "plan",
+    "topic": "1. Understanding business activity",
+    "part": "1.3 Enterprise, business growth and size",
+    "watch": "types of growth till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/lbx1qSyapyE?si=jvF3wObmBigy3oz7",
+    "passcode": "",
+    "taught": "14 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 25,
+    "day": 6,
+    "date": "2026-10-11",
+    "section": "plan",
+    "topic": "1. Understanding business activity",
+    "part": "1.4 Types of business organisation",
+    "watch": "start till partnership",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/-6pI_z0ZiuA?si=oIzwzwFz5OIAvtjU",
+    "passcode": "",
+    "taught": "15 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 27,
+    "day": 7,
+    "date": "2026-10-12",
+    "section": "plan",
+    "topic": "1. Understanding business activity",
+    "part": "1.4 Types of business organisation",
+    "watch": "private & public ltd",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/-6pI_z0ZiuA?si=oIzwzwFz5OIAvtjU",
+    "passcode": "",
+    "taught": "16 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 29,
+    "day": 8,
+    "date": "2026-10-13",
+    "section": "plan",
+    "topic": "1. Understanding business activity",
+    "part": "1.4 Types of business organisation",
+    "watch": "franchising till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/-6pI_z0ZiuA?si=oIzwzwFz5OIAvtjU",
+    "passcode": "",
+    "taught": "17 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 30,
+    "day": 8,
+    "date": "2026-10-13",
+    "section": "plan",
+    "topic": "1. Understanding business activity",
+    "part": "1.5 Business objectives and stakeholder objectives",
+    "watch": "start till managers",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/u0kWCYHg-44?si=wslGRPiawi-t2R-Q",
+    "passcode": "",
+    "taught": "20 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 32,
+    "day": 9,
+    "date": "2026-10-14",
+    "section": "plan",
+    "topic": "1. Understanding business activity",
+    "part": "1.5 Business objectives and stakeholder objectives",
+    "watch": "managers till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/u0kWCYHg-44?si=wslGRPiawi-t2R-Q",
+    "passcode": "",
+    "taught": "21 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 34,
+    "day": 10,
+    "date": "2026-10-15",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.3 Recruitment, selection and training of employees",
+    "watch": "start till external recruitment advertisement",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/RTiAGZRlUJ0?si=DjWJDGOblJ7sX7jZ",
+    "passcode": "",
+    "taught": "22 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 36,
+    "day": 11,
+    "date": "2026-10-16",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.3 Recruitment, selection and training of employees",
+    "watch": "external recruitment till off the job training",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/RTiAGZRlUJ0?si=DjWJDGOblJ7sX7jZ",
+    "passcode": "",
+    "taught": "23 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 37,
+    "day": 11,
+    "date": "2026-10-16",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.3 Recruitment, selection and training of employees",
+    "watch": "off the job till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/RTiAGZRlUJ0?si=DjWJDGOblJ7sX7jZ",
+    "passcode": "",
+    "taught": "24 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 39,
+    "day": 12,
+    "date": "2026-10-17",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.2 Organisation and management",
+    "watch": "Start till flexible hrs",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/02eF5QIGlXk?si=nQmcw3t6jDexzzjZ",
+    "passcode": "",
+    "taught": "27 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 41,
+    "day": 13,
+    "date": "2026-10-18",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.2 Organisation and management",
+    "watch": "Home working till delegation",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/02eF5QIGlXk?si=nQmcw3t6jDexzzjZ",
+    "passcode": "",
+    "taught": "28 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 43,
+    "day": 14,
+    "date": "2026-10-19",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.2 Organisation and management",
+    "watch": "Delegation till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/02eF5QIGlXk?si=nQmcw3t6jDexzzjZ",
+    "passcode": "",
+    "taught": "29 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 44,
+    "day": 14,
+    "date": "2026-10-19",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.2 Organisation and management",
+    "watch": "Paper 1 pattern",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/COOEZm6YMUg?si=58gkC8z5fzzWnrtt",
+    "passcode": "",
+    "taught": "30 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 46,
+    "day": 15,
+    "date": "2026-10-20",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.2 Organisation and management",
+    "watch": "Section 1 topicals w homework of all the a,b&c parts",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "31 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 48,
+    "day": 16,
+    "date": "2026-10-21",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.2 Organisation and management",
+    "watch": "Section 1 topicals w homework of all the d&e parts",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "3 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 49,
+    "day": 16,
+    "date": "2026-10-21",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.4 Internal and external communication",
+    "watch": "Start till written form of communication",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/ZGj9Kxl4OXE?si=lmCWGhn1XYVLcY42",
+    "passcode": "",
+    "taught": "4 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 51,
+    "day": 17,
+    "date": "2026-10-22",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.4 Internal and external communication",
+    "watch": "Written communnication till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/ZGj9Kxl4OXE?si=lmCWGhn1XYVLcY42",
+    "passcode": "",
+    "taught": "6 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 53,
+    "day": 18,
+    "date": "2026-10-23",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.4 Internal and external communication",
+    "watch": "Advantages and disadvantages of different ways of communication",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/ZGj9Kxl4OXE?si=lmCWGhn1XYVLcY42",
+    "passcode": "",
+    "taught": "7 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 55,
+    "day": 19,
+    "date": "2026-10-24",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.1 Motivating employees",
+    "watch": "Start till taylor's theory",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/ilnxCzKDjo4?si=kFDrSiKJgQeu7Psr",
+    "passcode": "",
+    "taught": "8 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 56,
+    "day": 19,
+    "date": "2026-10-24",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.1 Motivating employees",
+    "watch": "Maslow till salary",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/ilnxCzKDjo4?si=kFDrSiKJgQeu7Psr",
+    "passcode": "",
+    "taught": "10 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 58,
+    "day": 20,
+    "date": "2026-10-25",
+    "section": "plan",
+    "topic": "2. People in business",
+    "part": "2.1 Motivating employees",
+    "watch": "Salary till the end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/ilnxCzKDjo4?si=kFDrSiKJgQeu7Psr",
+    "passcode": "",
+    "taught": "11 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 60,
+    "day": 21,
+    "date": "2026-10-26",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.1 Marketing, competition and the customer",
+    "watch": "Start till market changes",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/vctn00039KI?si=ds02lGKZadiZQOc6",
+    "passcode": "",
+    "taught": "12 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 62,
+    "day": 22,
+    "date": "2026-10-27",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.1 Marketing, competition and the customer",
+    "watch": "Market changes till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/vctn00039KI?si=ds02lGKZadiZQOc6",
+    "passcode": "",
+    "taught": "13 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 63,
+    "day": 22,
+    "date": "2026-10-27",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.2 Market research",
+    "watch": "Start till observations",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/E8jU_kCa0mY?si=Lm8d_nn_liUoLvwj",
+    "passcode": "",
+    "taught": "17 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 65,
+    "day": 23,
+    "date": "2026-10-28",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.2 Market research",
+    "watch": "Observation till sampling",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/E8jU_kCa0mY?si=Lm8d_nn_liUoLvwj",
+    "passcode": "",
+    "taught": "19 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 67,
+    "day": 24,
+    "date": "2026-10-29",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.2 Market research",
+    "watch": "Secondary methods till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/E8jU_kCa0mY?si=Lm8d_nn_liUoLvwj",
+    "passcode": "",
+    "taught": "21 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 68,
+    "day": 24,
+    "date": "2026-10-29",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.3 Marketing mix",
+    "watch": "Start till packaging",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/hePw_3qj8Zo?si=-4KHhyQivssgOxwy&t=10986",
+    "passcode": "",
+    "taught": "24 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 70,
+    "day": 25,
+    "date": "2026-10-30",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.3 Marketing mix",
+    "watch": "Packaging till extension strategy",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/hePw_3qj8Zo?si=-4KHhyQivssgOxwy&t=10986",
+    "passcode": "",
+    "taught": "25 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 72,
+    "day": 26,
+    "date": "2026-10-31",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.3 Marketing mix",
+    "watch": "Prices till penetration pricing",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/hePw_3qj8Zo?si=-4KHhyQivssgOxwy&t=10986",
+    "passcode": "",
+    "taught": "26 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 74,
+    "day": 27,
+    "date": "2026-11-01",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.3 Marketing mix",
+    "watch": "Penetration pricing till agents",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/hePw_3qj8Zo?si=-4KHhyQivssgOxwy&t=10986",
+    "passcode": "",
+    "taught": "27 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 75,
+    "day": 27,
+    "date": "2026-11-01",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.3 Marketing mix",
+    "watch": "Promotion start till billboards",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/hePw_3qj8Zo?si=-4KHhyQivssgOxwy&t=10986",
+    "passcode": "",
+    "taught": "28 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 77,
+    "day": 28,
+    "date": "2026-11-02",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.3 Marketing mix",
+    "watch": "Billboards till tech & marketing mix",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/hePw_3qj8Zo?si=-4KHhyQivssgOxwy&t=10986",
+    "passcode": "",
+    "taught": "31 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 79,
+    "day": 29,
+    "date": "2026-11-03",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.3 Marketing mix",
+    "watch": "ecommerce",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/hePw_3qj8Zo?si=-4KHhyQivssgOxwy&t=10986",
+    "passcode": "",
+    "taught": "1 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 81,
+    "day": 30,
+    "date": "2026-11-04",
+    "section": "plan",
+    "topic": "3. Marketing",
+    "part": "3.4 Marketing strategy",
+    "watch": "full chapter",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "2 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 82,
+    "day": 30,
+    "date": "2026-11-04",
+    "section": "plan",
+    "topic": "4. Operations management",
+    "part": "Operations management",
+    "watch": "start till over processing",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/-VoVv9qhNrw?si=_eU7OecWWY-I9IkN",
+    "passcode": "",
+    "taught": "3 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 84,
+    "day": 31,
+    "date": "2026-11-05",
+    "section": "plan",
+    "topic": "4. Operations management",
+    "part": "4.1 Production of goods and services",
+    "watch": "pros & cons of lean till batch production",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/-VoVv9qhNrw?si=_eU7OecWWY-I9IkN",
+    "passcode": "",
+    "taught": "4 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 86,
+    "day": 32,
+    "date": "2026-11-06",
+    "section": "plan",
+    "topic": "4. Operations management",
+    "part": "4.1 Production of goods and services",
+    "watch": "flow production till factors affecting method of production",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/-VoVv9qhNrw?si=_eU7OecWWY-I9IkN",
+    "passcode": "",
+    "taught": "5 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 87,
+    "day": 32,
+    "date": "2026-11-06",
+    "section": "plan",
+    "topic": "4. Operations management",
+    "part": "4.1 Production of goods and services",
+    "watch": "technology & production",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/-VoVv9qhNrw?si=_eU7OecWWY-I9IkN",
+    "passcode": "",
+    "taught": "6 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 89,
+    "day": 33,
+    "date": "2026-11-07",
+    "section": "plan",
+    "topic": "4. Operations management",
+    "part": "4.2 Costs, scale of production and break-even analysis",
+    "watch": "full chapter",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/_8WnVboHI0w?si=PqWPSRSWaI7lj847",
+    "passcode": "",
+    "taught": "9 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 91,
+    "day": 34,
+    "date": "2026-11-08",
+    "section": "plan",
+    "topic": "4. Operations management",
+    "part": "4.3 Achieving quality production",
+    "watch": "full chapter",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/B9qEvE04dvU?si=0VJdSmWcr2Q8JomR",
+    "passcode": "",
+    "taught": "10 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 93,
+    "day": 35,
+    "date": "2026-11-09",
+    "section": "plan",
+    "topic": "4. Operations management",
+    "part": "4.4 Location decisions",
+    "watch": "Full chapter",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/hJkcuxFRCSI?si=oP1SXYxZ99pu45oq",
+    "passcode": "",
+    "taught": "11 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 94,
+    "day": 35,
+    "date": "2026-11-09",
+    "section": "plan",
+    "topic": "5. Financial information and decisions",
+    "part": "5.1 Business finance: needs and sources",
+    "watch": "Start till debt factoring",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/dRTX_pl7Uqg?si=w-8jTbmA6Obp1KdH",
+    "passcode": "",
+    "taught": "15 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 96,
+    "day": 36,
+    "date": "2026-11-10",
+    "section": "plan",
+    "topic": "5. Financial information and decisions",
+    "part": "5.1 Business finance: needs and sources",
+    "watch": "Debt factoring till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/dRTX_pl7Uqg?si=w-8jTbmA6Obp1KdH",
+    "passcode": "",
+    "taught": "16 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 98,
+    "day": 37,
+    "date": "2026-11-11",
+    "section": "plan",
+    "topic": "5. Financial information and decisions",
+    "part": "5.2 Cash-flow forecasting and working capital",
+    "watch": "Start till cashflow calculation",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/-qYggg4YQ6w?si=5Wv4HrrRrFA8d_D1",
+    "passcode": "",
+    "taught": "17 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 100,
+    "day": 38,
+    "date": "2026-11-12",
+    "section": "plan",
+    "topic": "5. Financial information and decisions",
+    "part": "5.2 Cash-flow forecasting and working capital",
+    "watch": "Cashflow table till the end",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/-qYggg4YQ6w?si=5Wv4HrrRrFA8d_D1",
+    "passcode": "",
+    "taught": "18 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 101,
+    "day": 38,
+    "date": "2026-11-12",
+    "section": "plan",
+    "topic": "5. Financial information and decisions",
+    "part": "5.3 Income statements",
+    "watch": "Full chapter",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/-qYggg4YQ6w?si=5Wv4HrrRrFA8d_D1",
+    "passcode": "",
+    "taught": "21 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 103,
+    "day": 39,
+    "date": "2026-11-13",
+    "section": "plan",
+    "topic": "5. Financial information and decisions",
+    "part": "5.4 Statement of financial position",
+    "watch": "Full chapter",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/-qYggg4YQ6w?si=5Wv4HrrRrFA8d_D1",
+    "passcode": "",
+    "taught": "22 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 105,
+    "day": 40,
+    "date": "2026-11-14",
+    "section": "plan",
+    "topic": "5. Financial information and decisions",
+    "part": "5.5 Analysis of accounts",
+    "watch": "Start till profitability ratios",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/dfR3IypE00c?si=TOigj03W5-YGR_VD",
+    "passcode": "",
+    "taught": "23 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 106,
+    "day": 40,
+    "date": "2026-11-14",
+    "section": "plan",
+    "topic": "5. Financial information and decisions",
+    "part": "5.5 Analysis of accounts",
+    "watch": "Liquidity ratios till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/dfR3IypE00c?si=TOigj03W5-YGR_VD",
+    "passcode": "",
+    "taught": "24 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 108,
+    "day": 41,
+    "date": "2026-11-15",
+    "section": "plan",
+    "topic": "6. External influences on business activity",
+    "part": "6.1 Economic issues",
+    "watch": "Start till balance of payment",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/6BcrQCz005c?si=_-ghjBvjmvff5MUA",
+    "passcode": "",
+    "taught": "25 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 110,
+    "day": 42,
+    "date": "2026-11-16",
+    "section": "plan",
+    "topic": "6. External influences on business activity",
+    "part": "6.1 Economic issues",
+    "watch": "Bop till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/6BcrQCz005c?si=_-ghjBvjmvff5MUA",
+    "passcode": "",
+    "taught": "26 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 112,
+    "day": 43,
+    "date": "2026-11-17",
+    "section": "plan",
+    "topic": "6. External influences on business activity",
+    "part": "6.3 Business and the international economy",
+    "watch": "Start till mnc",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/50kzBdMRovk?si=QFIa94fPk6-XBeJF",
+    "passcode": "",
+    "taught": "28 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 113,
+    "day": 43,
+    "date": "2026-11-17",
+    "section": "plan",
+    "topic": "6. External influences on business activity",
+    "part": "6.3 Business and the international economy",
+    "watch": "Mnc till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/50kzBdMRovk?si=QFIa94fPk6-XBeJF",
+    "passcode": "",
+    "taught": "29 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 115,
+    "day": 44,
+    "date": "2026-11-18",
+    "section": "plan",
+    "topic": "6. External influences on business activity",
+    "part": "6.2 Environmental and ethical issues",
+    "watch": "Start till how businesses respond to ethical issues",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "30 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 117,
+    "day": 45,
+    "date": "2026-11-19",
+    "section": "plan",
+    "topic": "6. External influences on business activity",
+    "part": "6.2 Environmental and ethical issues",
+    "watch": "ethical issues till the end",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "3 Oct",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   }
+  ],
+  "extras": []
+ },
+ "cs": {
+  "code": "0478",
+  "title": "Computer Science  (0478)",
+  "teacher": "Sir Muhammad Khawaja Gul",
+  "classes": [
+   {
+    "row": 12,
+    "day": 1,
+    "date": "2026-10-06",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "Intro",
+    "watch": "Full",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1Pd_MFo130Jgu9nURfQHSB7VcjOtLUg7u/view?usp=drive_link",
+    "passcode": "",
+    "taught": "3 Jul",
+    "notes": "PAPER 1 HAS MEMORIZATION STUFF AND PAPER 2 IS LIKE LESS MEMORIZATION MORE WORD PROBLEM TYPE. IN PAPER 2 ONLY PROGRAMMING LANGUAGE IS PSUDUCODE. WEEKLY REVISION IS VERY IMPROTANT.",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 13,
+    "day": 1,
+    "date": "2026-10-06",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "1.1 Number systems",
+    "watch": "Full",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1h3W2mDoVKsND5utrT35WtcFGjp8-bYzg/view?usp=drive_link",
+    "passcode": "",
+    "taught": "6 Jul",
+    "notes": "LEARNED THAT WE IN NORMAL LIFES USED 10 BASE NUMBER SYSTER CALLED DENARY DERIVED FROM 10 FINGERS USED IN PAST. COMPUTER HAS REGISTERS AND HAS ON AND OFF ON = 1 OFF = 0. LEARNED HOW TO CONVERT BINARY TO DENEARY. [COMPUTER HAS 2 NUMBER BASED SYSTEM SO HAS TWO FINGERS]",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 15,
+    "day": 2,
+    "date": "2026-10-07",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "1.1 Number systems",
+    "watch": "Full",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/178m5HmNptBXUT--0Dq7dCznf7dvxJQ4A/view?usp=drive_link",
+    "passcode": "",
+    "taught": "7 Jul",
+    "notes": "CONVERTED FROM DENARY TO BINARY AND PLUS ADDIITON OF 8 BIT BINARIES ALSO LEAREND THE ERROR CUASED THE 9TH BIT ERROR.",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 17,
+    "day": 3,
+    "date": "2026-10-08",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "1.1 Number systems",
+    "watch": "Full",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1-OjKFVpMt6hmi0hnWX1VX14PyKkbuHSC/view?usp=drive_link",
+    "passcode": "",
+    "taught": "8 Jul",
+    "notes": "Just learned about hexa decimal like its from 0 to F its 16 based number system and learns where its used like in errors and html color codes and stuff.",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 18,
+    "day": 3,
+    "date": "2026-10-08",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "1.1 Number systems",
+    "watch": "Full",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1vaQ5xQqlfH_JG5Kn6XtH7aexGyPf5RDy/view?usp=drive_link",
+    "passcode": "",
+    "taught": "9 Jul",
+    "notes": "Learned binary to hexa decimal and then hexa decimal to binary as well as the bit shift to left and right left shift multiplies by 2 right shift if 1 added divdeds by 2",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 20,
+    "day": 4,
+    "date": "2026-10-09",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "1.1 Number systems",
+    "watch": "Full",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1G5HGHF9f9pWYJXuX80t-767LAnoB7ZoJ/view?usp=drive_link",
+    "passcode": "",
+    "taught": "10 Jul",
+    "notes": "Did 2's compliment like repreenting negative denary numbers into binary put -128 in the most left bit. and also learned two ways on how to do it some body mention there is 3rd way too. Also learned about Ascii little.",
+    "steps": [
+     true,
+     false,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 22,
+    "day": 5,
+    "date": "2026-10-10",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "1.2 Text, Sound and Images",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/jkS35oXh8b8?si=SqZU2AwC_jYWPeji",
+    "passcode": "",
+    "taught": "13 Jul",
+    "notes": "Told morea about ASCII code and also told about like Uni code. Also told about sound waves but i ddint udnerstood it clearly like told about sample rate and stuff. then tolda bout images color depth of image resoulution of iamge and how it effects file size crispness downloading time etc.",
+    "steps": [
+     true,
+     false,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 23,
+    "day": 5,
+    "date": "2026-10-10",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "1.3 Storage and Compression",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/hFIjtsY453M?si=7eS7suYitUFqJ_Nt",
+    "passcode": "",
+    "taught": "14 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 25,
+    "day": 6,
+    "date": "2026-10-11",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "Topical Practice: 1.3 Storage and Compression",
+    "watch": "Full",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1E9MTgFsgDKlw_e5DxNHJosAVEaOiHSr5/view?usp=drive_link",
+    "passcode": "",
+    "taught": "15 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 27,
+    "day": 7,
+    "date": "2026-10-12",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "2.1 Methods of Data Transfer",
+    "watch": "Till Before USB",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/GMjGrpIziKk?si=-2sIGxu1yNkOlBTo",
+    "passcode": "",
+    "taught": "17 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 28,
+    "day": 7,
+    "date": "2026-10-12",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "2.1 Methods of Data Transfer",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/GMjGrpIziKk?si=-2sIGxu1yNkOlBTo",
+    "passcode": "",
+    "taught": "20 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 30,
+    "day": 8,
+    "date": "2026-10-13",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "2.2 Methods of Error Detection",
+    "watch": "Till before Echo Check",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/wcEIJTPpjWQ?si=VugXdk6J7PGikz6j",
+    "passcode": "",
+    "taught": "20 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 32,
+    "day": 9,
+    "date": "2026-10-14",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "2.2 Methods of Error Detection",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/wcEIJTPpjWQ?si=VugXdk6J7PGikz6j",
+    "passcode": "",
+    "taught": "21 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 33,
+    "day": 9,
+    "date": "2026-10-14",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "2.3 Encryption",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/KhgYZa59jjU?si=avLsTP_0IjTSMYyL",
+    "passcode": "",
+    "taught": "22 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 35,
+    "day": 10,
+    "date": "2026-10-15",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "3.1 Computer Architecture",
+    "watch": "Till before Registers",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/Xb3-FinBN7U?si=w9hk35FBVUcglcVq",
+    "passcode": "",
+    "taught": "22 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 37,
+    "day": 11,
+    "date": "2026-10-16",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "3.1 Computer Architecture",
+    "watch": "Till Before FDE",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/Xb3-FinBN7U?si=w9hk35FBVUcglcVq",
+    "passcode": "",
+    "taught": "23 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 38,
+    "day": 11,
+    "date": "2026-10-16",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "3.1 Computer Architecture",
+    "watch": "Till Before Embedded Systems",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/Xb3-FinBN7U?si=w9hk35FBVUcglcVq",
+    "passcode": "",
+    "taught": "24 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 40,
+    "day": 12,
+    "date": "2026-10-17",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "Topicals ch1 practice",
+    "watch": "Full",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/13EzLcbsR6IYP4oWDmB6W4Rcvgp5LOR7N/view?usp=drive_link",
+    "passcode": "",
+    "taught": "25 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 42,
+    "day": 13,
+    "date": "2026-10-18",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "3.1 Computer Architecture",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/Xb3-FinBN7U?si=w9hk35FBVUcglcVq",
+    "passcode": "",
+    "taught": "27 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 43,
+    "day": 13,
+    "date": "2026-10-18",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Variables - Paper 2",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1VB8LwR_8-gNKA3JnYnFU_ZWDUMAb1SRJ/view?usp=drive_link",
+    "passcode": "",
+    "taught": "28 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 45,
+    "day": 14,
+    "date": "2026-10-19",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Variables - Paper 2",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1mhSj3hg52vdv8AD-UoSoXsLtEbsdDk-a/view?usp=drive_link",
+    "passcode": "",
+    "taught": "29 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 47,
+    "day": 15,
+    "date": "2026-10-20",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Input-Output",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1_Vo39YaNw2uTasDY1PTPvByiQr1gFdnW/view?usp=drive_link",
+    "passcode": "",
+    "taught": "1 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 48,
+    "day": 15,
+    "date": "2026-10-20",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Arithematic",
+    "watch": "All Arithemetics",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/SyfXTnfXvmg?si=E7uyzKqzfywi8LAL",
+    "passcode": "",
+    "taught": "3 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 50,
+    "day": 16,
+    "date": "2026-10-21",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Built Ins",
+    "watch": "Till Before String Operations",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/SyfXTnfXvmg?si=E7uyzKqzfywi8LAL",
+    "passcode": "",
+    "taught": "4 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 52,
+    "day": 17,
+    "date": "2026-10-22",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Built Ins",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/SyfXTnfXvmg?si=E7uyzKqzfywi8LAL",
+    "passcode": "",
+    "taught": "5 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 53,
+    "day": 17,
+    "date": "2026-10-22",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Selection Statements",
+    "watch": "Till 9 minutes",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/Mq3b048GDXI?si=QgNhR-sIReN0slzf",
+    "passcode": "",
+    "taught": "6 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 55,
+    "day": 18,
+    "date": "2026-10-23",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Class not on the progression sheet",
+    "watch": "Your own tracker lists a class on 7 Aug. Check your class group for the recording.",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "7 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 57,
+    "day": 19,
+    "date": "2026-10-24",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Selection Statements",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1z7sQ7ofVADgdozCAITu7QJboRTSoYRTh/view?usp=drive_link",
+    "passcode": "",
+    "taught": "10 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 58,
+    "day": 19,
+    "date": "2026-10-24",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Selection Statements",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1mSziuu8nxxYgQuFR8DU-oQcIa_XWtu0Y/view?usp=drive_link",
+    "passcode": "",
+    "taught": "12 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 60,
+    "day": 20,
+    "date": "2026-10-25",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "Input & Output Devices",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1qIdC4OlZLXrxUtozrM5L2OaQicHZNyy-/view?usp=drive_link",
+    "passcode": "",
+    "taught": "13 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 62,
+    "day": 21,
+    "date": "2026-10-26",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "Input & Output Devices",
+    "watch": "From Microphone till before actuators",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/4QL-ApdK3kI?si=CxW4EBjI_K36jI1K",
+    "passcode": "",
+    "taught": "14 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 63,
+    "day": 21,
+    "date": "2026-10-26",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "3.2 Input & Output Devices + 3.3 Data Storage",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1Ho3gs05zikQWEZSGgA5PtxyrQTWOoHZD/view?usp=drive_link",
+    "passcode": "",
+    "taught": "16 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 65,
+    "day": 22,
+    "date": "2026-10-27",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "3.3 Data Storage",
+    "watch": "From Virtual Memory Till End",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/7eTpjc1l2s4?si=DhY6bQc0YTN_di-X",
+    "passcode": "",
+    "taught": "17 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 67,
+    "day": 23,
+    "date": "2026-10-28",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "3.4 Network Hardware",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/Li3KtvTWM5M?si=ryL1QHibLeziGvZ8",
+    "passcode": "",
+    "taught": "18 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 68,
+    "day": 23,
+    "date": "2026-10-28",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "4.1 Types of Software",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/G7-9gfQeRoY?si=M_0vkSVlI2_8z8lT",
+    "passcode": "",
+    "taught": "19 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 70,
+    "day": 24,
+    "date": "2026-10-29",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "4.1 Types of Software",
+    "watch": "Till before Assembler",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/sjZzDXgH2Go?si=xtBvENSq30qDMkWo",
+    "passcode": "",
+    "taught": "20 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 72,
+    "day": 25,
+    "date": "2026-10-30",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "4.1 Types of Software",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/sjZzDXgH2Go?si=xtBvENSq30qDMkWo",
+    "passcode": "",
+    "taught": "21 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 73,
+    "day": 25,
+    "date": "2026-10-30",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "5.1 The Internet",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/hpV0kOsm5_w?si=uFfSdpFlC-5oWIne",
+    "passcode": "",
+    "taught": "21 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 75,
+    "day": 26,
+    "date": "2026-10-31",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "5.2 Digital Currency",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/NZhVVZK4RAI?si=r-yyMJv9XlfDvR2o",
+    "passcode": "",
+    "taught": "21 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 77,
+    "day": 27,
+    "date": "2026-11-01",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "5.3 Cyber Security",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/7so9N6dUGK0?si=9k1nhY677H49YgNZ",
+    "passcode": "",
+    "taught": "24 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 78,
+    "day": 27,
+    "date": "2026-11-01",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "6.1 Automated Systems",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/mEvFVAX0uWQ?si=zFjMgZENPbFcnSuF",
+    "passcode": "",
+    "taught": "25 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 80,
+    "day": 28,
+    "date": "2026-11-02",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "6.2 Robotics",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/ynLBRXj8Kq4?si=9IfKSvPkJWdj4YDf",
+    "passcode": "",
+    "taught": "26 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 82,
+    "day": 29,
+    "date": "2026-11-03",
+    "section": "plan",
+    "topic": "Paper 1: theory",
+    "part": "6.3 Artificial Intelligence",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/IRr9fPT5mqU?si=LfqdBoz5feQXnxDB",
+    "passcode": "",
+    "taught": "27 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 83,
+    "day": 29,
+    "date": "2026-11-03",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Loops",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1BnKqN8xjWLjDWSGBuv0CnfkHb9boZRAU/view?usp=drive_link",
+    "passcode": "",
+    "taught": "28 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 85,
+    "day": 30,
+    "date": "2026-11-04",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Loops",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1-rpMNz95FEQn8rl6rDVd-zPN1Llq5IAn/view?usp=drive_link",
+    "passcode": "",
+    "taught": "31 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 87,
+    "day": 31,
+    "date": "2026-11-05",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Loops",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1j0A-kbsxNqGxz9J4B98sOcelD1gF-EEc/view?usp=drive_link",
+    "passcode": "",
+    "taught": "1 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 88,
+    "day": 31,
+    "date": "2026-11-05",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Loops",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1qblsXppP_UYkmWbFIe6F-ucewpDFhNzZ/view?usp=drive_link",
+    "passcode": "",
+    "taught": "2 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 90,
+    "day": 32,
+    "date": "2026-11-06",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Loops + Arrays",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1-ftVrcEwyAOo6uLJZnjcWL1K90Ng8bge/view?usp=drive_link",
+    "passcode": "",
+    "taught": "3 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 92,
+    "day": 33,
+    "date": "2026-11-07",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Arrays",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/16B4nStPHGMN3A1yKD3sLHyYU4R7wiSXk/view?usp=drive_link",
+    "passcode": "",
+    "taught": "4 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 93,
+    "day": 33,
+    "date": "2026-11-07",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Arrays",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/18SOdnPGsJgj-FWyhZXkMWTr7wZewJzy5/view?usp=drive_link",
+    "passcode": "",
+    "taught": "7 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 95,
+    "day": 34,
+    "date": "2026-11-08",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Linear Search",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/j8np_Gq4iJY?si=bYiHF1qphKeTiExq",
+    "passcode": "",
+    "taught": "8 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 97,
+    "day": 35,
+    "date": "2026-11-09",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "2D Arrays",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/pPdKIAf3WPU?si=0fZJWZue2TXIcfUC",
+    "passcode": "",
+    "taught": "9 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 98,
+    "day": 35,
+    "date": "2026-11-09",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Bubble Sort",
+    "watch": "Till before bubble sort code",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1grchAzc0-OVovMPNVdgw5BW6qgXpC1uH/view?usp=drive_link",
+    "passcode": "",
+    "taught": "10 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 100,
+    "day": 36,
+    "date": "2026-11-10",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Files",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/ivPrsuFXLC8?si=FOKWmZCRVfECh4Xn",
+    "passcode": "",
+    "taught": "11 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 102,
+    "day": 37,
+    "date": "2026-11-11",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Bubble Sort",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1grchAzc0-OVovMPNVdgw5BW6qgXpC1uH/view?usp=drive_link",
+    "passcode": "",
+    "taught": "13 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 103,
+    "day": 37,
+    "date": "2026-11-11",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Functions and Procedures",
+    "watch": "Full",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/q3r_DCC1aAY?si=HYpXFdMN10JsSdrP",
+    "passcode": "",
+    "taught": "14 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 105,
+    "day": 38,
+    "date": "2026-11-12",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Functions and Procedures",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1rNuLeGbg2Tr8n7EYrIUNW68spZ__tSUy/view?usp=drive_link",
+    "passcode": "",
+    "taught": "15 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 107,
+    "day": 39,
+    "date": "2026-11-13",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Functions and Procedures",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1YauPSPZUA_8ZGhwSyEMuQBzVeAvPe_gI/view?usp=drive_link",
+    "passcode": "",
+    "taught": "17 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 108,
+    "day": 39,
+    "date": "2026-11-13",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Standard Methods of Solution",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1huGfgXqxItSpego9wnY8bz5xmEOrAWLa/view?usp=drive_link",
+    "passcode": "",
+    "taught": "18 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 110,
+    "day": 40,
+    "date": "2026-11-14",
+    "section": "plan",
+    "topic": "Paper 2: programming",
+    "part": "Standard Methods of Solution + DB",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1_bRW1gcBBdzDJ5GqJ5SHc6t22D8dX6l9/view?usp=drive_link",
+    "passcode": "",
+    "taught": "21 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 112,
+    "day": 41,
+    "date": "2026-11-15",
+    "section": "plan",
+    "topic": "Paper 2 final sessions",
+    "part": "Class recording 09-22",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/19puiXNTQAyHfHBqWOjlBbgaq8vjI-gMB/view?usp=drive_link",
+    "passcode": "",
+    "taught": "22 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 113,
+    "day": 41,
+    "date": "2026-11-15",
+    "section": "plan",
+    "topic": "Paper 2 final sessions",
+    "part": "Class recording 09-23",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1UPmNgnclqA6YD1m5plSNnB7BRcO8KfAb/view?usp=drive_link",
+    "passcode": "",
+    "taught": "23 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 115,
+    "day": 42,
+    "date": "2026-11-16",
+    "section": "plan",
+    "topic": "Paper 2 final sessions",
+    "part": "Class recording 09-25",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/10F7non4IzSDBP8ivWWab8n37qZcpKE0c/view?usp=drive_link",
+    "passcode": "",
+    "taught": "25 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 117,
+    "day": 43,
+    "date": "2026-11-17",
+    "section": "plan",
+    "topic": "Paper 2 final sessions",
+    "part": "Class recording 09-27",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1hCbtxrSMyOJ_GwGiDPWE_PZt2Ttm-emu/view?usp=drive_link",
+    "passcode": "",
+    "taught": "27 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 118,
+    "day": 43,
+    "date": "2026-11-17",
+    "section": "plan",
+    "topic": "Paper 2 final sessions",
+    "part": "Class recording 09-28",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1ZDr9OIA6c6sVAcRdpK1SRzaGDYHTWrmL/view?usp=drive_link",
+    "passcode": "",
+    "taught": "28 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 120,
+    "day": 44,
+    "date": "2026-11-18",
+    "section": "plan",
+    "topic": "Paper 2 final sessions",
+    "part": "Class recording 09-29",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1fN99-Ch7frbotP1aryD4PfOqjxh3tWeH/view?usp=drive_link",
+    "passcode": "",
+    "taught": "29 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 122,
+    "day": 45,
+    "date": "2026-11-19",
+    "section": "plan",
+    "topic": "Paper 2 final sessions",
+    "part": "Class recording 09-30",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1E2-7_1I1fUloIa_CO3wgmB0yU2i7vV4r/view?usp=drive_link",
+    "passcode": "",
+    "taught": "30 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   }
+  ],
+  "extras": [
+   {
+    "title": "Master playlist: Paper 1",
+    "url": "https://www.youtube.com/playlist?list=PLLyqGZba3Xv14byYtlIpU5cZQkVIBzvMO"
+   },
+   {
+    "title": "Master playlist: Paper 2",
+    "url": "https://www.youtube.com/playlist?list=PLLyqGZba3Xv1esH57AkYbOUV9ds-pGsNv"
+   }
+  ]
+ },
+ "accounting": {
+  "code": "0452",
+  "title": "Accounting  (0452)",
+  "teacher": "Sir Wassim Abbas Alvi",
+  "classes": [
+   {
+    "row": 12,
+    "day": 1,
+    "date": "2026-10-06",
+    "section": "plan",
+    "topic": "Basics of Accounting",
+    "part": "Part-1",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=RJKxCzm7BcA&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=3",
+    "passcode": "",
+    "taught": "3 Jul",
+    "notes": "Sir, introduces to accounting the main accounting concept. tells about book keeping just little.",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 13,
+    "day": 1,
+    "date": "2026-10-06",
+    "section": "plan",
+    "topic": "Basics of Accounting",
+    "part": "Part-1, class 2",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=RJKxCzm7BcA&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=3",
+    "passcode": "",
+    "taught": "6 Jul",
+    "notes": "Sir introduces more on accounting tells how to score like good grade plus aslo tells about the objective of the examiner and what accounting basics we have to do plus learned accountign equation. plus different terms like assets etc.",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 15,
+    "day": 2,
+    "date": "2026-10-07",
+    "section": "plan",
+    "topic": "Basics of Accounting",
+    "part": "Part-1, class 3",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=RJKxCzm7BcA&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=3",
+    "passcode": "",
+    "taught": "7 Jul",
+    "notes": "Sir taught the clear rule. CLR (CAPITAL, LIBILITES AND REVENUE ) nature of increase is credit and decrease is debit. For EA (Expense and Assests) nature of increase is debit and decrease is debit told to prepare the basic before next class as questions in next class showed t account.",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 17,
+    "day": 3,
+    "date": "2026-10-08",
+    "section": "plan",
+    "topic": "Basics of Accounting",
+    "part": "Part-1, class 4",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=RJKxCzm7BcA&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=3",
+    "passcode": "",
+    "taught": "8 Jul",
+    "notes": "Sir taught some examples of what to debit and credit full big example of baisc to test.",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 18,
+    "day": 3,
+    "date": "2026-10-08",
+    "section": "plan",
+    "topic": "Basics of Accounting",
+    "part": "Part-1, class 5",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=RJKxCzm7BcA&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=3",
+    "passcode": "",
+    "taught": "9 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 20,
+    "day": 4,
+    "date": "2026-10-09",
+    "section": "plan",
+    "topic": "Basics of Accounting",
+    "part": "Part-1, class 6",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=RJKxCzm7BcA&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=3",
+    "passcode": "",
+    "taught": "10 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 22,
+    "day": 5,
+    "date": "2026-10-10",
+    "section": "plan",
+    "topic": "Basics of Accounting",
+    "part": "Part-1, class 7",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=bJQfmZtZMFo&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=2",
+    "passcode": "",
+    "taught": "11 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 23,
+    "day": 5,
+    "date": "2026-10-10",
+    "section": "plan",
+    "topic": "Basics of Accounting",
+    "part": "Part-2",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=bJQfmZtZMFo&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=2",
+    "passcode": "",
+    "taught": "12 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 25,
+    "day": 6,
+    "date": "2026-10-11",
+    "section": "plan",
+    "topic": "Basics of Accounting",
+    "part": "Part-2, class 2",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=bJQfmZtZMFo&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=2",
+    "passcode": "",
+    "taught": "13 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 27,
+    "day": 7,
+    "date": "2026-10-12",
+    "section": "plan",
+    "topic": "Trading, P&L, balance sheet & trial balance",
+    "part": "Part-3 (Intro)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=_qvH8FtGS9A&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=1",
+    "passcode": "",
+    "taught": "14 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 28,
+    "day": 7,
+    "date": "2026-10-12",
+    "section": "plan",
+    "topic": "Trading, P&L, balance sheet & trial balance",
+    "part": "Part-3 Detailed",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=xn0QS2KFOa4&t=7s",
+    "passcode": "",
+    "taught": "15 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 30,
+    "day": 8,
+    "date": "2026-10-13",
+    "section": "plan",
+    "topic": "Trading, P&L, balance sheet & trial balance",
+    "part": "Part-3 Detailed, class 2",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=xn0QS2KFOa4&t=7s",
+    "passcode": "",
+    "taught": "16 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 32,
+    "day": 9,
+    "date": "2026-10-14",
+    "section": "plan",
+    "topic": "Trading, P&L, balance sheet & trial balance",
+    "part": "Part-4 for O levels (It's same Part-5 for A levels)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=yyVTPTnm9zQ&list=PLLyqGZba3Xv2QUmlbQzjiUPFxUNU7aaBG&index=2",
+    "passcode": "",
+    "taught": "19 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 34,
+    "day": 10,
+    "date": "2026-10-15",
+    "section": "plan",
+    "topic": "Trading, P&L, balance sheet & trial balance",
+    "part": "Trial Balance Practice Question",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/1RwM4cX8aJcQpeICV1gn8f0oa9imRHqA1/view?usp=sharing",
+    "passcode": "",
+    "taught": "20 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 35,
+    "day": 10,
+    "date": "2026-10-15",
+    "section": "plan",
+    "topic": "Trading, P&L, balance sheet & trial balance",
+    "part": "Trial balance practice question completed",
+    "watch": "",
+    "linkText": "Drive recording",
+    "link": "https://drive.google.com/file/d/16PobYHGXt4y9r4Fqcp4l_U5ZhSwu9391/view?usp=sharing",
+    "passcode": "",
+    "taught": "21 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 37,
+    "day": 11,
+    "date": "2026-10-16",
+    "section": "plan",
+    "topic": "Daybooks / books of prime entry",
+    "part": "Introduction (Basics from start up to types of accounts)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=mJn3R9TZ6zs&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=17",
+    "passcode": "",
+    "taught": "22 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 39,
+    "day": 12,
+    "date": "2026-10-17",
+    "section": "plan",
+    "topic": "Daybooks / books of prime entry",
+    "part": "Introduction (Basics from types of accounts till end of discounts before past paper practice)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=mJn3R9TZ6zs&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=17",
+    "passcode": "",
+    "taught": "23 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 40,
+    "day": 12,
+    "date": "2026-10-17",
+    "section": "plan",
+    "topic": "Daybooks / books of prime entry",
+    "part": "Cash Book Question",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=mJn3R9TZ6zs&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=17",
+    "passcode": "",
+    "taught": "24 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 42,
+    "day": 13,
+    "date": "2026-10-18",
+    "section": "plan",
+    "topic": "Daybooks / books of prime entry",
+    "part": "Sales Journal Question (Addo)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=mJn3R9TZ6zs&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=17",
+    "passcode": "",
+    "taught": "27 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 44,
+    "day": 14,
+    "date": "2026-10-19",
+    "section": "plan",
+    "topic": "Daybooks / books of prime entry",
+    "part": "Purchase Journal Question (Nakul) part a and b",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=mJn3R9TZ6zs&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=17",
+    "passcode": "",
+    "taught": "27 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 45,
+    "day": 14,
+    "date": "2026-10-19",
+    "section": "plan",
+    "topic": "Daybooks / books of prime entry",
+    "part": "Purchase Journal Question part c and part d (Theory)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=mJn3R9TZ6zs&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=17",
+    "passcode": "",
+    "taught": "28 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 47,
+    "day": 15,
+    "date": "2026-10-20",
+    "section": "plan",
+    "topic": "Daybooks / books of prime entry",
+    "part": "Petty Cash Book",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=mJn3R9TZ6zs&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=17",
+    "passcode": "",
+    "taught": "30 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 49,
+    "day": 16,
+    "date": "2026-10-21",
+    "section": "plan",
+    "topic": "Daybooks / books of prime entry",
+    "part": "Petty Cash Book (Remaining Past paper + Theory)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=mJn3R9TZ6zs&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=17",
+    "passcode": "",
+    "taught": "31 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 50,
+    "day": 16,
+    "date": "2026-10-21",
+    "section": "plan",
+    "topic": "Capital and Revenue Expenditure",
+    "part": "Starting from 24:16 till 29:40",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=cpEct53-oeU&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=11",
+    "passcode": "",
+    "taught": "3 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 52,
+    "day": 17,
+    "date": "2026-10-22",
+    "section": "plan",
+    "topic": "Depreciation",
+    "part": "Part-1 (from start till topic straigh line method BS 2025 extracts)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=meVXDUZ3me4&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=25",
+    "passcode": "",
+    "taught": "4 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 54,
+    "day": 18,
+    "date": "2026-10-23",
+    "section": "plan",
+    "topic": "Depreciation",
+    "part": "Part-1 (Straight Line method completed with T accounts)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=meVXDUZ3me4&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=25",
+    "passcode": "",
+    "taught": "5 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 56,
+    "day": 19,
+    "date": "2026-10-24",
+    "section": "plan",
+    "topic": "Depreciation",
+    "part": "Part-1 (Reducing balance method)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=meVXDUZ3me4&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=25",
+    "passcode": "",
+    "taught": "6 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 57,
+    "day": 19,
+    "date": "2026-10-24",
+    "section": "plan",
+    "topic": "Depreciation",
+    "part": "Part-1 ( from additions to question 26.7 Machine A, B and C) and disposal T account",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=meVXDUZ3me4&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=25",
+    "passcode": "",
+    "taught": "7 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 59,
+    "day": 20,
+    "date": "2026-10-25",
+    "section": "plan",
+    "topic": "Depreciation",
+    "part": "Part-1 ( Last part Disposal of fixed assets from 1:37:25 onwards)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=meVXDUZ3me4&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=25",
+    "passcode": "",
+    "taught": "11 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 61,
+    "day": 21,
+    "date": "2026-10-26",
+    "section": "plan",
+    "topic": "Depreciation",
+    "part": "Part-2 Disposal practice past papers (32:30 onwards till 1:07:10)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=devl0tg0Jug&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=34",
+    "passcode": "",
+    "taught": "11 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 62,
+    "day": 21,
+    "date": "2026-10-26",
+    "section": "plan",
+    "topic": "Depreciation",
+    "part": "Part-2 (Past Paper Question Nov 2021 P22 Q-5) 1:07:11 onwards 1:30:00",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=devl0tg0Jug&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=34",
+    "passcode": "",
+    "taught": "12 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 64,
+    "day": 22,
+    "date": "2026-10-27",
+    "section": "plan",
+    "topic": "Depreciation",
+    "part": "Part-2 (Past Paper Question Nov 2021 P22 Q-5) 1:30:00 onwards",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=devl0tg0Jug&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=34",
+    "passcode": "",
+    "taught": "13 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 66,
+    "day": 23,
+    "date": "2026-10-28",
+    "section": "plan",
+    "topic": "Depreciation",
+    "part": "Part-2 (Revaluation method and Past Paper Question onward till end)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=devl0tg0Jug&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=34",
+    "passcode": "",
+    "taught": "14 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 67,
+    "day": 23,
+    "date": "2026-10-28",
+    "section": "plan",
+    "topic": "Bad debts and Provision for doubtful debts",
+    "part": "Part-1 (Starting from 1:00:35)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=nYY4Rgm6rNA&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=23",
+    "passcode": "",
+    "taught": "15 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 69,
+    "day": 24,
+    "date": "2026-10-29",
+    "section": "plan",
+    "topic": "Bad debts and Provision for doubtful debts",
+    "part": "From start of video till 31:50",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=Yk1cjwrCL4Y&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=22",
+    "passcode": "",
+    "taught": "17 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 71,
+    "day": 25,
+    "date": "2026-10-30",
+    "section": "plan",
+    "topic": "Bad debts and Provision for doubtful debts",
+    "part": "Part-2 Past Papers practice",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=Yk1cjwrCL4Y&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=22",
+    "passcode": "",
+    "taught": "18 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 72,
+    "day": 25,
+    "date": "2026-10-30",
+    "section": "plan",
+    "topic": "Inventory valuation",
+    "part": "Basics",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=nYY4Rgm6rNA&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=23",
+    "passcode": "",
+    "taught": "19 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 74,
+    "day": 26,
+    "date": "2026-10-31",
+    "section": "plan",
+    "topic": "Inventory valuation",
+    "part": "Basics Theory",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=nYY4Rgm6rNA&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=23",
+    "passcode": "",
+    "taught": "20 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 76,
+    "day": 27,
+    "date": "2026-11-01",
+    "section": "plan",
+    "topic": "Inventory valuation",
+    "part": "Past Paper practice",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=nYY4Rgm6rNA&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=23",
+    "passcode": "",
+    "taught": "22 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 78,
+    "day": 28,
+    "date": "2026-11-02",
+    "section": "plan",
+    "topic": "Accounting Concepts",
+    "part": "Starting from 02:46:29",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=ZB1hLogYCMA&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=15",
+    "passcode": "",
+    "taught": "24 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 79,
+    "day": 28,
+    "date": "2026-11-02",
+    "section": "plan",
+    "topic": "Accruals and Prepayments",
+    "part": "Starting from 59:45 (Accruals)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=Yk1cjwrCL4Y&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=22",
+    "passcode": "",
+    "taught": "25 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 81,
+    "day": 29,
+    "date": "2026-11-03",
+    "section": "plan",
+    "topic": "Accruals and Prepayments",
+    "part": "Starting from 59:45 (Prepayments)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=Yk1cjwrCL4Y&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=22",
+    "passcode": "",
+    "taught": "26 Aug",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 83,
+    "day": 30,
+    "date": "2026-11-04",
+    "section": "plan",
+    "topic": "Accruals and Prepayments",
+    "part": "Receivable Income and Advance Liability",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=Yk1cjwrCL4Y&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=22",
+    "passcode": "",
+    "taught": "28 Aug",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 84,
+    "day": 30,
+    "date": "2026-11-04",
+    "section": "plan",
+    "topic": "Accruals and Prepayments",
+    "part": "Past Papers practice (first two questions)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=Yk1cjwrCL4Y&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=22",
+    "passcode": "",
+    "taught": "31 Aug",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 86,
+    "day": 31,
+    "date": "2026-11-05",
+    "section": "plan",
+    "topic": "Accruals and Prepayments",
+    "part": "Past Papers practice (remaining questions till end)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=Yk1cjwrCL4Y&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=22",
+    "passcode": "",
+    "taught": "1 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 88,
+    "day": 32,
+    "date": "2026-11-06",
+    "section": "plan",
+    "topic": "Errors / Correction of Errors",
+    "part": "Errors types 1-3",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=Qo2ciO_X7BY&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=19",
+    "passcode": "",
+    "taught": "2 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 89,
+    "day": 32,
+    "date": "2026-11-06",
+    "section": "plan",
+    "topic": "Errors / Correction of Errors",
+    "part": "Errors types 4-7 and Suspense Account",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=Qo2ciO_X7BY&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=19",
+    "passcode": "",
+    "taught": "3 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 91,
+    "day": 33,
+    "date": "2026-11-07",
+    "section": "plan",
+    "topic": "Errors / Correction of Errors",
+    "part": "More Past Papers practice",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=Qo2ciO_X7BY&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=19",
+    "passcode": "",
+    "taught": "4 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 93,
+    "day": 34,
+    "date": "2026-11-08",
+    "section": "plan",
+    "topic": "Errors / Correction of Errors",
+    "part": "More Past Papers practice",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=Qo2ciO_X7BY&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=19",
+    "passcode": "",
+    "taught": "6 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 94,
+    "day": 34,
+    "date": "2026-11-08",
+    "section": "plan",
+    "topic": "Accounts from incomplete records",
+    "part": "Basics theory and T-Acocunts till Markup Margin",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=TPyu5gbiHFM&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=20",
+    "passcode": "",
+    "taught": "7 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 96,
+    "day": 35,
+    "date": "2026-11-09",
+    "section": "plan",
+    "topic": "Accounts from incomplete records",
+    "part": "past paper question nov 2021 in notes",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=TPyu5gbiHFM&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=20",
+    "passcode": "",
+    "taught": "8 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 98,
+    "day": 36,
+    "date": "2026-11-10",
+    "section": "plan",
+    "topic": "Accounts from incomplete records",
+    "part": "past paper question june 2022 till end in the notes",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=TPyu5gbiHFM&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=20",
+    "passcode": "",
+    "taught": "9 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 100,
+    "day": 37,
+    "date": "2026-11-11",
+    "section": "plan",
+    "topic": "Control Accounts",
+    "part": "Starting from 1:39:55",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=sh_WTe6en60&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=12",
+    "passcode": "",
+    "taught": "10 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 101,
+    "day": 37,
+    "date": "2026-11-11",
+    "section": "plan",
+    "topic": "Control Accounts",
+    "part": "Past Paper practice",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=sh_WTe6en60&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=12",
+    "passcode": "",
+    "taught": "11 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 103,
+    "day": 38,
+    "date": "2026-11-12",
+    "section": "plan",
+    "topic": "Bank Reconciliation Statements (BRS)",
+    "part": "Basic Notes",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=sh_WTe6en60&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=12",
+    "passcode": "",
+    "taught": "13 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 105,
+    "day": 39,
+    "date": "2026-11-13",
+    "section": "plan",
+    "topic": "Bank Reconciliation Statements (BRS)",
+    "part": "Past Paper practice",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=sh_WTe6en60&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=12",
+    "passcode": "",
+    "taught": "14 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 106,
+    "day": 39,
+    "date": "2026-11-13",
+    "section": "plan",
+    "topic": "Not-for-profit organisations (Income & Expenditure)",
+    "part": "Basic Notes and Frankwood Question",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=o822zt_YJ58&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=18",
+    "passcode": "",
+    "taught": "15 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 108,
+    "day": 40,
+    "date": "2026-11-14",
+    "section": "plan",
+    "topic": "Not-for-profit organisations (Income & Expenditure)",
+    "part": "Frankwood Question Football Club",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=o822zt_YJ58&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=18",
+    "passcode": "",
+    "taught": "16 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 110,
+    "day": 41,
+    "date": "2026-11-15",
+    "section": "plan",
+    "topic": "Not-for-profit organisations (Income & Expenditure)",
+    "part": "Football club question continues",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=o822zt_YJ58&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=18",
+    "passcode": "",
+    "taught": "17 Sep",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 111,
+    "day": 41,
+    "date": "2026-11-15",
+    "section": "plan",
+    "topic": "Not-for-profit organisations (Income & Expenditure)",
+    "part": "Past Paper practice BH Sports Club",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=o822zt_YJ58&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=18",
+    "passcode": "",
+    "taught": "18 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 113,
+    "day": 42,
+    "date": "2026-11-16",
+    "section": "plan",
+    "topic": "Manufacturing Accounts",
+    "part": "Basics and Formats",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=lcai34XW24k&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=13",
+    "passcode": "",
+    "taught": "19 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 115,
+    "day": 43,
+    "date": "2026-11-17",
+    "section": "plan",
+    "topic": "Manufacturing Accounts",
+    "part": "Full format continued",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=lcai34XW24k&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=13",
+    "passcode": "",
+    "taught": "20 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 116,
+    "day": 43,
+    "date": "2026-11-17",
+    "section": "plan",
+    "topic": "Manufacturing Accounts",
+    "part": "Past Paper Practice Hilary Nov 2023 P23 Q2",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=lcai34XW24k&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=13",
+    "passcode": "",
+    "taught": "21 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 118,
+    "day": 44,
+    "date": "2026-11-18",
+    "section": "plan",
+    "topic": "Manufacturing Accounts",
+    "part": "Past paper practice June 2024 P22 Q2",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=lcai34XW24k&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=13",
+    "passcode": "",
+    "taught": "22 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 120,
+    "day": 45,
+    "date": "2026-11-19",
+    "section": "plan",
+    "topic": "Company Accounts",
+    "part": "Basics up to advantages and disadvantages of company",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=J43R3aGLBug&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=16",
+    "passcode": "",
+    "taught": "23 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 124,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Company Accounts",
+    "part": "Rest of the video (after advantages & disadvantages)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=J43R3aGLBug&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=16",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 125,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Partnership Accounts",
+    "part": "Full topic",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=WcZ5VTx7nCk&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=14",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 126,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Ratio Analysis",
+    "part": "Full topic",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=ZB1hLogYCMA&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=15",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 127,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Marathon revision",
+    "part": "Whole marathon video (all topics in one)",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=cpEct53-oeU&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=15",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 128,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Exam tips",
+    "part": "P2 helpful tips before exam",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=Bl1sJTkHMLc&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=9",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 129,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Past paper practice",
+    "part": "Past Paper P1 Practice Nov 2024 P12 O levels",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=BK5gstEN-SI&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=5",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 130,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Past paper practice",
+    "part": "Past Paper P1 Practice Nov 2024 P13 O levels",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=BK5gstEN-SI&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=5",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 131,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Past paper practice",
+    "part": "Past Paper P1 Practice Jun 2024 P12 O levels",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=BK5gstEN-SI&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=5",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 132,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Past paper practice",
+    "part": "Past Paper P1 Practice 0452 Cambridge IGCSE March 2025 P12",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/watch?v=BK5gstEN-SI&list=PLLyqGZba3Xv2PYtdxGbjG35P9R8y4St8J&index=5",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   }
+  ],
+  "extras": []
+ },
+ "maths": {
+  "code": "0580",
+  "title": "Maths  (0580)",
+  "teacher": "Sir Zain Ul Afaq",
+  "classes": [
+   {
+    "row": 12,
+    "day": 1,
+    "date": "2026-10-06",
+    "section": "plan",
+    "topic": "Arithmetic",
+    "part": "Square / cube numbers memorization",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/vHcvBIRCugUPsRxmXiXhljsiKTiARy0PnuIHrFIQP55Lbl2qYHBPT9v4I5qNFldO.Dpv3Bw72OvqZWJDc",
+    "passcode": "&GAE77%&",
+    "taught": "3 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 13,
+    "day": 1,
+    "date": "2026-10-06",
+    "section": "plan",
+    "topic": "Arithmetic",
+    "part": "BODMAS",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/Ib4SMwow5049Guh5nnbqTyzwLg46WbM6jOUmo6GisCONoUXVDihzBRAmzIVWmMzY.-LDNz4w4jm1HVVnN",
+    "passcode": "sv2Z09.d",
+    "taught": "6 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 15,
+    "day": 2,
+    "date": "2026-10-07",
+    "section": "plan",
+    "topic": "Arithmetic",
+    "part": "Fractions",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/d1ntC2rQuAY-7_hOryWgZUPpoEy0oJKBoIdavpWguNWUu7vbupWg7QSvSamlkCWX.4mpYA4g8AWcYJ3Ip",
+    "passcode": "x6K&tz$v",
+    "taught": "7 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 16,
+    "day": 2,
+    "date": "2026-10-07",
+    "section": "plan",
+    "topic": "Arithmetic",
+    "part": "Decimals",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/rVJ8LlNXDl-lSDPHwU7naP2ef8BTUs8yqSHBPdgS02w0WpkPkYxZcq-6Ttkeo0uk.b9NX-bigzsHtB2Eh",
+    "passcode": "#yfe4U0*",
+    "taught": "8 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 18,
+    "day": 3,
+    "date": "2026-10-08",
+    "section": "plan",
+    "topic": "Arithmetic",
+    "part": "Midway",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/tYk4k2AREVMNsoEv3mZr3SJOxCPj-TLCa507fxZwSNYZxWfjfay-WRXGDa34QXij.WBxXDTdECFa_HQxd",
+    "passcode": "hP$3g@hr",
+    "taught": "9 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 19,
+    "day": 3,
+    "date": "2026-10-08",
+    "section": "plan",
+    "topic": "Arithmetic",
+    "part": "Difference",
+    "watch": "(same video as above)",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/tYk4k2AREVMNsoEv3mZr3SJOxCPj-TLCa507fxZwSNYZxWfjfay-WRXGDa34QXij.WBxXDTdECFa_HQxd",
+    "passcode": "hP$3g@hr",
+    "taught": "9 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 21,
+    "day": 4,
+    "date": "2026-10-09",
+    "section": "plan",
+    "topic": "Arithmetic",
+    "part": "Number families",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/Irn8x0vs2k_Irt5mY1ZJ_jKRDs_tBe-pmWaGC-boCJSQ4HxsFGFolTVI5SNk4iAq.e45RjFNaVewKSQOV",
+    "passcode": "L1^9HTX=",
+    "taught": "10 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 23,
+    "day": 5,
+    "date": "2026-10-10",
+    "section": "plan",
+    "topic": "Arithmetic",
+    "part": "Recurring to decimal conversion",
+    "watch": "2:48:00 till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/yJxpWZbpq-0?si=ppshp-z4Z6Rp9lqM",
+    "passcode": "",
+    "taught": "13 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 24,
+    "day": 5,
+    "date": "2026-10-10",
+    "section": "plan",
+    "topic": "Arithmetic",
+    "part": "Practice",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/xS8fw9zS--ZVZlP5w3oNLVtINOQ4SkxZzMeJoF6Z509SMCDbX96u2BFzCf2l_xSs.rSetJTO36dPjbW-h",
+    "passcode": "?0Fj0i3U",
+    "taught": "24 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     true,
+     false
+    ]
+   },
+   {
+    "row": 26,
+    "day": 6,
+    "date": "2026-10-11",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Unit conversion",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/sC7pgnNnd2I?si=b9iHgKwTV2wNW6Re",
+    "passcode": "",
+    "taught": "15 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 27,
+    "day": 6,
+    "date": "2026-10-11",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Ratios",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/ygEgrRGU2aE?si=9aPzicN4FIeTqAbU",
+    "passcode": "",
+    "taught": "16 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 29,
+    "day": 7,
+    "date": "2026-10-12",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Pie charts",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/iKwrUw1MSUk?si=w84qKViwW0bQOncS",
+    "passcode": "",
+    "taught": "17 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 31,
+    "day": 8,
+    "date": "2026-10-13",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Maps and scales",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/IkCvp-aefk0?si=8cR5VDLZH0Ubsk2v",
+    "passcode": "",
+    "taught": "21 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 32,
+    "day": 8,
+    "date": "2026-10-13",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Currency rates",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/wgIMYmVBhvo?si=-14slp15H2vCNawz",
+    "passcode": "",
+    "taught": "22 Jul",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 34,
+    "day": 9,
+    "date": "2026-10-14",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Percentages: formula",
+    "watch": "First 22 mins",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/SXZJO-jX4h4?si=BZWx-NbC6tvpjELO",
+    "passcode": "",
+    "taught": "22 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 35,
+    "day": 9,
+    "date": "2026-10-14",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Percentages: boxes",
+    "watch": "22 mins onwards",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/SXZJO-jX4h4?si=BZWx-NbC6tvpjELO",
+    "passcode": "",
+    "taught": "23 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 37,
+    "day": 10,
+    "date": "2026-10-15",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Simple and compound interest concept",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/igPE_qz-LvtyOzwzC0-67ECxkeb_REs9YVbekQPul_xTb1inDdpQapj4aU1bivit.k0UmDWQ9RRGZxxpz",
+    "passcode": "Mj&?Gp7i",
+    "taught": "27 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 39,
+    "day": 11,
+    "date": "2026-10-16",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Simple interest type 1",
+    "watch": "(same video as above)",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/igPE_qz-LvtyOzwzC0-67ECxkeb_REs9YVbekQPul_xTb1inDdpQapj4aU1bivit.k0UmDWQ9RRGZxxpz",
+    "passcode": "Mj&?Gp7i",
+    "taught": "27 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 40,
+    "day": 11,
+    "date": "2026-10-16",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Simple interest type 2",
+    "watch": "(same video as above)",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/igPE_qz-LvtyOzwzC0-67ECxkeb_REs9YVbekQPul_xTb1inDdpQapj4aU1bivit.k0UmDWQ9RRGZxxpz",
+    "passcode": "Mj&?Gp7i",
+    "taught": "28 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 42,
+    "day": 12,
+    "date": "2026-10-17",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Simple interest type 3",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/ZgLmPseDGY9gSXFkMEX86ATTBnC4W6la1qYahOMO8ORVaqAmZf6OOsIHA61fzLkC.-4p53MOzic86CeWp",
+    "passcode": "c@T9Y$0k",
+    "taught": "28 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 43,
+    "day": 12,
+    "date": "2026-10-17",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Compound interest",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/UPGKNqJfF2Q?si=amPUrPoRL3EQDYS-",
+    "passcode": "",
+    "taught": "28 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 45,
+    "day": 13,
+    "date": "2026-10-18",
+    "section": "plan",
+    "topic": "Daily maths",
+    "part": "Downpayment and installments",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/2apa9RmB-Nkn6_DOAh72I8SsxxRdcm9Q192HNC7GP3yHWtGPLrL6c-XLEagxIC0o.rhIRtOoH3Z3maBIp",
+    "passcode": "3Ke6zC#K",
+    "taught": "30 Jul",
+    "notes": "",
+    "steps": [
+     true,
+     true,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 47,
+    "day": 14,
+    "date": "2026-10-19",
+    "section": "plan",
+    "topic": "Statistics",
+    "part": "Mode median mean: raw data",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/4XdeVFevrqyhPR9ism84CHy4SYII1VMkdCsma0YDH4Z4SkY579XLAB6Ffdpd3SRo.wkDdch-iCepYC-Ik?startTime=1785763745000",
+    "passcode": "*E7nXVCB",
+    "taught": "3 Aug",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 48,
+    "day": 14,
+    "date": "2026-10-19",
+    "section": "plan",
+    "topic": "Statistics",
+    "part": "Mode median mean: single value data",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/MR-48mWeNZt9oqGrtKcNZuBISmKe-VOoIMJh4XBqr25Sr7hjvulhflwF2tuMmR0Z.iP5R3sv0xqCs4Nwn?startTime=1785850239000",
+    "passcode": "ms27&07x",
+    "taught": "4 Aug",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 50,
+    "day": 15,
+    "date": "2026-10-20",
+    "section": "plan",
+    "topic": "Statistics",
+    "part": "Mode median mean: range table",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/5bV-j41L8J2WI4qTRfn517gDSfUkCOsgAp_--uu6v2R_i3aNTJXnS9JR3D4hbjin.34EFXzkwDEVT8lB0?startTime=1785935597000",
+    "passcode": "rw.7ikCz",
+    "taught": "5 Aug",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 51,
+    "day": 15,
+    "date": "2026-10-20",
+    "section": "plan",
+    "topic": "Statistics",
+    "part": "Histogram: single value table",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/1GzadzwQJhSlyhPZCSUSJM2zpclIVPH-DEyzlfo1ho3ACHVmrh0Xj9qHYq2-GywQ.x935l9ksbV5iG66H?startTime=1786109103000",
+    "passcode": "#3Z+ff6u",
+    "taught": "7 Aug",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 53,
+    "day": 16,
+    "date": "2026-10-21",
+    "section": "plan",
+    "topic": "Statistics",
+    "part": "Histogram: range table same class width",
+    "watch": "(same video as above)",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/1GzadzwQJhSlyhPZCSUSJM2zpclIVPH-DEyzlfo1ho3ACHVmrh0Xj9qHYq2-GywQ.x935l9ksbV5iG66H?startTime=1786109103000",
+    "passcode": "#3Z+ff6u",
+    "taught": "7 Aug",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 54,
+    "day": 16,
+    "date": "2026-10-21",
+    "section": "plan",
+    "topic": "Statistics",
+    "part": "Histogram: range table diff class width",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/KFj0q8NryloXHVAOWr_naXDayhwIQ-tzjFg1rW9HUyLBcoCHaoeijG7nSljb-FFT.WZdCbRi1rQ3Cdcx6?startTime=1786368782000",
+    "passcode": "*2uugKne",
+    "taught": "10 Aug",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 56,
+    "day": 17,
+    "date": "2026-10-22",
+    "section": "plan",
+    "topic": "Statistics",
+    "part": "Bar chart",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/iN8rHapkcKcKfO46j6hXkcMNPIn7FagXaObMCM-N5u2BW5Yecyl04bCO37CwoX3b.4GEckHcJM0s1h_Vi?startTime=1786541022000",
+    "passcode": "J4Q$$m7h",
+    "taught": "12 Aug",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 58,
+    "day": 18,
+    "date": "2026-10-23",
+    "section": "plan",
+    "topic": "Statistics",
+    "part": "Scatter plot",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/39s1J0_7Je3FykW4Ap6FqzV26Kq_K08qVsduT9TKRXXUls7QOP509n3gC_FGfQLg.Opqmsi5yF5T8HijR",
+    "passcode": "P70UGNy+",
+    "taught": "15 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 59,
+    "day": 18,
+    "date": "2026-10-23",
+    "section": "plan",
+    "topic": "Statistics",
+    "part": "Cumulative frequency: table and graph",
+    "watch": "3h 16m till 3h 44m",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/2XGSmRJIDsU?si=gbwOE_qk7idWl91i",
+    "passcode": "",
+    "taught": "17 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 61,
+    "day": 19,
+    "date": "2026-10-24",
+    "section": "plan",
+    "topic": "Statistics",
+    "part": "Cumulative frequency: x axis",
+    "watch": "3h 44m till 3h 59m",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/2XGSmRJIDsU?si=gbwOE_qk7idWl91i",
+    "passcode": "",
+    "taught": "19 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 62,
+    "day": 19,
+    "date": "2026-10-24",
+    "section": "plan",
+    "topic": "Statistics",
+    "part": "Cumulative frequency: y axis",
+    "watch": "3h 59m till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/2XGSmRJIDsU?si=gbwOE_qk7idWl91i",
+    "passcode": "",
+    "taught": "20 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 64,
+    "day": 20,
+    "date": "2026-10-25",
+    "section": "plan",
+    "topic": "Statistics",
+    "part": "Pictogram",
+    "watch": "3h 59m till end",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/2XGSmRJIDsU?si=gbwOE_qk7idWl91i",
+    "passcode": "",
+    "taught": "20 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 66,
+    "day": 21,
+    "date": "2026-10-26",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "Types of triangles",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/I3Pyjbm0pw0?si=6VHPIjJtn4rMy40r",
+    "passcode": "",
+    "taught": "21 Aug",
+    "notes": "",
+    "steps": [
+     true,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 67,
+    "day": 21,
+    "date": "2026-10-26",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "Right angled triangles",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/tYh6ZDxQczQ?si=6ABu2XfWFdlCfkm6",
+    "passcode": "",
+    "taught": "24 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 69,
+    "day": 22,
+    "date": "2026-10-27",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "Pythagoras",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/tYh6ZDxQczQ?si=6ABu2XfWFdlCfkm6",
+    "passcode": "",
+    "taught": "24 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 70,
+    "day": 22,
+    "date": "2026-10-27",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "Trig ratios",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/tYh6ZDxQczQ?si=6ABu2XfWFdlCfkm6",
+    "passcode": "",
+    "taught": "24 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 72,
+    "day": 23,
+    "date": "2026-10-28",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "Non right : sine rule",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/WZbdhcNHWLk?si=g7lERApBzc5DGF66",
+    "passcode": "",
+    "taught": "25 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 74,
+    "day": 24,
+    "date": "2026-10-29",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "Non right : cos rule",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/ODYZ06CKS-0?si=RymIZhtPcNIE-nWH",
+    "passcode": "",
+    "taught": "25 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 75,
+    "day": 24,
+    "date": "2026-10-29",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "Bearings",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/410s4xF8U1E?si=3c7K1xorPyLAwqqy",
+    "passcode": "",
+    "taught": "26 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 77,
+    "day": 25,
+    "date": "2026-10-30",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "Area of triangle",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/RTB92dGNp6k?si=s2sV_6EjkIy9n-i1",
+    "passcode": "",
+    "taught": "26 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 78,
+    "day": 25,
+    "date": "2026-10-30",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "Angle properties",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/yZWEhthvk7o?si=8_FV_TPT4dV2aVQB",
+    "passcode": "",
+    "taught": "28 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 80,
+    "day": 26,
+    "date": "2026-10-31",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "Angle of elevation & depression",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/GrtHw6KL03I?si=8QuNbbw_i-BTtQGS",
+    "passcode": "",
+    "taught": "28 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 82,
+    "day": 27,
+    "date": "2026-11-01",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "With obtuse angle",
+    "watch": "Full video contains all styles of variations and lot of practice",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/cgE86Ed_fX8?si=9mnmp1KqJ4toD4Np",
+    "passcode": "",
+    "taught": "28 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 83,
+    "day": 27,
+    "date": "2026-11-01",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "P1 special case",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/cgE86Ed_fX8?si=9mnmp1KqJ4toD4Np",
+    "passcode": "",
+    "taught": "29 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 85,
+    "day": 28,
+    "date": "2026-11-02",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "P1 square roots",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/cgE86Ed_fX8?si=9mnmp1KqJ4toD4Np",
+    "passcode": "",
+    "taught": "29 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 86,
+    "day": 28,
+    "date": "2026-11-02",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "P1 table",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/cgE86Ed_fX8?si=9mnmp1KqJ4toD4Np",
+    "passcode": "",
+    "taught": "29 Aug",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 88,
+    "day": 29,
+    "date": "2026-11-03",
+    "section": "plan",
+    "topic": "Trigonometry",
+    "part": "3D Trigonometry",
+    "watch": "Full video for practice",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/Vwt5y3E_V_M?si=0oEZdgZH_NCIUYMj",
+    "passcode": "",
+    "taught": "2 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 90,
+    "day": 30,
+    "date": "2026-11-04",
+    "section": "plan",
+    "topic": "Mensuration",
+    "part": "2D basic shapes",
+    "watch": "Watch till 33 min",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/AC0zLBDhCLY?si=YUU_CL_3lUoBm4TN",
+    "passcode": "",
+    "taught": "3 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 91,
+    "day": 30,
+    "date": "2026-11-04",
+    "section": "plan",
+    "topic": "Mensuration",
+    "part": "2D major and minor sector",
+    "watch": "From 00:33:00 till 01:12:00",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/AC0zLBDhCLY?si=YUU_CL_3lUoBm4TN",
+    "passcode": "",
+    "taught": "4 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 93,
+    "day": 31,
+    "date": "2026-11-05",
+    "section": "plan",
+    "topic": "Mensuration",
+    "part": "2D major segment",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/AC0zLBDhCLY?si=YUU_CL_3lUoBm4TN",
+    "passcode": "",
+    "taught": "4 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 94,
+    "day": 31,
+    "date": "2026-11-05",
+    "section": "plan",
+    "topic": "Mensuration",
+    "part": "2D minor segment",
+    "watch": "From 01:13:00 till end",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/AC0zLBDhCLY?si=YUU_CL_3lUoBm4TN",
+    "passcode": "",
+    "taught": "4 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 96,
+    "day": 32,
+    "date": "2026-11-06",
+    "section": "plan",
+    "topic": "Mensuration",
+    "part": "3D basic shape",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/IKuVda0Tq88?si=pMTirWQYLuds14oW",
+    "passcode": "",
+    "taught": "8 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 97,
+    "day": 32,
+    "date": "2026-11-06",
+    "section": "plan",
+    "topic": "Mensuration",
+    "part": "3D cylinder",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/IKuVda0Tq88?si=pMTirWQYLuds14oW",
+    "passcode": "",
+    "taught": "8 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 99,
+    "day": 33,
+    "date": "2026-11-07",
+    "section": "plan",
+    "topic": "Mensuration",
+    "part": "3D upright and conical",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/IKuVda0Tq88?si=pMTirWQYLuds14oW",
+    "passcode": "",
+    "taught": "8 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 101,
+    "day": 34,
+    "date": "2026-11-08",
+    "section": "plan",
+    "topic": "Mensuration",
+    "part": "3D pyramid",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/IKuVda0Tq88?si=pMTirWQYLuds14oW",
+    "passcode": "",
+    "taught": "8 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 102,
+    "day": 34,
+    "date": "2026-11-08",
+    "section": "plan",
+    "topic": "Mensuration",
+    "part": "3D cone",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/IKuVda0Tq88?si=pMTirWQYLuds14oW",
+    "passcode": "",
+    "taught": "8 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 104,
+    "day": 35,
+    "date": "2026-11-09",
+    "section": "plan",
+    "topic": "Mensuration",
+    "part": "3D sphere and hemi sphere",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/IKuVda0Tq88?si=pMTirWQYLuds14oW",
+    "passcode": "",
+    "taught": "8 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 105,
+    "day": 35,
+    "date": "2026-11-09",
+    "section": "plan",
+    "topic": "Mensuration",
+    "part": "Frustum",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://www.youtube.com/live/4QZGi-Tk5X4?si=eY3XkfAfchyIEFDq",
+    "passcode": "",
+    "taught": "8 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 107,
+    "day": 36,
+    "date": "2026-11-10",
+    "section": "plan",
+    "topic": "Mensuration",
+    "part": "Similar shapes",
+    "watch": "",
+    "linkText": "Zoom recording",
+    "link": "https://us06web.zoom.us/rec/share/goqANUsfcbjxiv1v6sAZE9Wl1fICDiYwseD6OROgxLLymcl-hI6IQvlR8MyzGIUh.qzK50ex3rILqS9WT?startTime=1773410513000",
+    "passcode": "X*TiZ44Z",
+    "taught": "8 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 109,
+    "day": 37,
+    "date": "2026-11-11",
+    "section": "plan",
+    "topic": "Graphical solutions",
+    "part": "Table, graph and tangent",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/KDYUWOB-Ay4?si=ILhPXgTX4Cz8e8tT",
+    "passcode": "",
+    "taught": "16 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 110,
+    "day": 37,
+    "date": "2026-11-11",
+    "section": "plan",
+    "topic": "Graphical solutions",
+    "part": "Making smooth curve",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/hAo62_AgN94?si=NAIFri7ZeGhaJQhX",
+    "passcode": "",
+    "taught": "17 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 112,
+    "day": 38,
+    "date": "2026-11-12",
+    "section": "plan",
+    "topic": "Graphical solutions",
+    "part": "Case 1",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/Z_zZTWPA4zA?si=iTkt22q4fUnQYdkV",
+    "passcode": "",
+    "taught": "18 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 113,
+    "day": 38,
+    "date": "2026-11-12",
+    "section": "plan",
+    "topic": "Graphical solutions",
+    "part": "Case 2",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/F17M4jFhAW4?si=biNyU7qcNLJHuEYW",
+    "passcode": "",
+    "taught": "21 Sep",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 115,
+    "day": 39,
+    "date": "2026-11-13",
+    "section": "plan",
+    "topic": "Probability",
+    "part": "Concept and formula",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/pk4cpnQYrCg?si=z8YwJkfoR17SI11Z",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 117,
+    "day": 40,
+    "date": "2026-11-14",
+    "section": "plan",
+    "topic": "Probability",
+    "part": "Sample spaces",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/pk4cpnQYrCg?si=z8YwJkfoR17SI11Z",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 118,
+    "day": 40,
+    "date": "2026-11-14",
+    "section": "plan",
+    "topic": "Probability",
+    "part": "Tree diagram and rules",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/pk4cpnQYrCg?si=z8YwJkfoR17SI11Z",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 120,
+    "day": 41,
+    "date": "2026-11-15",
+    "section": "plan",
+    "topic": "Probability",
+    "part": "With replacement",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/awAcAHikad8?si=lGamidxV80NjlFIG",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 121,
+    "day": 41,
+    "date": "2026-11-15",
+    "section": "plan",
+    "topic": "Probability",
+    "part": "Without replacement",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/awAcAHikad8?si=lGamidxV80NjlFIG",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 123,
+    "day": 42,
+    "date": "2026-11-16",
+    "section": "plan",
+    "topic": "Vectors",
+    "part": "Column vectors",
+    "watch": "",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/JM8J5Zcg-50?si=pP6g6X9w2Udau2ke",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 125,
+    "day": 43,
+    "date": "2026-11-17",
+    "section": "plan",
+    "topic": "Vectors",
+    "part": "Magnitude",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/JM8J5Zcg-50?si=pP6g6X9w2Udau2ke",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 126,
+    "day": 43,
+    "date": "2026-11-17",
+    "section": "plan",
+    "topic": "Vectors",
+    "part": "Position vector",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/JM8J5Zcg-50?si=pP6g6X9w2Udau2ke",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 128,
+    "day": 44,
+    "date": "2026-11-18",
+    "section": "plan",
+    "topic": "Vectors",
+    "part": "Simple diagram",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/JM8J5Zcg-50?si=pP6g6X9w2Udau2ke",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 129,
+    "day": 44,
+    "date": "2026-11-18",
+    "section": "plan",
+    "topic": "Vectors",
+    "part": "Advanced diagram with ratio method",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/JM8J5Zcg-50?si=pP6g6X9w2Udau2ke",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 131,
+    "day": 45,
+    "date": "2026-11-19",
+    "section": "plan",
+    "topic": "Vectors",
+    "part": "Parallel and collinear vectors",
+    "watch": "(same video as above)",
+    "linkText": "YouTube video",
+    "link": "https://youtu.be/JM8J5Zcg-50?si=pP6g6X9w2Udau2ke",
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 135,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Mensuration",
+    "part": "Nets of a shape",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 136,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Indices",
+    "part": "Properties",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 137,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Indices",
+    "part": "Equation solving",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 138,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Standard form",
+    "part": "Dmas",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 139,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Standard form",
+    "part": "Arranging",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 140,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Standard form",
+    "part": "Scenario based",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 141,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Significant figures",
+    "part": "Rules",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 142,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Significant figures",
+    "part": "Estimation",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 143,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Significant figures",
+    "part": "Questions",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 144,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Functions & graphs",
+    "part": "Type 1",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 145,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Functions & graphs",
+    "part": "Type 2 inverse of a function",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 146,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Functions & graphs",
+    "part": "Type 3 composite functions",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 147,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Functions & graphs",
+    "part": "Type 4 domain and range",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 148,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Functions & graphs",
+    "part": "Asymptotes",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 149,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Factorization",
+    "part": "Two terms",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 150,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Factorization",
+    "part": "Three terms",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 151,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Factorization",
+    "part": "Four terms",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 152,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Factorization",
+    "part": "Equation solving",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 153,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Time",
+    "part": "Add and subtract",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 154,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Time",
+    "part": "Inter city travel",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 155,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Time",
+    "part": "Arranging",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 156,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Kinematics",
+    "part": "Unit conversion",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 157,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Kinematics",
+    "part": "Graphs rules",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 158,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Kinematics",
+    "part": "Case 1",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 159,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Kinematics",
+    "part": "Case 2",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 160,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Kinematics",
+    "part": "Distance time graphs",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 161,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Kinematics",
+    "part": "Graph conversion",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 162,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Circles",
+    "part": "Properties",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 163,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Circles",
+    "part": "Question rules",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 164,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Simultaneous equations",
+    "part": "Elimination",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 165,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Simultaneous equations",
+    "part": "Substitution",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 166,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Coordinate geometry",
+    "part": "Formulas",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 167,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Coordinate geometry",
+    "part": "Equation of a line",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 168,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Coordinate geometry",
+    "part": "Gradients",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 169,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Coordinate geometry",
+    "part": "Perpendicular bisector",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 170,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Number sequences",
+    "part": "Arithmetic pattern",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 171,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Number sequences",
+    "part": "Square cube triangle & shifts",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 172,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Number sequences",
+    "part": "With table pattern",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 173,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Number sequences",
+    "part": "With equations",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 174,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Number sequences",
+    "part": "Patterns only",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 175,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Linear inequalities & shading",
+    "part": "Linear inequalities",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 176,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Linear inequalities & shading",
+    "part": "Shading rules",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 177,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Linear inequalities & shading",
+    "part": "Examples",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 178,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Symmetry",
+    "part": "Line symmetry",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 179,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Symmetry",
+    "part": "Rotational symmetry",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 180,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Polygons",
+    "part": "Formulas",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 181,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Polygons",
+    "part": "Questions",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 182,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Proportionality",
+    "part": "Simple",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 183,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Proportionality",
+    "part": "Advanced",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 184,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Limits of accuracy",
+    "part": "Direct question",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 185,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Limits of accuracy",
+    "part": "Indirect question",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 186,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "HCF & LCM",
+    "part": "Simple HCF/LCM",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 187,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "HCF & LCM",
+    "part": "Smallest integer n problems",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 188,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "HCF & LCM",
+    "part": "Advanced HCF/LCM",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 189,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Algebra",
+    "part": "Algebraic expansions",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 190,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Algebra",
+    "part": "Quadratic equation solving",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 191,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Algebra",
+    "part": "Completed square form",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 192,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Algebra",
+    "part": "Quadratic formula",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 193,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Algebra",
+    "part": "Scenario based questions",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 194,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Sets",
+    "part": "Listing",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 195,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Sets",
+    "part": "Venn diagrams shading",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 196,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Sets",
+    "part": "Venn diagram scenario based",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 197,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Transformations",
+    "part": "Introduction",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 198,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Transformations",
+    "part": "Reflection: constructions",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 199,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Transformations",
+    "part": "Reflection: on grid",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 200,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Transformations",
+    "part": "Rotation: constructions",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 201,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Transformations",
+    "part": "Rotation: on grid",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 202,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Transformations",
+    "part": "Translation: constructions",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 203,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Transformations",
+    "part": "Translation: on grid",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 204,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Transformations",
+    "part": "Enlargement: constructions",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 205,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Transformations",
+    "part": "Enlargement: on grid",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 206,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Similarity",
+    "part": "Similarity",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 207,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Similarity",
+    "part": "Same height",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 208,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Congruence",
+    "part": "Rules",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 209,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Congruence",
+    "part": "Questions",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 210,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "Surds",
+    "part": "Surds",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   },
+   {
+    "row": 211,
+    "day": null,
+    "date": null,
+    "section": "later",
+    "topic": "IGCSE-only topics",
+    "part": "IGCSE-only topics",
+    "watch": "",
+    "linkText": "",
+    "link": null,
+    "passcode": "",
+    "taught": "",
+    "notes": "",
+    "steps": [
+     false,
+     false,
+     false,
+     false
+    ]
+   }
+  ],
+  "extras": []
+ }
+}
