@@ -56,6 +56,11 @@ const SECRET = cfg.secret || crypto.randomBytes(24).toString('hex');
 // Remembered, so your tablet stays signed in after you restart the server.
 try { fs.writeFileSync(CONFIG, JSON.stringify({ root: ROOT, port: PORT, pin: NO_PIN ? cfg.pin : PIN, secret: SECRET }, null, 2)); } catch { /* read-only install */ }
 fs.mkdirSync(DATA, { recursive: true });
+// when the desktop app that started this server is closed or killed, stop too (otherwise Windows keeps a hidden Aster.exe running and the installer cannot replace it)
+if (process.env.ASTER_PARENT_PID) {
+  const parent = Number(process.env.ASTER_PARENT_PID);
+  setInterval(() => { try { process.kill(parent, 0); } catch { process.exit(0); } }, 2000).unref?.();
+}
 const FFMPEG = process.env.ASTER_FFMPEG || 'ffmpeg'; // the desktop app brings its own copy
 const HAS_FFMPEG = spawnSync(FFMPEG, ['-version']).status === 0;
 

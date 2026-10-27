@@ -59,7 +59,7 @@ async function startServer() {
   port = await freePort(settings.port || 5174);
   const args = [SERVER, settings.root, '--port', String(port), '--pin', settings.pin, '--trust-local', '--host', settings.tablet ? '0.0.0.0' : '127.0.0.1'];
   child = spawn(process.execPath, args, {
-    env: { ...process.env, ELECTRON_RUN_AS_NODE: '1', ASTER_HOME: path.join(app.getPath('userData'), 'server'), ASTER_DIST: DIST, ...(FFMPEG_PATH ? { ASTER_FFMPEG: FFMPEG_PATH } : {}) },
+    env: { ...process.env, ELECTRON_RUN_AS_NODE: '1', ASTER_HOME: path.join(app.getPath('userData'), 'server'), ASTER_DIST: DIST, ASTER_PARENT_PID: String(process.pid), ...(FFMPEG_PATH ? { ASTER_FFMPEG: FFMPEG_PATH } : {}) },
     stdio: ['ignore', 'pipe', 'pipe'],
   });
   let log = '';
