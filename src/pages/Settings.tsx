@@ -154,6 +154,8 @@ function FocusLockPanel() {
           </div>
           <label className="check"><input type="checkbox" checked={draft.needTasks} disabled={locked} onChange={(e) => set({ needTasks: e.target.checked })} /> Today's planner classes must be ticked</label>
           <label className="check"><input type="checkbox" checked={draft.needProof} disabled={locked} onChange={(e) => set({ needProof: e.target.checked })} /> The AI must approve photos of my handwritten work</label>
+          <label className="check"><input type="checkbox" checked={draft.blockTaskMgr} disabled={locked} onChange={(e) => set({ blockTaskMgr: e.target.checked })} /> Also switch Task Manager off while locked</label>
+          <p className="muted">This uses a Windows setting for your account only. It is switched back on when the lock lifts and whenever Aster starts unlocked. If Aster is ever killed while locked and Task Manager stays grey, open Command Prompt (Windows key + R, type cmd) and run: reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /f</p>
           <p className="muted">Photos are read by your AI key (Settings, AI) and are not kept. Write today's date on the page.</p>
           <div className="form__actions">
             <button type="button" className="btn" disabled={locked || JSON.stringify(draft) === JSON.stringify(state.cfg)} onClick={apply}>Save lock settings</button>

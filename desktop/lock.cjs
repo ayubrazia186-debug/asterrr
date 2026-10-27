@@ -3,12 +3,26 @@
 // done and tells this file to let go. This is a promise device, not security: Task Manager, Ctrl+Alt+Del, safe mode or
 // editing desktop.json can always get around it, and this file does not try to stop that.
 const { app, ipcMain, Menu, session } = require('electron');
+const { execFile } = require('node:child_process');
+const fs = require('node:fs');
 
-const DEFAULT_CFG = { enabled: false, minutes: 120, needTasks: true, needProof: true, photos: 2 };
+const DEFAULT_CFG = { enabled: false, minutes: 120, needTasks: true, needProof: true, photos: 2, blockTaskMgr: false };
 const GAP = 7 * 24 * 3600_000;
 const WAIT = Number(process.env.ASTER_LOCK_TEST_WAIT_MS) || 30 * 60_000;
 const pad = (n) => String(n).padStart(2, '0');
 const today = () => { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; };
+
+// Task Manager switch: a per-user Windows setting that greys Task Manager out. It is switched on only while the lock is
+// active and always switched off when the lock lifts, when Aster quits normally, and whenever Aster starts unlocked.
+// If Aster is killed while locked, the setting stays until Aster next starts unlocked; to undo it by hand run this in cmd:
+//   reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /f
+const REG_KEY = 'HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System';
+function setTaskMgr(block) {
+  const args = block ? ['add', REG_KEY, '/v', 'DisableTaskMgr', '/t', 'REG_DWORD', '/d', '1', '/f'] : ['delete', REG_KEY, '/v', 'DisableTaskMgr', '/f'];
+  if (process.env.ASTER_REG_LOG) { try { fs.appendFileSync(process.env.ASTER_REG_LOG, `${args.join(' ')}\n`); } catch { /* test hook */ } return; }
+  if (process.platform !== 'win32') return;
+  try { execFile('reg', args, { windowsHide: true }, () => {}); } catch { /* not allowed on this PC: the lock still works without it */ }
+}
 
 function createLock(ctx) {
   let state = null;
@@ -43,8 +57,10 @@ function createLock(ctx) {
       win.setKiosk(true); win.setAlwaysOnTop(true, 'screen-saver'); win.setMenuBarVisibility(false);
       Menu.setApplicationMenu(Menu.buildFromTemplate([{ role: 'editMenu' }]));
       win.show(); win.focus();
+      setTaskMgr(!!state.cfg.blockTaskMgr);
       if (!keeper) keeper = setInterval(keep, 1200);
     } else {
+      setTaskMgr(false);
       if (keeper) { clearInterval(keeper); keeper = null; }
       win.setKiosk(false); win.setAlwaysOnTop(false); win.setClosable(true); win.setMinimizable(true); win.setSkipTaskbar(false);
       win.setMenuBarVisibility(true);
@@ -112,7 +128,7 @@ function createLock(ctx) {
   };
 
   return {
-    init() { load(); register(); },
+    init() { load(); register(); app.on('will-quit', () => setTaskMgr(false)); },
     enforce, blocks,
     isLocked: () => sessionLocked,
     keepFocus: keep,

@@ -11,6 +11,8 @@ export interface LockCfg {
   needProof: boolean;
   /** photos of handwritten work the AI must see */
   photos: number;
+  /** also switch Task Manager off while locked (Windows) */
+  blockTaskMgr: boolean;
 }
 export interface LockState {
   cfg: LockCfg;
@@ -26,7 +28,7 @@ export interface LockState {
 }
 export interface LockInit { state: LockState; sessionLocked: boolean; desktop: boolean; emergencyWaitMs: number }
 
-export const DEFAULT_CFG: LockCfg = { enabled: false, minutes: 120, needTasks: true, needProof: true, photos: 2 };
+export const DEFAULT_CFG: LockCfg = { enabled: false, minutes: 120, needTasks: true, needProof: true, photos: 2, blockTaskMgr: false };
 export const EMPTY_STATE: LockState = {
   cfg: DEFAULT_CFG, pending: null, unlockedDay: null, study: {}, proofDay: null, usedHashes: [], emergency: { startedAt: null, lastUsed: null },
 };
@@ -95,10 +97,10 @@ export const getLockState = () => state;
 // ---- rules ----
 const stricter = (a: LockCfg, b: LockCfg): LockCfg => ({
   enabled: a.enabled || b.enabled, minutes: Math.max(a.minutes, b.minutes), needTasks: a.needTasks || b.needTasks,
-  needProof: a.needProof || b.needProof, photos: Math.max(a.photos, b.photos),
+  needProof: a.needProof || b.needProof, photos: Math.max(a.photos, b.photos), blockTaskMgr: a.blockTaskMgr || b.blockTaskMgr,
 });
 const looser = (cur: LockCfg, next: LockCfg) =>
-  (cur.enabled && !next.enabled) || next.minutes < cur.minutes || next.photos < cur.photos || (cur.needTasks && !next.needTasks) || (cur.needProof && !next.needProof);
+  (cur.enabled && !next.enabled) || next.minutes < cur.minutes || next.photos < cur.photos || (cur.needTasks && !next.needTasks) || (cur.needProof && !next.needProof) || (cur.blockTaskMgr && !next.blockTaskMgr);
 
 /** Stricter settings apply now. Anything looser (including turning the lock off) waits 24 hours. Not allowed while locked. */
 export function requestCfg(next: LockCfg): 'applied' | 'waiting' | 'blocked' {
