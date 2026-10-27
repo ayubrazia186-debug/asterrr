@@ -56,7 +56,8 @@ const cool = new Map<string, { until: number; why: string }>();
 export const coolingOf = (id: string) => { const c = cool.get(id); return c && c.until > Date.now() ? c : null; };
 let lastUsed = -1;
 
-export interface ChatMessage { role: 'system' | 'user' | 'assistant'; content: string }
+/** images are data URLs (jpeg/png); only the Focus Lock proof check uses them */
+export interface ChatMessage { role: 'system' | 'user' | 'assistant'; content: string; images?: string[] }
 
 export class AiError extends Error {
   constructor(message: string, readonly status = 0, /** the next key may work */ readonly retry = false) { super(message); }
@@ -105,6 +106,12 @@ async function readSse(res: Response, onData: (data: string) => boolean | void):
   if (buf.startsWith('data:')) onData(buf.replace(/\r$/, '').slice(5).trim());
 }
 
+function orMessages(messages: ChatMessage[]) {
+  return messages.map((m) => m.images?.length
+    ? { role: m.role, content: [{ type: 'text', text: m.content }, ...m.images.map((u) => ({ type: 'image_url', image_url: { url: u } }))] }
+    : { role: m.role, content: m.content });
+}
+
 interface OrChunk { error?: { message?: string; code?: number }; choices?: Array<{ delta?: { content?: string | null }; finish_reason?: string | null }> }
 
 async function streamOpenRouter(k: AiKey, s: AiSettings, messages: ChatMessage[], signal: AbortSignal | undefined, onDelta: (t: string) => void, maxTokens?: number): Promise<string> {
@@ -113,7 +120,7 @@ async function streamOpenRouter(k: AiKey, s: AiSettings, messages: ChatMessage[]
     res = await fetch(`${OR}/chat/completions`, {
       method: 'POST', signal,
       headers: { Authorization: `Bearer ${k.key}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: s.model || DEFAULTS.model, messages, stream: true, temperature: s.temperature, seed: 7, ...(maxTokens ? { max_tokens: maxTokens } : {}) }),
+      body: JSON.stringify({ model: s.model || DEFAULTS.model, messages: orMessages(messages), stream: true, temperature: s.temperature, seed: 7, ...(maxTokens ? { max_tokens: maxTokens } : {}) }),
     });
   } catch (e) {
     if ((e as DOMException)?.name === 'AbortError') throw e;
@@ -142,12 +149,18 @@ interface GemChunk {
 
 function geminiBody(s: AiSettings, messages: ChatMessage[], maxTokens?: number) {
   const system = messages.filter((m) => m.role === 'system').map((m) => m.content).join('\n\n');
-  const contents: Array<{ role: 'user' | 'model'; parts: Array<{ text: string }> }> = [];
+  type Part = { text: string } | { inlineData: { mimeType: string; data: string } };
+  const contents: Array<{ role: 'user' | 'model'; parts: Part[] }> = [];
   for (const m of messages) {
     if (m.role === 'system') continue;
     const role = m.role === 'assistant' ? 'model' : 'user';
+    const parts: Part[] = [{ text: m.content }];
+    for (const u of m.images ?? []) {
+      const mm = /^data:([^;]+);base64,(.*)$/.exec(u);
+      if (mm) parts.push({ inlineData: { mimeType: mm[1], data: mm[2] } });
+    }
     const last = contents[contents.length - 1];
-    if (last && last.role === role) last.parts.push({ text: m.content }); else contents.push({ role, parts: [{ text: m.content }] });
+    if (last && last.role === role) last.parts.push(...parts); else contents.push({ role, parts });
   }
   return {
     ...(system ? { systemInstruction: { parts: [{ text: system }] } } : {}),

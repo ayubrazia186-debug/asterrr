@@ -8,6 +8,7 @@ const http = require('node:http');
 const net = require('node:net');
 const os = require('node:os');
 const path = require('node:path');
+const { createLock } = require('./lock.cjs');
 
 const SERVER = path.join(__dirname, 'bundle', 'serve.mjs');
 const DIST = path.join(__dirname, 'bundle', 'dist');
@@ -22,6 +23,7 @@ let FFMPEG_PATH = '';
 try { const p = require('ffmpeg-static'); if (p && fs.existsSync(p)) FFMPEG_PATH = p; } catch { /* falls back to ffmpeg on the PATH */ }
 let port = 0;
 let win = null;
+let focusLock = null;
 
 const freePort = (preferred) => new Promise((resolve) => {
   const s = net.createServer();
@@ -115,6 +117,7 @@ function setupUpdater() {
   autoUpdater.on('error', (e) => { updateState = 'idle'; if (manualCheck) dialog.showErrorBox('Could not check for updates', String(e?.message || e)); manualCheck = false; });
   autoUpdater.on('update-downloaded', async (i) => {
     updateState = 'ready'; manualCheck = false;
+    if (focusLock && focusLock.isLocked()) return; // installs when Aster closes
     const r = await dialog.showMessageBox({ type: 'info', buttons: ['Restart now', 'Later'], defaultId: 0, cancelId: 1, message: `Aster ${i.version} is ready`, detail: 'Restart to finish updating. Your planner, notes and library are not touched. If you choose Later it installs the next time you close Aster.' });
     if (r.response === 0) { stopServer(); autoUpdater.quitAndInstall(); }
   });
@@ -155,17 +158,24 @@ async function createWindow() {
   const b = settings.bounds || { width: 1360, height: 880 };
   win = new BrowserWindow({
     ...b, minWidth: 900, minHeight: 600, backgroundColor: '#0F1728', title: 'Aster', icon: path.join(__dirname, 'build', 'icon.png'),
-    webPreferences: { contextIsolation: true, sandbox: true, spellcheck: false },
+    webPreferences: { contextIsolation: true, sandbox: true, spellcheck: false, preload: path.join(__dirname, 'preload.cjs') },
   });
-  win.on('close', () => { settings.bounds = win.getBounds(); writeSettings(settings); });
+  win.on('close', (e) => {
+    if (focusLock && focusLock.isLocked()) { e.preventDefault(); return; } // Focus Lock: the window cannot be closed until the work is done
+    if (!win.isKiosk() && !win.isFullScreen()) { settings.bounds = win.getBounds(); writeSettings(settings); }
+  });
+  win.webContents.on('before-input-event', (e, input) => { if (focusLock && focusLock.isLocked() && focusLock.blocks(input)) e.preventDefault(); });
+  win.webContents.on('devtools-opened', () => { if (focusLock && focusLock.isLocked()) win.webContents.closeDevTools(); });
+  win.on('minimize', () => { if (focusLock && focusLock.isLocked()) { win.restore(); focusLock.keepFocus(); } });
   win.on('closed', () => { win = null; });
   // links to other websites open in your browser; PDFs and pictures made by Aster open in a small window
   win.webContents.setWindowOpenHandler(({ url }) => {
     if (url.startsWith('blob:') || url.startsWith(`http://127.0.0.1:${port}`)) return { action: 'allow' };
-    if (/^https?:/.test(url)) void shell.openExternal(url);
+    if (/^https?:/.test(url) && !(focusLock && focusLock.isLocked())) void shell.openExternal(url);
     return { action: 'deny' };
   });
-  win.webContents.on('will-navigate', (e, url) => { if (!url.startsWith(`http://127.0.0.1:${port}`)) { e.preventDefault(); if (/^https?:/.test(url)) void shell.openExternal(url); } });
+  win.webContents.on('will-navigate', (e, url) => { if (!url.startsWith(`http://127.0.0.1:${port}`)) { e.preventDefault(); if (/^https?:/.test(url) && !(focusLock && focusLock.isLocked())) void shell.openExternal(url); } });
+  focusLock.enforce(); // Focus Lock: full screen and on top from the first moment
   await win.loadURL(`http://127.0.0.1:${port}/`);
 }
 
@@ -184,9 +194,11 @@ else {
       settings.root = f;
     }
     writeSettings(settings);
+    focusLock = createLock({ settings: () => settings, save: () => writeSettings(settings), win: () => win, menu: buildMenu });
+    focusLock.init();
     buildMenu();
     updater = setupUpdater();
-    try { await startServer(); await createWindow(); if (updater) setTimeout(() => checkForUpdates(false), 8000); }
+    try { await startServer(); await createWindow(); if (updater) setTimeout(() => { if (!focusLock.isLocked()) checkForUpdates(false); }, 8000); }
     catch (e) { dialog.showErrorBox('Aster could not start', String(e?.message || e)); app.quit(); }
   });
   app.on('window-all-closed', () => { stopServer(); app.quit(); });

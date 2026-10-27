@@ -8,8 +8,10 @@ import { StoreProvider } from './state/store';
 import { App } from './App';
 import { Boot } from './components/Boot';
 import { applyTheme } from './lib/theme';
+import { initLock } from './lib/lock';
 
 applyTheme();
+void initLock();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

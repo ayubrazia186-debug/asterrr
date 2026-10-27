@@ -21,9 +21,9 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - run: npm install
-      - name: Number this build (5.3.<run number>) so every push counts as a newer version
+      - name: Number this build (5.4.<run number>) so every push counts as a newer version
         if: github.event_name == 'push'
-        run: npm version "5.3.${GITHUB_RUN_NUMBER}" --no-git-tag-version --allow-same-version
+        run: npm version "5.4.${GITHUB_RUN_NUMBER}" --no-git-tag-version --allow-same-version
       - name: Build and publish
         if: github.event_name == 'push'
         env:

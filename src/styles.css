@@ -901,3 +901,38 @@ audio.player { flex: 0 0 auto; height: 54px; margin: auto 0; }
 :root[data-theme='dark']{--notice-ink:#F3D9A8}
 :root[data-theme='dark'] .chipbtn.is-on{color:#fff;background:color-mix(in srgb,var(--accent) 72%,#10131A)}
 @media (prefers-color-scheme: dark){:root:not([data-theme='light']){--notice-ink:#F3D9A8}:root:not([data-theme='light']) .chipbtn.is-on{color:#fff;background:color-mix(in srgb,var(--accent) 72%,#10131A)}}
+
+/* ---- Focus Lock ---- */
+.lockpill { position: fixed; left: 16px; bottom: 16px; z-index: 300; width: min(340px, calc(100vw - 32px)); border-radius: 16px; background: var(--ink); color: var(--paper); box-shadow: 0 10px 34px rgba(0,0,0,.35); overflow: hidden; font-size: .9rem; }
+.lockpill--free { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: #1E6B3A; color: #fff; }
+.lockpill__head { display: flex; align-items: center; gap: 8px; width: 100%; padding: 12px 16px; border: 0; background: transparent; color: inherit; font: inherit; font-weight: 650; cursor: pointer; text-align: left; }
+.lockpill__body { padding: 2px 16px 14px; display: grid; gap: 10px; }
+.lockpill .btn { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.lockpill .btn--ghost { background: transparent; color: var(--paper); border-color: color-mix(in srgb, var(--paper) 40%, transparent); }
+.lockpill__acts { display: flex; gap: 8px; flex-wrap: wrap; }
+.lockpill__link { justify-self: start; border: 0; background: none; color: color-mix(in srgb, var(--paper) 70%, transparent); font: inherit; font-size: .8rem; text-decoration: underline; cursor: pointer; padding: 0; }
+.lockreq { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.lockreq li { display: flex; align-items: center; gap: 8px; opacity: .8; }
+.lockreq li svg { opacity: .35; }
+.lockreq li.is-ok { opacity: 1; }
+.lockreq li.is-ok svg { opacity: 1; color: #6FE0A0; }
+.lockmodal { position: fixed; inset: 0; z-index: 400; display: grid; place-items: center; padding: 16px; background: rgba(8,12,22,.72); backdrop-filter: blur(4px); }
+.lockmodal__card { width: min(560px, 100%); max-height: calc(100dvh - 32px); overflow: auto; background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 18px; padding: 20px; display: grid; gap: 12px; }
+.lockmodal__card header { display: flex; align-items: center; justify-content: space-between; }
+.lockmodal__card h2 { margin: 0; font-size: 1.15rem; }
+.lockmodal__card .lockpill__acts .btn { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.lockmodal__card .lockpill__acts .btn--ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.lockhow { margin: 0; padding-left: 20px; display: grid; gap: 4px; color: var(--ink2); }
+.lockshots { display: flex; gap: 8px; flex-wrap: wrap; }
+.lockshots figure { position: relative; margin: 0; width: 92px; height: 92px; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); }
+.lockshots img { width: 100%; height: 100%; object-fit: cover; }
+.lockshots figure button { position: absolute; top: 4px; right: 4px; width: 22px; height: 22px; border-radius: 99px; border: 0; background: rgba(0,0,0,.65); color: #fff; display: grid; place-items: center; cursor: pointer; }
+.lockcam video { width: 100%; max-height: 260px; border-radius: 12px; background: #000; }
+.lockcam { display: grid; gap: 8px; }
+.lockmsg { margin: 0; padding: 10px 12px; border-radius: 10px; font-size: .9rem; }
+.lockmsg--ok { background: color-mix(in srgb, #2E9E5B 18%, var(--card)); color: var(--ink); }
+.lockmsg--bad { background: color-mix(in srgb, #D64B3C 16%, var(--card)); color: var(--ink); }
+.lockphrase { margin: 0; padding: 10px 12px; border-radius: 10px; background: var(--line2); font-weight: 600; user-select: none; }
+.lockinput { font: inherit; padding: 11px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); width: 100%; }
+.lockclock { margin: 0; font-size: 1.6rem; font-weight: 700; }
+body.is-locked .mtop, body.is-locked .mnav { z-index: 30; }

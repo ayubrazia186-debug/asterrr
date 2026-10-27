@@ -10,6 +10,7 @@ import { timeAgo } from '../lib/dates';
 import { AiError, coolingOf, listGeminiModels, listModels, newKeyId, PROVIDER_NAME, ping, saveAi, useAi, type AiKey, type ModelInfo, type Provider } from '../lib/ai';
 import { cx } from '../lib/dates';
 import { keysShared, setKeysShared, useSharedStatus } from '../lib/shared';
+import { DEFAULT_CFG, cancelPending, requestCfg, useLock, type LockCfg } from '../lib/lock';
 
 function AiSettingsPanel() {
   const ai = useAi();
@@ -120,6 +121,50 @@ function AiSettingsPanel() {
         <input className="input input--short" type="number" min={0} max={2} step={0.1} value={temp} onChange={(e) => { setTemp(e.target.value); saveAi({ temperature: Math.min(2, Math.max(0, Number(e.target.value) || 0)) }); }} />
       </label>
       <p className="muted">Current: {t}. A model can still word an answer differently even at 0. Some newer Gemini models are tuned for their default temperature; if answers loop or look odd, try 1. openrouter/auto may cost credit; models ending in :free do not.</p>
+    </section>
+  );
+}
+
+function FocusLockPanel() {
+  const { state, locked, desktop } = useLock();
+  const [draft, setDraft] = useState<LockCfg>(state.cfg);
+  const [note, setNote] = useState('');
+  const set = (p: Partial<LockCfg>) => { setDraft((d) => ({ ...d, ...p })); setNote(''); };
+  const left = state.pending ? Math.max(0, state.pending.at - Date.now()) : 0;
+  const hours = Math.ceil(left / 3600_000);
+  const apply = () => {
+    const r = requestCfg(draft);
+    setNote(r === 'blocked' ? 'Finish today\'s work first. The lock settings cannot change while the PC is locked.'
+      : r === 'waiting' ? 'Saved. Stricter parts apply now. The looser parts (or turning it off) apply in 24 hours.' : 'Saved.');
+  };
+  return (
+    <section className="panel">
+      <h2 className="panel__title">Focus Lock</h2>
+      {!desktop ? (
+        <p className="lede lede--tight">Focus Lock works in the Aster desktop app on your computer. Install the Setup file and open it there.</p>
+      ) : (
+        <>
+          <p className="lede lede--tight">Every time the computer starts, Aster takes over the screen until today's work is done. It cannot lock Windows itself, so it keeps Aster in front of everything. Closing it with Task Manager is still possible; the lock is a promise you make to yourself.</p>
+          <label className="check"><input type="checkbox" checked={draft.enabled} disabled={locked} onChange={(e) => set({ enabled: e.target.checked })} /> Lock the computer every time it starts</label>
+          <div className="form">
+            <label className="field"><span>Study time in Aster (minutes)</span>
+              <input type="number" min={0} max={600} step={5} value={draft.minutes} disabled={locked} onChange={(e) => set({ minutes: Math.max(0, Math.min(600, Number(e.target.value) || 0)) })} /></label>
+            <label className="field"><span>Photos of your work to send</span>
+              <input type="number" min={1} max={6} value={draft.photos} disabled={locked} onChange={(e) => set({ photos: Math.max(1, Math.min(6, Number(e.target.value) || 1)) })} /></label>
+          </div>
+          <label className="check"><input type="checkbox" checked={draft.needTasks} disabled={locked} onChange={(e) => set({ needTasks: e.target.checked })} /> Today's planner classes must be ticked</label>
+          <label className="check"><input type="checkbox" checked={draft.needProof} disabled={locked} onChange={(e) => set({ needProof: e.target.checked })} /> The AI must approve photos of my handwritten work</label>
+          <p className="muted">Photos are read by your AI key (Settings, AI) and are not kept. Write today's date on the page.</p>
+          <div className="form__actions">
+            <button type="button" className="btn" disabled={locked || JSON.stringify(draft) === JSON.stringify(state.cfg)} onClick={apply}>Save lock settings</button>
+            <button type="button" className="btn btn--ghost" disabled={locked} onClick={() => { setDraft(DEFAULT_CFG); setNote(''); }}>Standard settings</button>
+          </div>
+          <p className="muted">Fair rule: making the lock stricter works straight away. Making it looser, or turning it off, takes 24 hours, so you cannot do it on a bad evening.</p>
+          {state.pending && <p className="notice notice--soft">A looser setting is waiting and starts in about {hours} hour{hours === 1 ? '' : 's'}. <button type="button" className="linkbtn" disabled={locked} onClick={cancelPending}>Cancel it</button></p>}
+          {locked && <p className="errtext">The computer is locked right now, so these settings cannot be changed. Finish today's work first.</p>}
+          {note && <p className="muted" role="status">{note}</p>}
+        </>
+      )}
     </section>
   );
 }
@@ -266,6 +311,8 @@ export function Settings() {
       {isServer() && <SharedPanel />}
 
       <AiSettingsPanel />
+
+      <FocusLockPanel />
 
       <section className="panel">
         <h2 className="panel__title">Backup</h2>

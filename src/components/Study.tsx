@@ -1,5 +1,6 @@
 // The study view: opens PDFs, images, notes and videos right inside Aster. A video and a set of notes can sit side by side,
 // and the AI tutor can read the notes that are open.
+import { useStudyClock } from '../lib/lock';
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import {
@@ -25,6 +26,7 @@ export function Study({
   libraryKey, subject, title, items, start, beside, onClose,
 }: { libraryKey: LibKey; subject: SubjectId; title: string; items: StudyItem[]; start: string; beside?: string; onClose: () => void }) {
   const { marks, toggleMark, setMark, notify, addCards } = useStore();
+  useStudyClock(); // counts toward the Focus Lock study time
   const done = useMemo(() => new Set(marks[libraryKey] ?? []), [marks, libraryKey]);
   const byPath = useMemo(() => new Map(items.map((i) => [i.node.path, i.node])), [items]);
   const first = byPath.get(start) ?? items[0]?.node;

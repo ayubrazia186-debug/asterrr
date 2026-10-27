@@ -2,6 +2,7 @@ import { Navigate, Route, Routes, useLocation, useParams } from 'react-router-do
 import { useEffect } from 'react';
 import { MobileBar, Sidebar } from './components/Shell';
 import { Toast } from './components/ui';
+import { LockBar } from './components/LockBar';
 import { Home } from './pages/Home';
 import { Today } from './pages/Today';
 import { Planner } from './pages/Planner';
@@ -48,6 +49,7 @@ export function App() {
         </div>
       </main>
       <Toast />
+      <LockBar />
     </>
   );
 }

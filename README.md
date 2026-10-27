@@ -162,3 +162,13 @@ The `android/` folder is a small launcher app that opens Aster from your compute
 Installed copies of Aster check your GitHub repository for a newer release when they start, download it quietly, and ask you to restart. Aster, Check for updates… does it on demand. The portable .exe and `npm start` do not update.
 To publish an update: put the new files in your GitHub folder, Commit, then Push origin (GitHub Desktop). GitHub builds the installer by itself (Actions tab, a few minutes) and publishes it as a release. The repository must be public so installed apps can read releases.
 Install the first copy from that release (Releases page, the Setup .exe), because it carries your repository's address. One built by hand with `npm run dist:win` works but never updates.
+
+## Focus Lock (desktop app)
+Settings, Focus Lock. When it is on, every time the computer starts Aster fills the screen and stays in front of everything until today's work is done:
+- today's planner classes ticked (optional),
+- the study time reached, counted while you actively use a PDF or video in Aster (optional),
+- photos of your handwritten work (with today's date written on the page) approved by your AI key (optional). Photos are shrunk, checked and not kept; a photo cannot be used on two days.
+
+Fair rules: making the lock stricter works at once; making it looser or turning it off takes 24 hours, and settings cannot change while locked. Emergency exit: type a long sentence (no pasting), wait 30 minutes, once every 7 days.
+
+What it cannot do: it is not Windows security. Ctrl+Alt+Del, Task Manager, safe mode, uninstalling Aster or editing its settings file can all get around it. It also only starts with Windows in the installed (Setup) version, not the portable one. Tablets and phones are not locked.
