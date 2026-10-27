@@ -152,7 +152,7 @@ The `desktop/` folder is the Aster desktop app (Electron). It opens Aster in its
 4. Make the installer: `npm run dist:win` (on Windows), `npm run dist:mac` (on a Mac) or `npm run dist:linux`. Build on the system you are building for. The results land in `desktop/release`: on Windows a Setup .exe and a portable .exe.
 
 Windows may show a "SmartScreen" warning because the app is not code-signed. Choose More info, then Run anyway.
-For tablets and phones, use the app's menu: Aster, Tablet and phone access. It shows the address and PIN. Converting videos for iPad needs ffmpeg installed on the computer.
+For tablets and phones, use the app's menu: Aster, Tablet and phone access. It shows the address and PIN. The desktop app includes ffmpeg, so .mkv videos are converted for phones and iPads automatically.
 Your planner and progress live inside the app's data folder; the library folder is never modified.
 
 ### Phone (Android APK)
@@ -160,5 +160,5 @@ The `android/` folder is a small launcher app that opens Aster from your compute
 
 ### Automatic updates (installed Windows app)
 Installed copies of Aster check your GitHub repository for a newer release when they start, download it quietly, and ask you to restart. Aster, Check for updates… does it on demand. The portable .exe and `npm start` do not update.
-To publish an update: change the code, then in a terminal in the project run `git tag v5.4.0` and `git push origin v5.4.0` (use the next version number). The "Build Windows installer" workflow builds it and creates the release. The repository should be public so installed apps can read releases without a password.
-The first installer must come from this workflow (tag push), because it carries the address of your repository. One built by hand with `npm run dist:win` works but never updates.
+To publish an update: put the new files in your GitHub folder, Commit, then Push origin (GitHub Desktop). GitHub builds the installer by itself (Actions tab, a few minutes) and publishes it as a release. The repository must be public so installed apps can read releases.
+Install the first copy from that release (Releases page, the Setup .exe), because it carries your repository's address. One built by hand with `npm run dist:win` works but never updates.

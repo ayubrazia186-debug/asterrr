@@ -14,10 +14,13 @@ const emptySeed = (): Plugin => ({
 
 export default defineConfig({
   plugins: [emptySeed(), react()],
+  // the "legacy" pdf.js also runs on older phone browsers (the normal one needs a very recent Chrome or Safari)
+  resolve: { alias: [{ find: /^pdfjs-dist$/, replacement: 'pdfjs-dist/legacy/build/pdf.mjs' }] },
   server: { port: 5173, strictPort: true },
   build: {
     outDir: publicBuild ? 'dist-public' : 'dist',
     sourcemap: false,
+    target: ['chrome80', 'safari13', 'firefox78'],
     reportCompressedSize: false, // saves memory on low-RAM PCs
     chunkSizeWarningLimit: 1500,
     rollupOptions: {

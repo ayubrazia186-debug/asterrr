@@ -1,7 +1,7 @@
 {
   "name": "aster-desktop",
   "productName": "Aster",
-  "version": "5.3.0",
+  "version": "5.3.1",
   "description": "Aster desktop app: your IGCSE planner, notes, papers and AI tutor in their own window.",
   "author": "Aster",
   "main": "main.cjs",
@@ -27,6 +27,8 @@
     },
     "files": [
       "main.cjs",
+      "preload.cjs",
+      "tablet.html",
       "bundle/**/*",
       "build/icon.png",
       "package.json"
@@ -75,6 +77,7 @@
     }
   },
   "dependencies": {
-    "electron-updater": "6.3.9"
+    "electron-updater": "6.3.9",
+    "ffmpeg-static": "^5.2.0"
   }
 }

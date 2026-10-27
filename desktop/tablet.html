@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Tablet and phone access</title>
+<style>
+:root{color-scheme:dark light}
+*{box-sizing:border-box}
+body{margin:0;padding:22px;font:15px/1.5 system-ui,sans-serif;background:#0F1728;color:#EEF1F6;display:grid;gap:14px}
+h1{margin:0;font-size:19px}
+p{margin:0;color:#B4BCCB}
+.row{display:grid;gap:6px}
+label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#8A94A6}
+.box{display:flex;gap:8px}
+.val{flex:1;padding:11px 12px;border-radius:10px;background:#161A21;border:1px solid #3a4252;font:600 17px ui-monospace,Consolas,monospace;user-select:all;overflow-wrap:anywhere}
+button{font:inherit;font-weight:600;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;background:#EEF1F6;color:#0F1728}
+button.ghost{background:transparent;color:#EEF1F6;border:1px solid #3a4252}
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+.warn{font-size:13px;color:#8A94A6}
+.ok{color:#7be3a4}
+</style></head><body>
+<h1 id="t">Tablet and phone access</h1>
+<p id="d"></p>
+<div id="on" hidden>
+  <div class="row"><label>Address (type this on the phone)</label><div id="urls"></div></div>
+  <div class="row" style="margin-top:12px"><label>PIN</label><div class="box"><div class="val" id="pin"></div><button id="cp">Copy</button></div></div>
+  <p class="warn" style="margin-top:12px">Only turn this on at home. Anyone on this Wi-Fi who knows the PIN can read your course folder.</p>
+</div>
+<div class="acts"><button id="tog"></button><button class="ghost" id="close">Close</button></div>
+<script>
+const $=(i)=>document.getElementById(i);
+let st=null;
+function copy(btn,text){window.aster.copy(text);const o=btn.textContent;btn.textContent='Copied';btn.classList.add('ok');setTimeout(()=>{btn.textContent=o;btn.classList.remove('ok')},1200)}
+function draw(){
+  $('t').textContent=st.on?'Tablet and phone access is ON':'Tablet and phone access is OFF';
+  $('d').textContent=st.on?'Open the address below on a device on the same Wi-Fi, then type the PIN.':'Turn it on to open Aster from a tablet or phone on the same Wi-Fi. A PIN protects your files, and your folder is only read, never changed.';
+  $('on').hidden=!st.on;
+  $('pin').textContent=st.pin;
+  $('urls').innerHTML='';
+  (st.urls.length?st.urls:['(no Wi-Fi address found)']).forEach((u)=>{
+    const b=document.createElement('div');b.className='box';b.style.marginBottom='6px';
+    const v=document.createElement('div');v.className='val';v.textContent=u.replace(/^http:\/\//,'');
+    const c=document.createElement('button');c.textContent='Copy';c.onclick=()=>copy(c,u.replace(/^http:\/\//,''));
+    b.append(v,c);$('urls').append(b);
+  });
+  $('tog').textContent=st.on?'Turn off':'Turn on';
+}
+$('cp').onclick=()=>copy($('cp'),st.pin);
+$('tog').onclick=async()=>{$('tog').disabled=true;st=await window.aster.toggle();$('tog').disabled=false;draw()};
+$('close').onclick=()=>window.close();
+window.aster.state().then((s)=>{st=s;draw()});
+</script></body></html>

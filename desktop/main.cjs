@@ -1,6 +1,6 @@
 // Aster desktop app. It runs the library server on this computer (so folders open with no permission prompts and every
 // video format Chromium knows plays), and shows Aster in its own window. Other devices can use it too (Tablet access).
-const { app, BrowserWindow, Menu, dialog, shell, clipboard } = require('electron');
+const { app, BrowserWindow, Menu, dialog, shell, clipboard, ipcMain } = require('electron');
 const { spawn } = require('node:child_process');
 const crypto = require('node:crypto');
 const fs = require('node:fs');
@@ -17,6 +17,9 @@ const writeSettings = (s) => { try { fs.writeFileSync(settingsFile(), JSON.strin
 
 let settings = {};
 let child = null;
+// the app brings its own ffmpeg, which turns .mkv videos into something phones can play
+let FFMPEG_PATH = '';
+try { const p = require('ffmpeg-static'); if (p && fs.existsSync(p)) FFMPEG_PATH = p; } catch { /* falls back to ffmpeg on the PATH */ }
 let port = 0;
 let win = null;
 
@@ -54,7 +57,7 @@ async function startServer() {
   port = await freePort(settings.port || 5174);
   const args = [SERVER, settings.root, '--port', String(port), '--pin', settings.pin, '--trust-local', '--host', settings.tablet ? '0.0.0.0' : '127.0.0.1'];
   child = spawn(process.execPath, args, {
-    env: { ...process.env, ELECTRON_RUN_AS_NODE: '1', ASTER_HOME: path.join(app.getPath('userData'), 'server'), ASTER_DIST: DIST },
+    env: { ...process.env, ELECTRON_RUN_AS_NODE: '1', ASTER_HOME: path.join(app.getPath('userData'), 'server'), ASTER_DIST: DIST, ...(FFMPEG_PATH ? { ASTER_FFMPEG: FFMPEG_PATH } : {}) },
     stdio: ['ignore', 'pipe', 'pipe'],
   });
   let log = '';
@@ -66,27 +69,27 @@ async function startServer() {
 
 const lanAddresses = () => Object.values(os.networkInterfaces()).flat().filter((i) => i && i.family === 'IPv4' && !i.internal).map((i) => `http://${i.address}:${port}`);
 
+let tabletWin = null;
+const tabletState = () => ({ on: !!settings.tablet, pin: settings.pin, urls: settings.tablet ? lanAddresses() : [] });
 async function tabletDialog() {
-  const urls = lanAddresses();
-  const on = !!settings.tablet;
-  const r = await dialog.showMessageBox(win, {
-    type: 'info',
-    title: 'Tablet and phone access',
-    message: on ? 'Tablet and phone access is ON' : 'Tablet and phone access is OFF',
-    detail: on
-      ? `On a device on the same Wi-Fi, open:\n\n${urls.join('\n') || '(no Wi-Fi address found)'}\n\nPIN: ${settings.pin}\n\nOnly turn this on at home. Anyone on this Wi-Fi who knows the PIN can read your course folder.`
-      : 'Turn it on to open Aster from a tablet or phone on the same Wi-Fi. A PIN protects your files, and your folder is only read, never changed.',
-    buttons: on ? ['Turn off', 'Copy address', 'Close'] : ['Turn on', 'Close'],
-    defaultId: 0, cancelId: on ? 2 : 1,
+  if (tabletWin) { tabletWin.focus(); return; }
+  tabletWin = new BrowserWindow({
+    width: 480, height: 520, parent: win ?? undefined, title: 'Tablet and phone access', backgroundColor: '#0F1728', autoHideMenuBar: true,
+    minimizable: false, maximizable: false,
+    webPreferences: { contextIsolation: true, sandbox: true, preload: path.join(__dirname, 'preload.cjs') },
   });
-  if (on && r.response === 1) { clipboard.writeText(urls[0] ?? ''); return; }
-  if ((on && r.response === 0) || (!on && r.response === 0)) {
-    settings.tablet = !on; writeSettings(settings);
-    await startServer();
-    if (win) win.loadURL(`http://127.0.0.1:${port}/`);
-    if (settings.tablet) setTimeout(() => void tabletDialog(), 300);
-  }
+  tabletWin.removeMenu();
+  tabletWin.on('closed', () => { tabletWin = null; });
+  await tabletWin.loadFile(path.join(__dirname, 'tablet.html'));
 }
+ipcMain.handle('tablet:state', () => tabletState());
+ipcMain.handle('tablet:toggle', async () => {
+  settings.tablet = !settings.tablet; writeSettings(settings);
+  await startServer();
+  if (win) win.loadURL(`http://127.0.0.1:${port}/`);
+  return tabletState();
+});
+ipcMain.on('tablet:copy', (_e, t) => clipboard.writeText(t));
 
 async function changeFolder() {
   const f = await chooseFolder(win);

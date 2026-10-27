@@ -56,7 +56,8 @@ const SECRET = cfg.secret || crypto.randomBytes(24).toString('hex');
 // Remembered, so your tablet stays signed in after you restart the server.
 try { fs.writeFileSync(CONFIG, JSON.stringify({ root: ROOT, port: PORT, pin: NO_PIN ? cfg.pin : PIN, secret: SECRET }, null, 2)); } catch { /* read-only install */ }
 fs.mkdirSync(DATA, { recursive: true });
-const HAS_FFMPEG = spawnSync('ffmpeg', ['-version']).status === 0 && spawnSync('ffprobe', ['-version']).status === 0;
+const FFMPEG = process.env.ASTER_FFMPEG || 'ffmpeg'; // the desktop app brings its own copy
+const HAS_FFMPEG = spawnSync(FFMPEG, ['-version']).status === 0;
 
 // ---------- subjects ----------
 const CODES = { '0450': 'business', '0580': 'maths', '0452': 'accounting', '0478': 'cs', '0500': 'english' };
@@ -170,7 +171,13 @@ function sendFile(req, res, file, type) {
 
 // ---------- mp4 for devices that cannot play mkv ----------
 const jobs = new Map();
-const probe = (file, sel) => spawnSync('ffprobe', ['-v', 'error', '-select_streams', sel, '-show_entries', 'stream=codec_name', '-of', 'csv=p=0', file], { encoding: 'utf8' }).stdout.trim().split('\n')[0];
+// reads the video/audio codec from ffmpeg's own description of the file (so ffprobe is not needed)
+const probe = (file, sel) => {
+  const r = spawnSync(FFMPEG, ['-hide_banner', '-i', file], { encoding: 'utf8' });
+  const kind = sel.startsWith('v') ? 'Video' : 'Audio';
+  const m = new RegExp(`Stream #\\d+:\\d+[^:]*: ${kind}: ([a-z0-9_]+)`, 'i').exec(`${r.stderr || ''}`);
+  return m ? m[1].toLowerCase() : '';
+};
 async function prepareMp4(file) {
   const st = await fsp.stat(file);
   const id = crypto.createHash('sha1').update(`${file}|${st.size}|${st.mtimeMs}`).digest('hex').slice(0, 20);
@@ -185,7 +192,7 @@ async function prepareMp4(file) {
     const aArgs = a === 'aac' ? ['-c:a', 'copy'] : a ? ['-c:a', 'aac', '-b:a', '128k'] : ['-an'];
     const tmp = `${out}.part.mp4`;
     await new Promise((resolve, reject) => {
-      const p = spawn('ffmpeg', ['-v', 'error', '-y', '-i', file, '-map', '0:v:0', '-map', '0:a:0?', ...vArgs, ...aArgs, '-movflags', '+faststart', tmp]);
+      const p = spawn(FFMPEG, ['-v', 'error', '-y', '-i', file, '-map', '0:v:0', '-map', '0:a:0?', ...vArgs, ...aArgs, '-movflags', '+faststart', tmp]);
       let err = '';
       p.stderr.on('data', (d) => { err += d; });
       p.on('error', reject);

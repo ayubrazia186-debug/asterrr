@@ -7,7 +7,7 @@ function pdfjs() {
   if (!loader) {
     loader = (async () => {
       const lib = await import('pdfjs-dist');
-      const worker = (await import('pdfjs-dist/build/pdf.worker.min.mjs?url')).default;
+      const worker = (await import('pdfjs-dist/legacy/build/pdf.worker.min.mjs?url')).default;
       lib.GlobalWorkerOptions.workerSrc = worker;
       return lib;
     })();
