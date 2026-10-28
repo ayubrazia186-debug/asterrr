@@ -8,7 +8,7 @@ import { Today } from './pages/Today';
 import { Planner } from './pages/Planner';
 import { Settings } from './pages/Settings';
 import { SubjectLayout } from './pages/subject/SubjectLayout';
-import { AiSection, FlashcardsSection, LibrarySection, PlannerSection } from './pages/subject/Sections';
+import { AiSection, FlashcardsSection, LibrarySection, MistakesSection, PlannerSection } from './pages/subject/Sections';
 
 function OldSubjectRedirect() {
   const { id } = useParams();
@@ -38,6 +38,7 @@ export function App() {
               <Route path="topicals" element={<LibrarySection section="topicals" />} />
               <Route path="papers" element={<LibrarySection section="papers" />} />
               <Route path="notes" element={<LibrarySection section="notes" />} />
+              <Route path="mistakes" element={<MistakesSection />} />
               <Route path="flashcards" element={<FlashcardsSection />} />
               <Route path="ai" element={<AiSection />} />
             </Route>

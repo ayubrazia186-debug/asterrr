@@ -58,6 +58,23 @@ export interface Paper {
   total: number;
   date: string;
   notes: string;
+  /** minutes it took, from the paper timer */
+  minutes?: number;
+}
+
+/** A wrong answer you want to fix, or a point from an examiner report you want to remember. */
+export interface Mistake {
+  id: string;
+  subject: SubjectId;
+  kind: 'mistake' | 'examiner';
+  topic: string;
+  text: string;
+  fix: string;
+  /** where it came from, for example "May/June 2023 Paper 22 Q4" */
+  source: string;
+  date: string;
+  fixed: boolean;
+  updatedAt: string;
 }
 
 export interface Note {
@@ -111,6 +128,10 @@ export interface TopicRef {
 export interface Settings {
   name: string;
   examDate: string;
+  /** exam date for each subject, YYYY-MM-DD */
+  exams?: Partial<Record<SubjectId, string>>;
+  /** "when and where I will study", one line per day */
+  dayPlan?: Record<string, string>;
   syncUrl: string;
   syncToken: string;
 }
@@ -122,6 +143,7 @@ export interface Persisted {
   plan: PlanData;
   pending: PendingChange[];
   papers: Paper[];
+  mistakes: Mistake[];
   notes: Note[];
   files: FileLink[];
   cards: Card[];

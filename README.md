@@ -172,3 +172,14 @@ Settings, Focus Lock. When it is on, every time the computer starts Aster fills 
 Fair rules: making the lock stricter works at once; making it looser or turning it off takes 24 hours, and settings cannot change while locked. Emergency exit: type a long sentence (no pasting), wait 30 minutes, once every 7 days.
 
 What it cannot do: it is not Windows security. Ctrl+Alt+Del, Task Manager, safe mode, uninstalling Aster or editing its settings file can all get around it. It also only starts with Windows in the installed (Setup) version, not the portable one. Tablets and phones are not locked.
+
+## Settings, Home and study tools (5.5)
+
+- **Settings** is split into General, Study plan, AI tutor, Focus Lock, Devices and Backup & reset. Use the search box to jump to a setting. Sync, AI and Focus Lock each show a plain one-line status. Reset is at the bottom.
+- **Home** has a Today card: days to the next exam (enter each subject's exam date in Settings, General), today's classes, late classes, minutes studied, a one-line "when and where I will study" plan, and a short **Revise first** list.
+- **Revise first** is built only from what you recorded: unfixed mistakes, flashcards still in the first box, and papers scored under 60%. No records means no list.
+- **Papers**: a stopwatch (My scores tab) saves the time when you log the paper.
+- **Mistakes** (new tab in each subject): a mistake notebook, and a checklist for points from examiner reports. Both sync between your devices.
+- **Photo check model**: Settings, AI tutor. Google keys read photos already; for OpenRouter name a model that can see images.
+- **Focus Lock while behind**: with late classes left, only study time and photos are required. Ticks are required again once you are caught up.
+- On touch screens buttons and fields are at least 44 px tall.

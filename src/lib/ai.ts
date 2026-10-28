@@ -16,6 +16,8 @@ export interface AiSettings {
   keys: AiKey[];
   /** OpenRouter model. */
   model: string;
+  /** OpenRouter model used to read photos of your work (must understand images). Empty = same as above. */
+  photoModel?: string;
   geminiModel: string;
   /** 0 gives the most repeatable answers. */
   temperature: number;

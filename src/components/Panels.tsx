@@ -1,5 +1,5 @@
-import { useState, type FormEvent } from 'react';
-import { ExternalLink, Plus, Trash2 } from 'lucide-react';
+import { useEffect, useState, type FormEvent } from 'react';
+import { ExternalLink, Pause, Play, Plus, Trash2 } from 'lucide-react';
 import { useStore } from '../state/store';
 import { SUBJECTS, subjectMeta } from '../data/subjects';
 import type { LibSection, SubjectId } from '../types';
@@ -7,6 +7,21 @@ import { Empty } from './ui';
 import { dayMonth, todayISO } from '../lib/dates';
 
 const gradeFor = (pct: number) => (pct >= 90 ? 'A*' : pct >= 80 ? 'A' : pct >= 70 ? 'B' : pct >= 60 ? 'C' : pct >= 50 ? 'D' : pct >= 40 ? 'E' : 'U');
+
+/** Stopwatch for a past paper. Survives moving between pages while the app stays open. */
+let paperRun: { start: number; base: number } | null = null;
+let paperBase = 0;
+function usePaperTimer() {
+  const [, tick] = useState(0);
+  useEffect(() => { const id = setInterval(() => tick((n) => n + 1), 1000); return () => clearInterval(id); }, []);
+  const ms = paperBase + (paperRun ? Date.now() - paperRun.start : 0);
+  return {
+    ms, running: !!paperRun,
+    toggle: () => { if (paperRun) { paperBase += Date.now() - paperRun.start; paperRun = null; } else paperRun = { start: Date.now(), base: paperBase }; tick((n) => n + 1); },
+    reset: () => { paperRun = null; paperBase = 0; tick((n) => n + 1); },
+  };
+}
+const clock = (ms: number) => { const t = Math.floor(ms / 1000); return `${String(Math.floor(t / 60)).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`; };
 
 /** Past paper log. Pass `subject` to lock it to one subject, or leave it out for the all-subjects view. */
 export function PapersPanel({ subject }: { subject?: SubjectId }) {
@@ -19,6 +34,7 @@ export function PapersPanel({ subject }: { subject?: SubjectId }) {
   const [score, setScore] = useState('');
   const [total, setTotal] = useState('');
   const [notes, setNotes] = useState('');
+  const tm = usePaperTimer();
   const list = papers.filter((p) => !subject || p.subject === subject);
   const scored = list.filter((p) => p.score !== null && p.total > 0);
   const avg = scored.length ? Math.round((scored.reduce((a, p) => a + (p.score! / p.total) * 100, 0) / scored.length)) : null;
@@ -28,7 +44,9 @@ export function PapersPanel({ subject }: { subject?: SubjectId }) {
     addPaper({
       subject: subject ?? sub, year: Number(year) || new Date().getFullYear(), session, paper: paper.trim() || 'Paper',
       score: score === '' ? null : Number(score), total: Number(total) || 0, date: todayISO(), notes: notes.trim(),
+      ...(tm.ms >= 60_000 ? { minutes: Math.round(tm.ms / 60_000) } : {}),
     });
+    tm.reset();
     setPaper(''); setScore(''); setTotal(''); setNotes(''); setOpen(false);
   };
 
@@ -37,6 +55,12 @@ export function PapersPanel({ subject }: { subject?: SubjectId }) {
       <div className="sechead">
         <h2>{subject ? 'Past papers' : 'Papers you have done'}</h2>
         <button type="button" className="btn btn--sm" onClick={() => setOpen(!open)}><Plus size={15} />Log a paper</button>
+      </div>
+      <div className="papertimer" role="group" aria-label="Paper timer">
+        <span className="num papertimer__clock">{clock(tm.ms)}</span>
+        <button type="button" className="btn btn--sm btn--ghost" onClick={tm.toggle}>{tm.running ? <Pause size={15} /> : <Play size={15} />}{tm.running ? 'Pause' : tm.ms ? 'Resume' : 'Start paper timer'}</button>
+        {tm.ms > 0 && <button type="button" className="btn btn--sm btn--ghost" onClick={tm.reset}>Reset</button>}
+        <span className="muted">Time yourself like the real exam. The time is saved when you log the paper.</span>
       </div>
       {avg !== null && <p className="lede lede--tight">Average {avg}% across {scored.length} marked paper{scored.length === 1 ? '' : 's'}, about a grade {gradeFor(avg)}.</p>}
       {open && (
@@ -73,7 +97,7 @@ export function PapersPanel({ subject }: { subject?: SubjectId }) {
                 <span className="dot" />
                 <div className="rows__text">
                   <strong>{!subject && `${m.name}, `}{p.session} {p.year}, {p.paper}</strong>
-                  <span className="muted">{dayMonth(p.date)}{p.notes ? `. ${p.notes}` : ''}</span>
+                  <span className="muted">{dayMonth(p.date)}{p.minutes ? `, ${p.minutes} min` : ''}{p.notes ? `. ${p.notes}` : ''}</span>
                 </div>
                 <span className="num">{pct !== null ? `${p.score}/${p.total} (${pct}%)` : 'Not marked'}</span>
                 <button type="button" className="iconbtn" aria-label="Delete paper" onClick={() => deletePaper(p.id)}><Trash2 size={15} /></button>
@@ -189,5 +213,66 @@ export function OnlineLinks({ subject, section }: { subject: SubjectId; section:
         </ul>
       )}
     </details>
+  );
+}
+
+
+/** Mistake notebook and examiner-report checklist for one subject. */
+export function MistakesPanel({ subject }: { subject: SubjectId }) {
+  const { mistakes, addMistake, updateMistake, deleteMistake } = useStore();
+  const [kind, setKind] = useState<'mistake' | 'examiner'>('mistake');
+  const [topic, setTopic] = useState('');
+  const [text, setText] = useState('');
+  const [fix, setFix] = useState('');
+  const [source, setSource] = useState('');
+  const [showFixed, setShowFixed] = useState(false);
+  const all = mistakes.filter((m) => m.subject === subject && m.kind === kind);
+  const open = all.filter((m) => !m.fixed);
+  const done = all.filter((m) => m.fixed);
+  const list = showFixed ? all : open;
+  const submit = (e: FormEvent) => {
+    e.preventDefault();
+    if (!text.trim()) return;
+    addMistake({ subject, kind, topic: topic.trim(), text: text.trim(), fix: fix.trim(), source: source.trim() });
+    setText(''); setFix('');
+  };
+  const isM = kind === 'mistake';
+  return (
+    <div>
+      <div className="sechead"><h2>{isM ? 'Mistake notebook' : 'Examiner report points'}</h2></div>
+      <div className="seg" role="group" aria-label="Notebook type">
+        <button type="button" className={`btn btn--sm ${isM ? '' : 'btn--ghost'}`} onClick={() => setKind('mistake')}>My mistakes</button>{' '}
+        <button type="button" className={`btn btn--sm ${isM ? 'btn--ghost' : ''}`} onClick={() => setKind('examiner')}>Examiner report checklist</button>
+      </div>
+      <p className="lede lede--tight">{isM
+        ? 'Write down each wrong answer, why it was wrong and how to get it right. Tick it off once you can do it. Unfixed mistakes show up under “Revise first” on Home.'
+        : 'Copy the points from the examiner report for your papers (what students often lost marks for). Tick each one when you are sure you will not make that slip.'}</p>
+      <form className="form" onSubmit={submit}>
+        <label className="field"><span className="field__label">Topic</span><input className="input" value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="e.g. Ratio" /></label>
+        <label className="field"><span className="field__label">Paper and question</span><input className="input" value={source} onChange={(e) => setSource(e.target.value)} placeholder="e.g. May/June 2023, Paper 22, Q4" /></label>
+        <label className="field field--wide"><span className="field__label">{isM ? 'What went wrong' : 'The point'}</span><input className="input" value={text} onChange={(e) => setText(e.target.value)} /></label>
+        <label className="field field--wide"><span className="field__label">{isM ? 'How to get it right' : 'What I will do instead'}</span><input className="input" value={fix} onChange={(e) => setFix(e.target.value)} /></label>
+        <div className="form__actions"><button className="btn" type="submit" disabled={!text.trim()}><Plus size={15} />Add</button></div>
+      </form>
+      <div className="sechead">
+        <span className="muted">{open.length} to fix, {done.length} fixed</span>
+        {done.length > 0 && <label className="check"><input type="checkbox" checked={showFixed} onChange={(e) => setShowFixed(e.target.checked)} />Show fixed</label>}
+      </div>
+      {list.length === 0 ? <Empty title={isM ? 'No mistakes to fix.' : 'No points yet.'}>{isM ? 'After each paper, add what you got wrong.' : 'Add points from the examiner report.'}</Empty> : (
+        <ul className="rows">
+          {list.map((m) => (
+            <li key={m.id} className="rows__item">
+              <input type="checkbox" checked={m.fixed} onChange={(e) => updateMistake(m.id, { fixed: e.target.checked })} aria-label={m.fixed ? 'Mark as not fixed' : 'Mark as fixed'} />
+              <div className="rows__text">
+                <strong>{m.topic ? `${m.topic}: ` : ''}{m.text}</strong>
+                {m.fix && <span>{m.fix}</span>}
+                <span className="muted">{m.source ? `${m.source}. ` : ''}{dayMonth(m.date)}</span>
+              </div>
+              <button type="button" className="iconbtn" aria-label="Delete" onClick={() => deleteMistake(m.id)}><Trash2 size={15} /></button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }

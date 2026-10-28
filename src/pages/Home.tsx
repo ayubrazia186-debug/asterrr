@@ -10,6 +10,7 @@ import { useCountUp } from '../lib/useCountUp';
 import { useLast } from '../lib/last';
 import { subjectMeta } from '../data/subjects';
 import { PlayCircle, Layers3 } from 'lucide-react';
+import { TodayCard } from '../components/TodayCard';
 
 const ICON: Record<SubjectId, LucideIcon> = { maths: Sigma, accounting: ReceiptText, cs: Cpu, business: Briefcase, english: BookOpen };
 const R = 27;
@@ -54,6 +55,8 @@ export function Home() {
         </div>
         <Link to="/today" className="btn btn--ghost">Open today&rsquo;s list</Link>
       </header>
+
+      <TodayCard />
 
       {cells.length > 0 && <div className="homestrip"><DayStrip cells={cells} /></div>}
 

@@ -4,7 +4,7 @@ import {
 } from 'react';
 import seed from '../data/plan.seed.json';
 import type {
-  Card, ClassItem, FileLink, Note, Paper, Persisted, PendingChange, PlanData, Settings, Steps, SubjectId, SyncState, TopicRef,
+  Card, ClassItem, FileLink, Mistake, Note, Paper, Persisted, PendingChange, PlanData, Settings, Steps, SubjectId, SyncState, TopicRef,
 } from '../types';
 import { pullPlan, pushChanges } from '../sync/client';
 import { addDays, todayISO, uid } from '../lib/dates';
@@ -18,6 +18,7 @@ const initial = (): Persisted => ({
   plan: seed as unknown as PlanData,
   pending: [],
   papers: [],
+  mistakes: [],
   notes: [],
   files: [],
   cards: [],
@@ -64,6 +65,7 @@ interface Toast { id: string; text: string; tone: 'ok' | 'warn' }
 interface Store {
   plan: PlanData;
   papers: Paper[];
+  mistakes: Mistake[];
   notes: Note[];
   files: FileLink[];
   cards: Card[];
@@ -82,6 +84,9 @@ interface Store {
   updateSettings: (patch: Partial<Settings>) => void;
   addPaper: (p: Omit<Paper, 'id'>) => void;
   deletePaper: (id: string) => void;
+  addMistake: (m: Omit<Mistake, 'id' | 'updatedAt' | 'date' | 'fixed'>) => void;
+  updateMistake: (id: string, patch: Partial<Pick<Mistake, 'topic' | 'text' | 'fix' | 'source' | 'fixed'>>) => void;
+  deleteMistake: (id: string) => void;
   saveNote: (n: Omit<Note, 'id' | 'updatedAt'> & { id?: string }) => string;
   deleteNote: (id: string) => void;
   addFile: (f: Omit<FileLink, 'id'>) => void;
@@ -131,17 +136,17 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const sharedCtl = useRef<ReturnType<typeof startShared> | null>(null);
   useEffect(() => {
     const ctl = startShared(
-      () => { const p = latest.current; return { cards: p.cards, notes: p.notes, papers: p.papers, files: p.files, marks: p.marks, assign: p.assign }; },
+      () => { const p = latest.current; return { cards: p.cards, notes: p.notes, papers: p.papers, mistakes: p.mistakes, files: p.files, marks: p.marks, assign: p.assign }; },
       // anything changed on this device while the network call was in flight is merged back in, not overwritten
       (d: SharedData, was: SharedData) => setState((p) => {
-        const m = merge3(was, { cards: p.cards, notes: p.notes, papers: p.papers, files: p.files, marks: p.marks, assign: p.assign }, d) as SharedData;
-        return { ...p, cards: m.cards as Persisted['cards'], notes: m.notes as Persisted['notes'], papers: m.papers as Persisted['papers'], files: m.files as Persisted['files'], marks: m.marks, assign: m.assign as Persisted['assign'] };
+        const m = merge3(was, { cards: p.cards, notes: p.notes, papers: p.papers, mistakes: p.mistakes, files: p.files, marks: p.marks, assign: p.assign }, d) as SharedData;
+        return { ...p, cards: m.cards as Persisted['cards'], notes: m.notes as Persisted['notes'], papers: m.papers as Persisted['papers'], mistakes: m.mistakes as Persisted['mistakes'], files: m.files as Persisted['files'], marks: m.marks, assign: m.assign as Persisted['assign'] };
       }),
     );
     sharedCtl.current = ctl;
     return () => { ctl.stop(); sharedCtl.current = null; };
   }, []);
-  useEffect(() => { sharedCtl.current?.poke(); }, [state.cards, state.notes, state.papers, state.files, state.marks, state.assign]);
+  useEffect(() => { sharedCtl.current?.poke(); }, [state.cards, state.notes, state.papers, state.mistakes, state.files, state.marks, state.assign]);
 
   const notify = useCallback((text: string, tone: Toast['tone'] = 'ok') => {
     window.clearTimeout(toastTimer.current);
@@ -259,6 +264,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     setState((p) => ({ ...p, settings: { ...p.settings, ...patch } }));
   }, []);
   const addPaper = useCallback((paper: Omit<Paper, 'id'>) => setState((p) => ({ ...p, papers: [{ ...paper, id: uid() }, ...p.papers] })), []);
+  const addMistake = useCallback<Store['addMistake']>((m) => setState((p) => ({ ...p, mistakes: [{ ...m, id: uid(), date: todayISO(), fixed: false, updatedAt: new Date().toISOString() }, ...p.mistakes] })), []);
+  const updateMistake = useCallback<Store['updateMistake']>((id, patch) => setState((p) => ({ ...p, mistakes: p.mistakes.map((x) => (x.id === id ? { ...x, ...patch, updatedAt: new Date().toISOString() } : x)) })), []);
+  const deleteMistake = useCallback((id: string) => setState((p) => ({ ...p, mistakes: p.mistakes.filter((x) => x.id !== id) })), []);
   const deletePaper = useCallback((id: string) => setState((p) => ({ ...p, papers: p.papers.filter((x) => x.id !== id) })), []);
   const saveNote = useCallback<Store['saveNote']>((n) => {
     const id = n.id ?? uid();
@@ -326,11 +334,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const resetLocal = useCallback(() => setState(initial()), []);
 
   const value = useMemo<Store>(() => ({
-    plan: state.plan, papers: state.papers, notes: state.notes, files: state.files, cards: state.cards, marks: state.marks, assign: state.assign, settings: state.settings,
+    plan: state.plan, papers: state.papers, mistakes: state.mistakes, notes: state.notes, files: state.files, cards: state.cards, marks: state.marks, assign: state.assign, settings: state.settings,
     pendingCount: state.pending.length, syncState, syncError, lastSync: state.lastSync, toast,
-    setStep, setAllSteps, setClassNotes, syncNow, updateSettings, addPaper, deletePaper, saveNote, deleteNote,
+    setStep, setAllSteps, setClassNotes, syncNow, updateSettings, addPaper, deletePaper, addMistake, updateMistake, deleteMistake, saveNote, deleteNote,
     addFile, deleteFile, addCards, deleteCard, reviewCard, toggleMark, setMark, assignFile, exportBackup, importBackup, resetLocal, notify,
-  }), [state, syncState, syncError, toast, setStep, setAllSteps, setClassNotes, syncNow, updateSettings, addPaper,
+  }), [state, syncState, syncError, toast, setStep, setAllSteps, setClassNotes, syncNow, updateSettings, addPaper, addMistake, updateMistake, deleteMistake,
     deletePaper, saveNote, deleteNote, addFile, deleteFile, addCards, deleteCard, reviewCard, toggleMark, setMark, assignFile, exportBackup, importBackup, resetLocal, notify]);
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

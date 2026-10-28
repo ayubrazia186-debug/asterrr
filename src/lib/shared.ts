@@ -5,7 +5,7 @@ import { isServer } from './folders';
 import type { AiKey } from './ai';
 import { getAi, saveAi } from './ai';
 
-export interface SharedData { cards: unknown[]; notes: unknown[]; papers: unknown[]; files: unknown[]; marks: Record<string, string[]>; assign: Record<string, unknown> }
+export interface SharedData { cards: unknown[]; notes: unknown[]; papers: unknown[]; mistakes: unknown[]; files: unknown[]; marks: Record<string, string[]>; assign: Record<string, unknown> }
 
 type Json = unknown;
 const same = (a: Json, b: Json) => JSON.stringify(a) === JSON.stringify(b);
@@ -72,7 +72,7 @@ interface Meta { v: number; base: SharedData | null }
 const readMeta = (): Meta => { try { return { v: 0, base: null, ...(JSON.parse(localStorage.getItem(META) ?? '{}') as Partial<Meta>) }; } catch { return { v: 0, base: null }; } };
 const writeMeta = (m: Meta) => { try { localStorage.setItem(META, JSON.stringify(m)); } catch { /* private mode */ } };
 
-const EMPTY: SharedData = { cards: [], notes: [], papers: [], files: [], marks: {}, assign: {} };
+const EMPTY: SharedData = { cards: [], notes: [], papers: [], mistakes: [], files: [], marks: {}, assign: {} };
 const norm = (d: Partial<SharedData> | null | undefined): SharedData => ({ ...EMPTY, ...(d ?? {}) });
 
 async function kv(ns: string, init?: RequestInit) {

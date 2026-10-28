@@ -1,6 +1,6 @@
 import { Link, NavLink, useMatch } from 'react-router-dom';
 import {
-  ArrowLeft, BrainCircuit, CalendarCheck, CalendarDays, CheckCheck, FileStack, LayoutGrid, ListChecks, NotebookText, Settings as Cog, Sparkles, Sun,
+  ArrowLeft, BrainCircuit, CalendarCheck, CalendarDays, CheckCheck, FileStack, LayoutGrid, ListChecks, NotebookText, NotebookPen, Settings as Cog, Sparkles, Sun,
 } from 'lucide-react';
 import { SUBJECTS, isSubjectId, subjectMeta } from '../data/subjects';
 import { useStore } from '../state/store';
@@ -13,6 +13,7 @@ const SECTIONS = [
   { to: 'topicals', label: 'Topicals', short: 'Topicals', icon: ListChecks },
   { to: 'papers', label: 'Yearly papers', short: 'Papers', icon: FileStack },
   { to: 'notes', label: 'Notes', short: 'Notes', icon: NotebookText },
+  { to: 'mistakes', label: 'Mistakes', short: 'Mistakes', icon: NotebookPen },
   { to: 'flashcards', label: 'Flashcards', short: 'Cards', icon: BrainCircuit },
   { to: 'ai', label: 'AI tutor', short: 'AI', icon: Sparkles },
 ] as const;

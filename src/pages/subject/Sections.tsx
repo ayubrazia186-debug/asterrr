@@ -8,7 +8,7 @@ import { todayISO } from '../../lib/dates';
 import { PlanTab, TopicsTab, type Show } from '../../components/PlanViews';
 import { CourseView } from '../../components/CourseView';
 import { AiChat } from '../../components/AiChat';
-import { NotesPanel, OnlineLinks, PapersPanel, SheetLinks } from '../../components/Panels';
+import { MistakesPanel, NotesPanel, OnlineLinks, PapersPanel, SheetLinks } from '../../components/Panels';
 import { Empty, Segmented } from '../../components/ui';
 import { Flashcards } from './Flashcards';
 import { useSubjectId } from './SubjectLayout';
@@ -98,6 +98,16 @@ export function AiSection() {
     <>
       <SectionTitle title="AI tutor">{`Ask anything about ${meta.name}. To have it read your notes, open a PDF in Notes and press Ask AI.`}</SectionTitle>
       <AiChat key={id} subject={id} prefill={params.get('ask') ?? undefined} />
+    </>
+  );
+}
+
+export function MistakesSection() {
+  const id = useSubjectId();
+  return (
+    <>
+      <SectionTitle title="Mistakes">Learn from what went wrong, and keep the examiner&rsquo;s tips in one place.</SectionTitle>
+      <MistakesPanel subject={id} />
     </>
   );
 }

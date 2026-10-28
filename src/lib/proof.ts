@@ -77,7 +77,7 @@ export async function checkWork(photos: Photo[], tasks: string[], signal?: Abort
   ];
   let text = '';
   // temperature 0: the same photos should always get the same answer
-  await streamChat({ settings: { ...ai, temperature: 0 }, messages, signal, maxTokens: 500, onDelta: (t) => { text += t; } });
+  await streamChat({ settings: { ...ai, temperature: 0, model: ai.photoModel?.trim() || ai.model }, messages, signal, maxTokens: 500, onDelta: (t) => { text += t; } });
   const a = text.indexOf('{'); const b = text.lastIndexOf('}');
   if (a < 0 || b <= a) throw new Error('The AI did not answer clearly. Try again.');
   let j: Record<string, unknown>;

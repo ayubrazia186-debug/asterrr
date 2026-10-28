@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useMemo, useRef, useState, type ReactNode } from 'react';
 import { ArrowDown, ArrowUp, Download, ExternalLink, FolderOpen, Loader2, Plus, RefreshCw, Sparkles, Trash2, Upload } from 'lucide-react';
 import { SUBJECTS } from '../data/subjects';
 import { folderAccessSupported, isServer, linkLibrary, serverInfo, unlinkFolder, courseKey } from '../lib/folders';
@@ -10,6 +10,7 @@ import { timeAgo } from '../lib/dates';
 import { AiError, coolingOf, listGeminiModels, listModels, newKeyId, PROVIDER_NAME, ping, saveAi, useAi, type AiKey, type ModelInfo, type Provider } from '../lib/ai';
 import { cx } from '../lib/dates';
 import { keysShared, setKeysShared, useSharedStatus } from '../lib/shared';
+import { usableKeys } from '../lib/ai';
 import { DEFAULT_CFG, cancelPending, requestCfg, useLock, type LockCfg } from '../lib/lock';
 
 function AiSettingsPanel() {
@@ -116,6 +117,11 @@ function AiSettingsPanel() {
         <button type="button" className="btn btn--ghost btn--sm" onClick={() => void loadOr()} disabled={busy !== ''}>{busy === 'or' ? <Loader2 size={14} className="spin" /> : <RefreshCw size={14} />}Load OpenRouter models</button>
         {orModels.length > 0 && <label className="check"><input type="checkbox" checked={freeOnly} onChange={(e) => setFreeOnly(e.target.checked)} />Free only ({orModels.filter((m) => m.free).length})</label>}
       </div>
+
+      <label className="field"><span className="field__label">OpenRouter model for reading photos (Focus Lock)</span>
+        <input className="input" list="or-models" value={ai.photoModel ?? ''} onChange={(e) => saveAi({ photoModel: e.target.value.trim() })} placeholder="Same as above. Pick one that understands images" spellCheck={false} autoComplete="off" />
+      </label>
+      <p className="muted">Google keys read photos already. For OpenRouter, openrouter/auto may choose a model that cannot see images, so name a vision model here (for example one with “vision” or “gemini” in its name).</p>
 
       <label className="field"><span className="field__label">Temperature (0 = the same answer each time, up to 2 = more varied)</span>
         <input className="input input--short" type="number" min={0} max={2} step={0.1} value={temp} onChange={(e) => { setTemp(e.target.value); saveAi({ temperature: Math.min(2, Math.max(0, Number(e.target.value) || 0)) }); }} />
@@ -272,64 +278,115 @@ export function Settings() {
     notify(ok ? 'Backup restored' : 'That file is not an Aster backup', ok ? 'ok' : 'warn');
   };
 
+  const ai = useAi();
+  const lock = useLock();
+  const nKeys = usableKeys(ai).length;
+  const [tab, setTab] = useState('general');
+  const [q, setQ] = useState('');
+
+  const syncText = syncState === 'off' ? { tone: 'muted', text: 'Not connected. Paste the Web app URL and access code to start.' }
+    : syncState === 'error' ? { tone: 'bad', text: /fetch|network/i.test(syncError ?? '') ? 'Could not reach Google. Check the internet, and that the Web app is shared with “Anyone”.' : (syncError ?? 'Sync problem.') }
+    : { tone: 'ok', text: `Connected. Last sync ${timeAgo(lastSync)}.` };
+  const lockText = !lock.desktop ? { tone: 'muted', text: 'Only in the desktop app.' }
+    : lock.state.cfg.enabled ? { tone: 'ok', text: `On. Locks at every start until ${lock.state.cfg.minutes} min and ${lock.state.cfg.photos} photos are done.` } : { tone: 'muted', text: 'Off.' };
+  const aiText = nKeys ? { tone: 'ok', text: `${nKeys} key${nKeys === 1 ? '' : 's'} ready.` } : { tone: 'bad', text: 'No key yet. Add one so the tutor and photo check can work.' };
+
+  const exams = settings.exams ?? {};
+
+  const groups: Array<{ id: string; label: string; desc: string; words: string; node: ReactNode }> = [
+    { id: 'general', label: 'General', desc: 'Your name, look of the app and exam dates.', words: 'name appearance theme dark light exam date countdown',
+      node: (
+        <section className="panel">
+          <h2 className="panel__title">General</h2>
+          <label className="field"><span className="field__label">Your name</span>
+            <input className="input" value={settings.name} onChange={(e) => updateSettings({ name: e.target.value })} placeholder="Shown in the greeting" />
+          </label>
+          <div className="field"><span className="field__label">Appearance</span>
+            <Segmented<Theme> label="Appearance" value={theme} onChange={(t) => { setTheme(t); setThemeState(t); }} options={[{ value: 'auto', label: 'Match device' }, { value: 'light', label: 'Light' }, { value: 'dark', label: 'Dark' }]} />
+          </div>
+          <div className="field"><span className="field__label">Exam date for each subject</span>
+            <div className="examgrid">
+              {SUBJECTS.map((sub) => (
+                <label key={sub.id} className="examrow"><span><span className="navdot" style={{ ['--accent' as string]: sub.color }} /> {sub.name}</span>
+                  <input className="input input--short" type="date" value={exams[sub.id] ?? ''} onChange={(e) => updateSettings({ exams: { ...exams, [sub.id]: e.target.value } })} aria-label={`${sub.name} exam date`} /></label>
+              ))}
+            </div>
+            <p className="muted">Used for the countdown on Home. Check the exact dates on your Cambridge timetable.</p>
+          </div>
+        </section>
+      ) },
+    { id: 'plan', label: 'Study plan', desc: 'Google Sheets sync and your course folders.', words: 'sheets google sync url token access code planner library folder course files',
+      node: (
+        <>
+          <section className="panel">
+            <h2 className="panel__title">Google Sheets sync</h2>
+            <p className={cx('statusline', `is-${syncText.tone}`)} role="status">{syncText.text}</p>
+            <p className="lede lede--tight">
+              Ticks and class notes you change here are written to your four Google Sheets. Changes you make in the sheets show up here within about a minute. Setup takes about five minutes and is in <code>sync/SETUP.md</code>.
+            </p>
+            <label className="field"><span className="field__label">Web app URL</span>
+              <input className="input" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://script.google.com/macros/s/.../exec" spellCheck={false} autoComplete="off" />
+            </label>
+            <label className="field"><span className="field__label">Access code</span>
+              <input className="input" type="password" value={token} onChange={(e) => setToken(e.target.value)} placeholder="The TOKEN you set in the script" spellCheck={false} autoComplete="off" />
+            </label>
+            <div className="form__actions">
+              <button type="button" className="btn" onClick={save} disabled={!dirty}>Save and connect</button>
+              <button type="button" className="btn btn--ghost" onClick={() => void syncNow()} disabled={syncState === 'off' || dirty}><RefreshCw size={15} />Sync now</button>
+              <SyncChip full />
+            </div>
+            <dl className="facts">
+              <div><dt>Last sync</dt><dd>{timeAgo(lastSync)}</dd></div>
+              <div><dt>Waiting to send</dt><dd>{pendingCount}</dd></div>
+            </dl>
+          </section>
+          <LibraryPanel />
+        </>
+      ) },
+    { id: 'ai', label: 'AI tutor', desc: 'Keys, models and the photo reader.', words: 'ai gemini openrouter key model temperature photo vision tutor',
+      node: <><p className={cx('statusline', `is-${aiText.tone}`)} role="status">{aiText.text}</p><AiSettingsPanel /></> },
+    { id: 'lock', label: 'Focus Lock', desc: 'Lock the computer at every start until work is done.', words: 'lock focus kiosk task manager study time photos emergency',
+      node: <><p className={cx('statusline', `is-${lockText.tone}`)} role="status">{lockText.text}</p><FocusLockPanel /></> },
+    { id: 'devices', label: 'Devices', desc: 'Keep phone, tablet and computer the same.', words: 'devices phone tablet ipad share sync pin keys',
+      node: isServer() ? <SharedPanel /> : <section className="panel"><h2 className="panel__title">Your devices</h2><p className="lede lede--tight">Open Aster from your computer (or the Aster desktop/phone app) and this page will show how your devices stay in step.</p></section> },
+    { id: 'backup', label: 'Backup & reset', desc: 'Save a copy of your data. Reset is at the bottom.', words: 'backup restore download reset delete erase',
+      node: (
+        <section className="panel">
+          <h2 className="panel__title">Backup</h2>
+          <p className="lede lede--tight">Flashcards, papers, mistakes, notes, done-marks and web links live only on this device. Download a backup now and then. Linked folders are not included, so link them again on a new browser.</p>
+          <div className="form__actions">
+            <button type="button" className="btn" onClick={download}><Download size={15} />Download backup</button>
+            <button type="button" className="btn btn--ghost" onClick={() => fileRef.current?.click()}><Upload size={15} />Restore backup</button>
+            <input ref={fileRef} type="file" accept="application/json" hidden onChange={(e) => { void restore(e.target.files?.[0]); e.target.value = ''; }} />
+          </div>
+          <div className="danger">
+            <button type="button" className="btn btn--danger" onClick={() => { if (window.confirm('Reset this device to the original snapshot? Unsent ticks, notes, papers and links on this device will be lost.')) resetLocal(); }}>Reset this device</button>
+            <span className="muted">Your Google Sheets are not touched.</span>
+          </div>
+        </section>
+      ) },
+  ];
+
+  const query = q.trim().toLowerCase();
+  const shown = useMemo(() => query
+    ? groups.filter((g) => `${g.label} ${g.desc} ${g.words}`.toLowerCase().includes(query))
+    : groups.filter((g) => g.id === tab), [query, tab, groups]);
+  const current = groups.find((g) => g.id === tab);
+
   return (
-    <div className="page page--narrow">
+    <div className="page page--narrow settings">
       <header className="pagehead"><div><h1>Settings</h1></div></header>
-
-      <section className="panel">
-        <h2 className="panel__title">You</h2>
-        <label className="field"><span className="field__label">Your name</span>
-          <input className="input" value={settings.name} onChange={(e) => updateSettings({ name: e.target.value })} placeholder="Shown in the greeting" />
-        </label>
-        <div className="field"><span className="field__label">Appearance</span>
-          <Segmented<Theme> label="Appearance" value={theme} onChange={(t) => { setTheme(t); setThemeState(t); }} options={[{ value: 'auto', label: 'Match device' }, { value: 'light', label: 'Light' }, { value: 'dark', label: 'Dark' }]} />
-        </div>
-      </section>
-
-      <section className="panel">
-        <h2 className="panel__title">Google Sheets sync</h2>
-        <p className="lede lede--tight">
-          Ticks and class notes you change here are written to your four Google Sheets. Changes you make in the sheets show up here within about a minute. Setup takes about five minutes and is in <code>sync/SETUP.md</code>.
-        </p>
-        <label className="field"><span className="field__label">Web app URL</span>
-          <input className="input" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://script.google.com/macros/s/.../exec" spellCheck={false} autoComplete="off" />
-        </label>
-        <label className="field"><span className="field__label">Access code</span>
-          <input className="input" type="password" value={token} onChange={(e) => setToken(e.target.value)} placeholder="The TOKEN you set in the script" spellCheck={false} autoComplete="off" />
-        </label>
-        <div className="form__actions">
-          <button type="button" className="btn" onClick={save} disabled={!dirty}>Save and connect</button>
-          <button type="button" className="btn btn--ghost" onClick={() => void syncNow()} disabled={syncState === 'off' || dirty}><RefreshCw size={15} />Sync now</button>
-          <SyncChip full />
-        </div>
-        <dl className="facts">
-          <div><dt>Last sync</dt><dd>{timeAgo(lastSync)}</dd></div>
-          <div><dt>Waiting to send</dt><dd>{pendingCount}</dd></div>
-        </dl>
-        {syncState === 'error' && <p className="errtext" role="alert">{syncError}</p>}
-      </section>
-
-      <LibraryPanel />
-
-      {isServer() && <SharedPanel />}
-
-      <AiSettingsPanel />
-
-      <FocusLockPanel />
-
-      <section className="panel">
-        <h2 className="panel__title">Backup</h2>
-        <p className="lede lede--tight">Flashcards, papers, notes, done-marks and web links live only on this device. Download a backup now and then. Linked folders are not included, so link them again on a new browser.</p>
-        <div className="form__actions">
-          <button type="button" className="btn" onClick={download}><Download size={15} />Download backup</button>
-          <button type="button" className="btn btn--ghost" onClick={() => fileRef.current?.click()}><Upload size={15} />Restore backup</button>
-          <input ref={fileRef} type="file" accept="application/json" hidden onChange={(e) => { void restore(e.target.files?.[0]); e.target.value = ''; }} />
-        </div>
-        <div className="danger">
-          <button type="button" className="btn btn--danger" onClick={() => { if (window.confirm('Reset this device to the original snapshot? Unsent ticks, notes, papers and links on this device will be lost.')) resetLocal(); }}>Reset this device</button>
-          <span className="muted">Your Google Sheets are not touched.</span>
-        </div>
-      </section>
+      <input className="input settings__search" type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search settings (for example key, backup, lock)" aria-label="Search settings" />
+      {!query && (
+        <nav className="settings__tabs" aria-label="Settings groups">
+          {groups.map((g) => (
+            <button key={g.id} type="button" className={cx('settings__tab', g.id === tab && 'is-on')} aria-current={g.id === tab ? 'page' : undefined} onClick={() => setTab(g.id)}>{g.label}</button>
+          ))}
+        </nav>
+      )}
+      {!query && current && <p className="muted settings__desc">{current.desc}</p>}
+      {query && shown.length === 0 && <p className="muted">Nothing matches “{q}”.</p>}
+      {shown.map((g) => <div key={g.id} className="settings__group">{query && <p className="muted settings__desc">{g.label}: {g.desc}</p>}{g.node}</div>)}
     </div>
   );
 }
