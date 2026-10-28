@@ -6,7 +6,7 @@ const { app, ipcMain, Menu, session } = require('electron');
 const { execFile } = require('node:child_process');
 const fs = require('node:fs');
 
-const DEFAULT_CFG = { enabled: false, minutes: 120, needTasks: true, needProof: true, photos: 2, blockTaskMgr: false };
+const DEFAULT_CFG = { enabled: false, minutes: 120, needTasks: true, needProof: true, photos: 2, blockTaskMgr: true };
 const GAP = 7 * 24 * 3600_000;
 const WAIT = Number(process.env.ASTER_LOCK_TEST_WAIT_MS) || 30 * 60_000;
 const pad = (n) => String(n).padStart(2, '0');
@@ -36,6 +36,8 @@ function createLock(ctx) {
   function load() {
     state = { ...blank(), ...(ctx.settings().lock || {}) };
     state.cfg = { ...DEFAULT_CFG, ...state.cfg };
+    // one-time: Task Manager blocking became the default (a stricter setting, so it applies at once)
+    if (!state.tmMigrated) { state.cfg.blockTaskMgr = true; state.tmMigrated = true; }
     state.emergency = { startedAt: null, lastUsed: null, ...(state.emergency || {}) };
     if (state.pending && Date.now() >= state.pending.at) { state.cfg = { ...DEFAULT_CFG, ...state.pending.cfg }; state.pending = null; }
     sessionLocked = !!state.cfg.enabled && state.unlockedDay !== today();

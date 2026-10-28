@@ -28,7 +28,7 @@ export interface LockState {
 }
 export interface LockInit { state: LockState; sessionLocked: boolean; desktop: boolean; emergencyWaitMs: number }
 
-export const DEFAULT_CFG: LockCfg = { enabled: false, minutes: 120, needTasks: true, needProof: true, photos: 2, blockTaskMgr: false };
+export const DEFAULT_CFG: LockCfg = { enabled: false, minutes: 120, needTasks: true, needProof: true, photos: 2, blockTaskMgr: true };
 export const EMPTY_STATE: LockState = {
   cfg: DEFAULT_CFG, pending: null, unlockedDay: null, study: {}, proofDay: null, usedHashes: [], emergency: { startedAt: null, lastUsed: null },
 };
