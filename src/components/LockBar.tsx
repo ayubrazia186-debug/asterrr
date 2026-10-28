@@ -35,7 +35,8 @@ export function LockBar() {
   const hasPlan = today.total > 0 || today.late > 0;
   useEffect(() => { if (locked && hasPlan) noteRemaining(today.late); }, [locked, hasPlan, today.late]);
   const q = quota(state.dayBase, todayISO(), today.late, today.done, today.total);
-  const n = needs(state, q.done, q.owed);
+  // while late classes remain, ticking is not required (catching up is encouraged, not enforced); it returns once you reach today's work
+  const n = { ...needs(state, q.done, q.owed), ...(q.kind === 'late' ? { tasks: null } : {}) };
   const met = allMet(n);
   const [freed, setFreed] = useState(false);
 
@@ -63,7 +64,8 @@ export function LockBar() {
         {open && (
           <div className="lockpill__body">
             <ul className="lockreq">
-              {n.tasks && <li className={n.tasks[0] >= n.tasks[1] ? 'is-ok' : ''}><Check size={14} />{q.kind === 'late' ? 'Late classes finished (today\'s wait until you catch up)' : 'Today\'s classes finished'}: <b>{n.tasks[0]} of {n.tasks[1]}</b></li>}
+              {n.tasks && <li className={n.tasks[0] >= n.tasks[1] ? 'is-ok' : ''}><Check size={14} />Today's classes finished: <b>{n.tasks[0]} of {n.tasks[1]}</b></li>}
+              {q.kind === 'late' && today.late > 0 && <li className="is-note"><Check size={14} />Late classes: <b>{today.late} left</b> (not required for now)</li>}
               {n.study && <li className={n.study[0] >= n.study[1] ? 'is-ok' : ''}><Check size={14} />Study time in Aster: <b>{n.study[0]} of {n.study[1]} min</b></li>}
               {n.proof !== null && <li className={n.proof ? 'is-ok' : ''}><Check size={14} />Photos of your work: <b>{n.proof ? 'approved' : 'not sent yet'}</b></li>}
             </ul>

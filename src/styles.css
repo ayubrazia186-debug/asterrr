@@ -937,3 +937,4 @@ audio.player { flex: 0 0 auto; height: 54px; margin: auto 0; }
 .lockclock { margin: 0; font-size: 1.6rem; font-weight: 700; }
 body.is-locked .mtop, body.is-locked .mnav { z-index: 30; }
 .lockreq--late li { opacity: .75; font-size: .82rem; display: list-item; list-style: disc; margin-left: 18px; }
+.lockreq li.is-note { opacity: .75; }
