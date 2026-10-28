@@ -215,6 +215,8 @@ const NS = /^[a-z0-9_-]{1,40}$/;
 const kvFile = (ns) => path.join(DATA, `${ns}.json`);
 const kvRead = (ns) => { try { return JSON.parse(fs.readFileSync(kvFile(ns), 'utf8')); } catch { return { v: 0, value: null }; } };
 
+const inbox = [];
+
 // ---------- routes ----------
 async function api(req, res, url) {
   const q = url.searchParams;
@@ -254,6 +256,23 @@ async function api(req, res, url) {
   if (url.pathname === '/api/cached') {
     const id = (q.get('id') || '').replace(/[^a-f0-9]/g, '');
     return sendFile(req, res, path.join(CACHE, `${id}.mp4`), 'video/mp4');
+  }
+  // photos sent from a tablet or phone camera to the computer's Focus Lock; kept in memory only, never on disk
+  if (url.pathname === '/api/inbox') {
+    if (req.method === 'POST') {
+      let body;
+      try { body = JSON.parse(await readBody(req, 3 * 1024 * 1024)); } catch { return json(res, 400, { error: 'bad photo' }); }
+      if (typeof body.url !== 'string' || !/^data:image\/jpeg;base64,/.test(body.url)) return json(res, 400, { error: 'send a jpeg' });
+      inbox.push({ url: body.url, at: Date.now() });
+      while (inbox.length > 6) inbox.shift();
+      return json(res, 200, { ok: true, waiting: inbox.length });
+    }
+    if (req.method === 'GET') {
+      const now = Date.now();
+      const photos = inbox.filter((x) => now - x.at < 30 * 60_000).map((x) => x.url);
+      inbox.length = 0;
+      return json(res, 200, { photos });
+    }
   }
   const m = /^\/api\/kv(?:\/([^/]+))?$/.exec(url.pathname);
   if (m) {

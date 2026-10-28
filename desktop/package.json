@@ -1,7 +1,7 @@
 {
   "name": "aster-desktop",
   "productName": "Aster",
-  "version": "5.5.0",
+  "version": "5.5.1",
   "description": "Aster desktop app: your IGCSE planner, notes, papers and AI tutor in their own window.",
   "author": "Aster",
   "main": "main.cjs",

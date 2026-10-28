@@ -183,3 +183,4 @@ What it cannot do: it is not Windows security. Ctrl+Alt+Del, Task Manager, safe 
 - **Photo check model**: Settings, AI tutor. Google keys read photos already; for OpenRouter name a model that can see images.
 - **Focus Lock while behind**: with late classes left, only study time and photos are required. Ticks are required again once you are caught up.
 - On touch screens buttons and fields are at least 44 px tall.
+- **Two cameras for the Focus Lock photo check**: "PC camera" uses the computer's webcam. "Tablet camera" waits for photos from your tablet or phone: open Aster on it, Settings, Devices, **Send photo to computer** (or `/#/camera`), and take the photos there. They go to the Focus Lock window, are held in memory only, and the tablet needs the PIN like everything else.

@@ -6,6 +6,7 @@ import { LockBar } from './components/LockBar';
 import { Home } from './pages/Home';
 import { Today } from './pages/Today';
 import { Planner } from './pages/Planner';
+import { SendPhoto } from './pages/SendPhoto';
 import { Settings } from './pages/Settings';
 import { SubjectLayout } from './pages/subject/SubjectLayout';
 import { AiSection, FlashcardsSection, LibrarySection, MistakesSection, PlannerSection } from './pages/subject/Sections';
@@ -44,6 +45,7 @@ export function App() {
             </Route>
             <Route path="/subject" element={<Navigate to="/" replace />} />
             <Route path="/subject/:id" element={<OldSubjectRedirect />} />
+            <Route path="/camera" element={<SendPhoto />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

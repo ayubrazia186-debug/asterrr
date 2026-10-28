@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useMemo, useRef, useState, type ReactNode } from 'react';
 import { ArrowDown, ArrowUp, Download, ExternalLink, FolderOpen, Loader2, Plus, RefreshCw, Sparkles, Trash2, Upload } from 'lucide-react';
 import { SUBJECTS } from '../data/subjects';
@@ -348,7 +349,7 @@ export function Settings() {
     { id: 'lock', label: 'Focus Lock', desc: 'Lock the computer at every start until work is done.', words: 'lock focus kiosk task manager study time photos emergency',
       node: <><p className={cx('statusline', `is-${lockText.tone}`)} role="status">{lockText.text}</p><FocusLockPanel /></> },
     { id: 'devices', label: 'Devices', desc: 'Keep phone, tablet and computer the same.', words: 'devices phone tablet ipad share sync pin keys',
-      node: isServer() ? <SharedPanel /> : <section className="panel"><h2 className="panel__title">Your devices</h2><p className="lede lede--tight">Open Aster from your computer (or the Aster desktop/phone app) and this page will show how your devices stay in step.</p></section> },
+      node: isServer() ? <><SharedPanel /><section className="panel"><h2 className="panel__title">Tablet or phone as a camera</h2><p className="lede lede--tight">Use this device&rsquo;s camera for the Focus Lock photo check on your computer.</p><Link className="btn" to="/camera">Send photo to computer</Link></section></> : <section className="panel"><h2 className="panel__title">Your devices</h2><p className="lede lede--tight">Open Aster from your computer (or the Aster desktop/phone app) and this page will show how your devices stay in step.</p></section> },
     { id: 'backup', label: 'Backup & reset', desc: 'Save a copy of your data. Reset is at the bottom.', words: 'backup restore download reset delete erase',
       node: (
         <section className="panel">

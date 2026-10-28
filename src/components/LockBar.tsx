@@ -9,6 +9,7 @@ import {
   EMERGENCY_PHRASE, allMet, cancelEmergency, dialogOpening, emergencyLeft, markProof, needs, noteRemaining, startEmergency, unlock, useLock,
 } from '../lib/lock';
 import { checkWork, preparePhoto, type Photo, type Verdict } from '../lib/proof';
+import { isServer } from '../lib/folders';
 import { cx, dayMonth, todayISO } from '../lib/dates';
 
 /** Today's classes as text for the AI, and the late classes that come first. */
@@ -103,6 +104,7 @@ function ProofDialog({ tasks, need, onClose }: { tasks: string[]; need: number; 
   const [msg, setMsg] = useState('');
   const [verdict, setVerdict] = useState<Verdict | null>(null);
   const [cam, setCam] = useState(false);
+  const [tab, setTab] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
 
   const add = async (files: Blob[]) => {
@@ -145,16 +147,50 @@ function ProofDialog({ tasks, need, onClose }: { tasks: string[]; need: number; 
           <figure key={p.id}><img src={p.url} alt="Your work" /><button type="button" onClick={() => setPhotos((c) => c.filter((x) => x.id !== p.id))} aria-label="Remove photo"><X size={13} /></button></figure>
         ))}
       </div>
+      {tab && <TabletWait onPhotos={(b) => { void add(b); }} onClose={() => setTab(false)} />}
       {cam && <Camera2 onShot={(b) => { void add([b]); }} onClose={() => setCam(false)} />}
       <div className="lockpill__acts">
         <input ref={fileRef} type="file" accept="image/*" multiple hidden onChange={(e) => { void add(Array.from(e.target.files ?? [])); e.target.value = ''; }} />
         <button type="button" className="btn btn--ghost btn--sm" onClick={() => { dialogOpening(); fileRef.current?.click(); }}><ImagePlus size={15} /> Add pictures</button>
-        <button type="button" className="btn btn--ghost btn--sm" onClick={() => { dialogOpening(); setCam((v) => !v); }}><Camera size={15} /> Use the camera</button>
+        <button type="button" className="btn btn--ghost btn--sm" onClick={() => { dialogOpening(); setCam((v) => !v); }}><Camera size={15} /> PC camera</button>
+        {isServer() && <button type="button" className="btn btn--ghost btn--sm" onClick={() => setTab((v) => !v)}><Camera size={15} /> Tablet camera</button>}
         <button type="button" className="btn btn--sm" disabled={busy || photos.length === 0} onClick={() => void send()}>{busy ? 'Checking…' : 'Check my work'}</button>
       </div>
       {msg && <p className="lockmsg lockmsg--bad" role="alert">{msg}</p>}
       {verdict && <p className={cx('lockmsg', verdict.accepted ? 'lockmsg--ok' : 'lockmsg--bad')} role="status">{verdict.accepted ? 'Approved. ' : 'Not approved. '}{verdict.reason}</p>}
     </Modal>
+  );
+}
+
+function TabletWait({ onPhotos, onClose }: { onPhotos: (b: Blob[]) => void; onClose: () => void }) {
+  const [got, setGot] = useState(0);
+  const [err, setErr] = useState('');
+  const cb = useRef(onPhotos);
+  cb.current = onPhotos;
+  useEffect(() => {
+    let stop = false;
+    const poll = async () => {
+      try {
+        const r = await fetch('/api/inbox');
+        if (!r.ok) throw new Error();
+        const j = (await r.json()) as { photos: string[] };
+        if (!stop && j.photos.length) {
+          const blobs = await Promise.all(j.photos.map((u) => fetch(u).then((x) => x.blob())));
+          setGot((n) => n + blobs.length); cb.current(blobs);
+        }
+        setErr('');
+      } catch { if (!stop) setErr('Cannot reach the Aster server on this computer.'); }
+    };
+    void poll();
+    const id = setInterval(() => void poll(), 2000);
+    return () => { stop = true; clearInterval(id); };
+  }, []);
+  return (
+    <div className="lockcam">
+      <p className="lockmsg" role="status">Waiting for your tablet. On the tablet open Aster, then Settings, Devices, <b>Send photo to computer</b> (or go to <code>/#/camera</code> on the same address). Take the photos there.{got > 0 ? ` Received ${got}.` : ''}</p>
+      {err && <p className="lockmsg lockmsg--bad">{err}</p>}
+      <div className="lockpill__acts"><button type="button" className="btn btn--ghost btn--sm" onClick={onClose}>Done</button></div>
+    </div>
   );
 }
 
