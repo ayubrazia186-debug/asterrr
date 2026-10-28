@@ -2,6 +2,7 @@
 // The desktop shell (desktop/main.cjs) owns the real lock; this file holds the rules and the state the screens show.
 import { useEffect, useSyncExternalStore } from 'react';
 import { todayISO } from './dates';
+import { nextBase, type Base } from './quota';
 
 export interface LockCfg {
   enabled: boolean;
@@ -22,15 +23,17 @@ export interface LockState {
   /** milliseconds studied per day */
   study: Record<string, number>;
   proofDay: string | null;
+  /** the most unfinished (late + today's) classes seen today: the starting point for today's quota */
+  dayBase: Base | null;
   /** fingerprints of photos already accepted, so old pictures cannot be used again */
   usedHashes: string[];
   emergency: { startedAt: number | null; lastUsed: number | null };
 }
-export interface LockInit { state: LockState; sessionLocked: boolean; desktop: boolean; emergencyWaitMs: number }
+export interface LockInit { state: LockState; sessionLocked: boolean; desktop: boolean; emergencyWaitMs: number; tmFailed?: boolean }
 
 export const DEFAULT_CFG: LockCfg = { enabled: false, minutes: 120, needTasks: true, needProof: true, photos: 2, blockTaskMgr: true };
 export const EMPTY_STATE: LockState = {
-  cfg: DEFAULT_CFG, pending: null, unlockedDay: null, study: {}, proofDay: null, usedHashes: [], emergency: { startedAt: null, lastUsed: null },
+  cfg: DEFAULT_CFG, pending: null, unlockedDay: null, study: {}, proofDay: null, dayBase: null, usedHashes: [], emergency: { startedAt: null, lastUsed: null },
 };
 export const COOLDOWN_MS = 24 * 3600_000;
 export const EMERGENCY_GAP_MS = 7 * 24 * 3600_000;
@@ -50,6 +53,7 @@ let state: LockState = EMPTY_STATE;
 let locked = false;
 let ready = false;
 let waitMs = 30 * 60_000;
+let tmFailed = false;
 const subs = new Set<() => void>();
 const emit = () => subs.forEach((f) => f());
 let version = 0;
@@ -63,6 +67,7 @@ export async function initLock(): Promise<void> {
       state = normalize(i.state);
       locked = i.sessionLocked;
       waitMs = i.emergencyWaitMs;
+      tmFailed = !!i.tmFailed;
     } catch { /* stays unlocked: nothing to enforce */ }
   }
   ready = true; version++; emit();
@@ -73,7 +78,7 @@ function normalize(s: Partial<LockState> | undefined): LockState {
   return {
     ...EMPTY_STATE, ...o,
     cfg: { ...DEFAULT_CFG, ...(o.cfg ?? {}) },
-    study: o.study ?? {}, usedHashes: o.usedHashes ?? [],
+    study: o.study ?? {}, usedHashes: o.usedHashes ?? [], dayBase: o.dayBase ?? null,
     emergency: { startedAt: null, lastUsed: null, ...(o.emergency ?? {}) },
   };
 }
@@ -90,7 +95,7 @@ function persist(now = false) {
 
 export function useLock() {
   useSyncExternalStore((f) => { subs.add(f); return () => subs.delete(f); }, snapshot, snapshot);
-  return { ready, state, locked, waitMs, desktop: isDesktop() };
+  return { ready, state, locked, waitMs, tmFailed, desktop: isDesktop() };
 }
 export const getLockState = () => state;
 
@@ -138,6 +143,15 @@ export function useStudyClock(active = true) {
     }, 1000);
     return () => { clearInterval(id); evs.forEach((e) => window.removeEventListener(e, poke)); if (pending) addStudy(pending); };
   }, [active]);
+}
+
+// ---- class quota ----
+export function noteRemaining(remaining: number) {
+  const day = todayISO();
+  const nb = nextBase(state.dayBase, day, remaining);
+  if (nb === state.dayBase || (state.dayBase && nb.day === state.dayBase.day && nb.remaining === state.dayBase.remaining)) return;
+  state = { ...state, dayBase: nb };
+  persist();
 }
 
 // ---- proof ----

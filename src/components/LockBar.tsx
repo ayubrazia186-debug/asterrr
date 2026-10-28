@@ -3,32 +3,39 @@ import { Link } from 'react-router-dom';
 import { Camera, Check, ImagePlus, Lock, LockOpen, ShieldAlert, X } from 'lucide-react';
 import { useStore } from '../state/store';
 import { SUBJECTS } from '../data/subjects';
-import { isDone, planClasses, todayOf } from '../lib/plan';
+import { behindOf, isDone, planClasses, todayOf } from '../lib/plan';
+import { quota } from '../lib/quota';
 import {
-  EMERGENCY_PHRASE, allMet, cancelEmergency, dialogOpening, emergencyLeft, markProof, needs, startEmergency, unlock, useLock,
+  EMERGENCY_PHRASE, allMet, cancelEmergency, dialogOpening, emergencyLeft, markProof, needs, noteRemaining, startEmergency, unlock, useLock,
 } from '../lib/lock';
 import { checkWork, preparePhoto, type Photo, type Verdict } from '../lib/proof';
 import { cx, dayMonth, todayISO } from '../lib/dates';
 
-/** Today's classes as text for the AI and for the screen. */
+/** Today's classes as text for the AI, and the late classes that come first. */
 function useToday() {
   const { plan } = useStore();
   return useMemo(() => {
     const rows = SUBJECTS.flatMap((s) => todayOf(planClasses(plan[s.id])).map((c) => ({ s, c })));
+    const late = SUBJECTS.flatMap((s) => behindOf(planClasses(plan[s.id])).filter((c) => !isDone(c)).map((c) => ({ s, c })));
     return {
       total: rows.length,
       done: rows.filter((r) => isDone(r.c)).length,
+      late: late.length,
+      lateLines: late.slice(0, 5).map((r) => `${r.s.name}: ${r.c.topic}${r.c.part ? ` (${r.c.part})` : ''}${r.c.date ? `, ${dayMonth(r.c.date)}` : ''}`),
       lines: rows.map((r) => `${r.s.name}: ${r.c.topic}${r.c.part ? ` (${r.c.part})` : ''}`),
     };
   }, [plan]);
 }
 
 export function LockBar() {
-  const { ready, state, locked, desktop } = useLock();
+  const { ready, state, locked, desktop, tmFailed } = useLock();
   const today = useToday();
   const [open, setOpen] = useState(false);
   const [dlg, setDlg] = useState<null | 'proof' | 'emergency'>(null);
-  const n = needs(state, today.done, today.total);
+  const hasPlan = today.total > 0 || today.late > 0;
+  useEffect(() => { if (locked && hasPlan) noteRemaining(today.late); }, [locked, hasPlan, today.late]);
+  const q = quota(state.dayBase, todayISO(), today.late, today.done, today.total);
+  const n = needs(state, q.done, q.owed);
   const met = allMet(n);
   const [freed, setFreed] = useState(false);
 
@@ -56,10 +63,12 @@ export function LockBar() {
         {open && (
           <div className="lockpill__body">
             <ul className="lockreq">
-              {n.tasks && <li className={n.tasks[0] >= n.tasks[1] ? 'is-ok' : ''}><Check size={14} />Today's classes ticked: <b>{n.tasks[0]} of {n.tasks[1]}</b></li>}
+              {n.tasks && <li className={n.tasks[0] >= n.tasks[1] ? 'is-ok' : ''}><Check size={14} />{q.kind === 'late' ? 'Late classes finished (today\'s wait until you catch up)' : 'Today\'s classes finished'}: <b>{n.tasks[0]} of {n.tasks[1]}</b></li>}
               {n.study && <li className={n.study[0] >= n.study[1] ? 'is-ok' : ''}><Check size={14} />Study time in Aster: <b>{n.study[0]} of {n.study[1]} min</b></li>}
               {n.proof !== null && <li className={n.proof ? 'is-ok' : ''}><Check size={14} />Photos of your work: <b>{n.proof ? 'approved' : 'not sent yet'}</b></li>}
             </ul>
+            {tmFailed && state.cfg.blockTaskMgr && <p className="lockmsg lockmsg--bad" role="status">Windows refused to switch Task Manager off on this PC, so it can still be opened.</p>}
+            {q.kind === 'late' && today.lateLines.length > 0 && <ul className="lockreq lockreq--late">{today.lateLines.map((l, i) => <li key={i}>{l}</li>)}{today.late > today.lateLines.length && <li>…and {today.late - today.lateLines.length} more</li>}</ul>}
             <div className="lockpill__acts">
               <Link to="/today" className="btn btn--sm btn--ghost" onClick={() => setOpen(false)}>Today's classes</Link>
               {n.proof !== null && !n.proof && <button type="button" className="btn btn--sm" onClick={() => setDlg('proof')}><Camera size={15} /> Send photos of my work</button>}

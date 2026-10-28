@@ -17,11 +17,26 @@ const today = () => { const d = new Date(); return `${d.getFullYear()}-${pad(d.g
 // If Aster is killed while locked, the setting stays until Aster next starts unlocked; to undo it by hand run this in cmd:
 //   reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /f
 const REG_KEY = 'HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System';
+let tmFailed = false;
+let tmPending = Promise.resolve();
 function setTaskMgr(block) {
   const args = block ? ['add', REG_KEY, '/v', 'DisableTaskMgr', '/t', 'REG_DWORD', '/d', '1', '/f'] : ['delete', REG_KEY, '/v', 'DisableTaskMgr', '/f'];
-  if (process.env.ASTER_REG_LOG) { try { fs.appendFileSync(process.env.ASTER_REG_LOG, `${args.join(' ')}\n`); } catch { /* test hook */ } return; }
+  if (process.env.ASTER_REG_LOG) {
+    try { fs.appendFileSync(process.env.ASTER_REG_LOG, `${args.join(' ')}\n`); } catch { /* test hook */ }
+    if (block) tmFailed = process.env.ASTER_REG_FAIL === '1';
+    return;
+  }
   if (process.platform !== 'win32') return;
-  try { execFile('reg', args, { windowsHide: true }, () => {}); } catch { /* not allowed on this PC: the lock still works without it */ }
+  tmPending = new Promise((resolve) => {
+    try {
+      execFile('reg', args, { windowsHide: true }, (err, _o, stderr) => {
+        // deleting a value that is not there is fine; being refused while switching it ON is the problem to report
+        if (block) tmFailed = !!err;
+        if (err && block) console.error('Task Manager block refused:', String(stderr || err.message).trim());
+        resolve();
+      });
+    } catch { if (block) tmFailed = true; resolve(); }
+  });
 }
 
 function createLock(ctx) {
@@ -30,7 +45,7 @@ function createLock(ctx) {
   let keeper = null;
   let suppressUntil = 0;
 
-  const blank = () => ({ cfg: { ...DEFAULT_CFG }, pending: null, unlockedDay: null, study: {}, proofDay: null, usedHashes: [], emergency: { startedAt: null, lastUsed: null } });
+  const blank = () => ({ cfg: { ...DEFAULT_CFG }, pending: null, unlockedDay: null, study: {}, proofDay: null, dayBase: null, usedHashes: [], emergency: { startedAt: null, lastUsed: null } });
   const persist = () => { const s = ctx.settings(); s.lock = state; ctx.save(); };
 
   function load() {
@@ -84,7 +99,7 @@ function createLock(ctx) {
   const gapOk = () => !state.emergency.lastUsed || Date.now() - state.emergency.lastUsed >= GAP;
 
   function register() {
-    ipcMain.handle('lock:load', () => ({ state, sessionLocked, desktop: true, emergencyWaitMs: WAIT }));
+    ipcMain.handle('lock:load', async () => { await Promise.race([tmPending, new Promise((r) => setTimeout(r, 3000))]); return { state, sessionLocked, desktop: true, emergencyWaitMs: WAIT, tmFailed: sessionLocked && !!state.cfg.blockTaskMgr && tmFailed }; });
     ipcMain.handle('lock:save', (_e, inc) => {
       if (!inc || typeof inc !== 'object') return;
       if (!sessionLocked) {
@@ -93,6 +108,10 @@ function createLock(ctx) {
       }
       if (inc.study && typeof inc.study === 'object') for (const [d, ms] of Object.entries(inc.study)) state.study[d] = Math.max(state.study[d] || 0, Number(ms) || 0);
       if (typeof inc.proofDay === 'string' || inc.proofDay === null) state.proofDay = inc.proofDay;
+      if (inc.dayBase && typeof inc.dayBase.day === 'string' && Number.isFinite(inc.dayBase.remaining)) {
+        const cur = state.dayBase;
+        state.dayBase = cur && cur.day === inc.dayBase.day ? { day: cur.day, remaining: Math.max(cur.remaining, inc.dayBase.remaining) } : { day: inc.dayBase.day, remaining: inc.dayBase.remaining };
+      }
       if (Array.isArray(inc.usedHashes)) state.usedHashes = inc.usedHashes.filter((h) => typeof h === 'string').slice(-600);
       // the wait for the emergency exit is timed here, not in the web page
       const want = inc.emergency?.startedAt;

@@ -126,7 +126,7 @@ function AiSettingsPanel() {
 }
 
 function FocusLockPanel() {
-  const { state, locked, desktop } = useLock();
+  const { state, locked, desktop, tmFailed } = useLock();
   const [draft, setDraft] = useState<LockCfg>(state.cfg);
   const [note, setNote] = useState('');
   const set = (p: Partial<LockCfg>) => { setDraft((d) => ({ ...d, ...p })); setNote(''); };
@@ -152,9 +152,10 @@ function FocusLockPanel() {
             <label className="field"><span>Photos of your work to send</span>
               <input type="number" min={1} max={6} value={draft.photos} disabled={locked} onChange={(e) => set({ photos: Math.max(1, Math.min(6, Number(e.target.value) || 1)) })} /></label>
           </div>
-          <label className="check"><input type="checkbox" checked={draft.needTasks} disabled={locked} onChange={(e) => set({ needTasks: e.target.checked })} /> Today's planner classes must be ticked</label>
+          <label className="check"><input type="checkbox" checked={draft.needTasks} disabled={locked} onChange={(e) => set({ needTasks: e.target.checked })} /> Planner classes must be finished (late classes first, then today's)</label>
           <label className="check"><input type="checkbox" checked={draft.needProof} disabled={locked} onChange={(e) => set({ needProof: e.target.checked })} /> The AI must approve photos of my handwritten work</label>
           <label className="check"><input type="checkbox" checked={draft.blockTaskMgr} disabled={locked} onChange={(e) => set({ blockTaskMgr: e.target.checked })} /> Also switch Task Manager off while locked</label>
+          {tmFailed && locked && <p className="errtext" role="alert">Windows refused to switch Task Manager off on this PC (access denied), so it can still be opened. Another tool or a PC rule may be protecting that setting. This does not stop the rest of the lock.</p>}
           <p className="muted">This uses a Windows setting for your account only. It is switched back on when the lock lifts and whenever Aster starts unlocked. If Aster is ever killed while locked and Task Manager stays grey, open Command Prompt (Windows key + R, type cmd) and run: reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /f</p>
           <p className="muted">Photos are read by your AI key (Settings, AI) and are not kept. Write today's date on the page.</p>
           <div className="form__actions">
